@@ -1,0 +1,136 @@
+---
+config:
+    layout: elk
+---
+flowchart TD
+    AAA(All Computer Science Topics)
+    A(["Introduction to calculus and limits"])    
+    A --> B(["The limit concept"])
+    B --> C(["Graphical and numerical limits"]) & H(["Introduction to derivatives"])
+    C --> D(["Limit laws"]) & E(["Limits at infinity and infinite limits"])
+    D --> F(["Epsilon-delta definition of the limit"]) & G(["Continuity and the intermediate value theorem"]) & J(["Basic differentiation rules"]) & BB(["Sequences"])
+    H --> I(["Derivatives as functions"])
+    I --> J & N(["Rates of change and exponential models"]) & P(["Linear approximations"])
+    J --> K(["The product and quotient rules"]) & L(["Trigonometric derivatives"]) & M(["Logarithmic and exponential derivatives"]) & O(["The chain rule"]) & S@{ label: "L'Hopitals rule" } & W(["Newton's method"])
+    O --> R(["The shape of graphs and concavity"]) & Q(["Extreme values"]) & U(["Implicit differentiation"]) & AJ(["Integration by substitution"]) & AL(["Inverse trigonometric integrals"]) & AB(["Hyperbolic functions"]) & BJ(["Parametric equations"])
+    K --> Q & AM(["Integration by parts"])
+    L --> Q & T(["Antiderivatives"]) & BH(["Taylor series"]) & BK(["Polar coordinates"])
+    M --> Q & T & BH
+    N --> V(["Related rates"]) & AA(["Introduction to integrals and area approximation"]) & AW(["Introduction to differential equations"])
+    U --> V
+    Q --> X(["Optimization"]) & Y(["The mean value theorem"]) & Z(["Graphing with derivatives"])
+    R --> Z
+    AA --> AC(["Definite integrals"])
+    AC --> AD(["The fundamental theorem of calculus"]) & AE(["Area between curves"]) & AF(["Volume of solids of revolution"]) & AG(["Arc length and surface area"]) & AH(["Physical applications of integrals"]) & AR(["Numerical and table-based integration"]) & AS(["Improper integrals"]) & AU(["Advanced physical applications"]) & AV(["Economics applications"]) & AZ(["Modeling with differential equations"]) & BL(["Area and arc length in polar coordinates"])
+    T --> AD & AK(["Logarithmic and exponential integrals"]) & AJ & AL & AB & AM & AN(["Trigonometric integrals"]) & AP(["Integration by partial fractions"])
+    AD --> AI(["Indefinite integrals and the net change theorem"])
+    AJ --> AH & AG & AO(["Trigonometric substitutions"]) & AY(["Separable differential equations"]) & BA(["Special first-order linear differential equations"]) & BL
+    AK --> AH
+    AN --> AO
+    AP --> AQ(["Integration strategies"])
+    AO --> AQ
+    AM --> AQ
+    AQ --> AR & AS & AU & AV
+    AS --> AT(["Probability applications"])
+    AW --> AX(["Direction fields and Euler's method"]) & AY & BA
+    AY --> AZ
+    BB --> BC(["Series"])
+    BC --> BD(["Convergence and divergence"])
+    BD --> BE(["Comparison tests"]) & BF(["The ratio and root tests"]) & BG(["Alternating series"]) & BH
+    BH --> BI(["Power series and functions"])
+    BK --> BL & BM(["Conic sections"])
+    BJ --> BM
+    A --> C & D & E
+    B --> D & F & E & G & I & AA & AC & AD & AS & BB
+    C --> F & G & BB
+    D --> L & M & S & BC & BD & BE & BF & BG
+    H --> O & W
+    I --> Q & Y & R & W & AD & AW & AX & BJ
+    J --> U & V & Q & R & Z & X & T & AG & AB & AL & AM & BH & BJ & BK & BM
+    O --> V & Z & X & AG
+    K --> Z & X
+    L --> Z & X & AN & AO & BL
+    M --> Z & X & AK
+    N --> AI & AH & AU & AV & AZ
+    AC --> AT
+    T --> AO & AQ & AR & AY & BA & AI
+    AJ --> AQ & AU & AV
+    AQ --> AT
+    AW --> AZ
+    BC --> BE & BF & BG & BH & BI
+    BD --> BI
+    S@{ shape: stadium}
+
+    classDef limits stroke:#377eb8,font-size:18
+    classDef limits-ghost stroke:#377eb80D,fill:#377eb80D,color:#d3d3d3,font-size:18
+    classDef limits-pre stroke:#377eb866,fill:#377eb866,font-size:18
+    classDef limits-direct stroke:#377eb8,fill:#377eb8A6,stroke-width:4px,font-size:18
+   
+    style AAA fill:#4daf4a99,stroke:#4daf4a,font-size:26
+
+A:::limits-direct
+AA:::limits-direct
+AB:::limits-direct
+AC:::limits-direct
+AD:::limits-direct
+AH:::limits-direct
+AI:::limits-direct
+AK:::limits-direct
+AT:::limits-direct
+AU:::limits-direct
+AW:::limits-direct
+B:::limits-direct
+BB:::limits-direct
+BC:::limits-direct
+BD:::limits-direct
+BE:::limits-direct
+BH:::limits-direct
+BI:::limits-direct
+BJ:::limits-direct
+BK:::limits-direct
+C:::limits-direct
+D:::limits-direct
+E:::limits-direct
+G:::limits-direct
+H:::limits-direct
+I:::limits-direct
+J:::limits-direct
+L:::limits-direct
+M:::limits-direct
+N:::limits-direct
+O:::limits-direct
+Q:::limits-direct
+R:::limits-direct
+S:::limits-direct
+U:::limits-direct
+W:::limits-direct
+X:::limits-direct
+AJ:::limits-pre
+AM:::limits-pre
+AN:::limits-pre
+AO:::limits-pre
+AP:::limits-pre
+AQ:::limits-pre
+AS:::limits-pre
+K:::limits-pre
+T:::limits-pre
+AE:::limits-ghost
+AF:::limits-ghost
+AG:::limits-ghost
+AL:::limits-ghost
+AR:::limits-ghost
+AV:::limits-ghost
+AX:::limits-ghost
+AY:::limits-ghost
+AZ:::limits-ghost
+BA:::limits-ghost
+BF:::limits-ghost
+BG:::limits-ghost
+BL:::limits-ghost
+BM:::limits-ghost
+F:::limits-ghost
+P:::limits-ghost
+V:::limits-ghost
+Y:::limits-ghost
+Z:::limits-ghost
+linkStyle 5,12,23,35,38,40,41,42,45,46,47,49,52,53,54,58,65,67,68,69,75,78,80,81,82,83,87,88,91,92,93 stroke:#d3d3d3,fill:none

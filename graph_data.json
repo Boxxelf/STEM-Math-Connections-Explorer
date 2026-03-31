@@ -1,0 +1,2477 @@
+{
+  "nodes": [
+    {
+      "id": "A",
+      "number_id": 1,
+      "label": "Introduction to calculus and limits",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Data analysis",
+            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
+          },
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
+          },
+          {
+            "cs_topic": "Regression analysis",
+            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
+          },
+          {
+            "cs_topic": "Clustering algorithms",
+            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
+          },
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
+          },
+          {
+            "cs_topic": "Advanced deep learning",
+            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
+          }
+        ]
+      },
+      "topicCode": "Lim1",
+      "topicName": "Introduction to calculus and limits",
+      "course": "Calculus I",
+      "coreIdea": "Limits and Continuity"
+    },
+    {
+      "id": "B",
+      "number_id": 2,
+      "label": "The limit concept",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Running time analysis",
+            "rationale": "The concept of limits in calculus is foundational for analyzing the asymptotic behavior of functions, which is critical in computer science for understanding algorithm running times. Limits allow us to characterize the growth of a function \\(f(n)\\) as \\(n \\to \\infty\\), enabling the use of asymptotic notation such as \\(O(f(n))\\), \\(\\Omega(f(n))\\), and \\(\\Theta(f(n))\\). These notations describe upper, lower, and tight bounds on running time, respectively, and are defined in terms of limits. For example, if an algorithm's running time is \\(T(n) = 2n^2 + 3n + 5\\), the limit as \\(n \\to \\infty\\) reveals that \\(T(n)\\) grows asymptotically as \\(n^2\\), allowing us to classify it as \\(O(n^2)\\). This analysis informs decisions about algorithm efficiency for large inputs."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic reasoning",
+            "rationale": "The concept of limits in calculus is foundational for understanding expected values in probabilistic reasoning. In probability theory, the expected value \\(E(X)\\) of a random variable \\(X\\) represents the weighted average of all possible outcomes, where the weights are given by their probabilities. For discrete random variables, \\(E(X) = \\sum_{i} x_i P(X = x_i)\\), and for continuous random variables, \\(E(X) = \\int_{-\\infty}^\\infty x P(x) \\, dx\\). These formulations rely on the convergence of sums or integrals, which is inherently tied to the limit concept. For example, in machine learning, an agent may estimate the expected reward of an action by summing or integrating over possible outcomes, ensuring convergence to a meaningful value using limits."
+          },
+          {
+            "cs_topic": "Probabilistic reasoning over time",
+            "rationale": "The concept of limits in calculus is foundational for understanding change and continuity, which are critical in probabilistic reasoning over time in computer science. Limits allow us to model how probabilities evolve as time approaches a specific point or infinity, enabling precise predictions in dynamic systems. For example, Bayesian networks often rely on updating probabilities based on new evidence over time. This process involves calculating conditional probabilities that may depend on continuous changes, which can be approximated using limits. By understanding limits, computer scientists can better design algorithms for reasoning under uncertainty, such as tracking the likelihood of events in real-time systems."
+          },
+          {
+            "cs_topic": "Multiagent decision making",
+            "rationale": "The concept of limits in calculus is fundamental to multiagent decision-making in computer science, particularly in utility-based frameworks. Utility functions, which quantify an agent's preferences, often involve scenarios where outcomes approach optimal values asymptotically. For example, in mechanisms addressing externalities like carbon taxes, agents aim to maximize global utility by making local decisions. Here, the limit concept helps model how individual actions converge toward maximizing collective utility as constraints or incentives are adjusted. Mathematically, if \\( U(x) \\) represents utility as a function of an agent's decision \\( x \\), the behavior of \\( U(x) \\) as \\( x \\to \\infty \\) or \\( x \\to c \\) (a critical value) can determine optimal strategies, ensuring rationality and efficiency in complex systems."
+          },
+          {
+            "cs_topic": "Probabilistic programming",
+            "rationale": "The concept of limits in calculus is fundamental to understanding the behavior of probabilistic programming algorithms like Markov Chain Monte Carlo (MCMC). MCMC algorithms aim to approximate posterior distributions by generating samples that converge to the true distribution over time. This convergence is inherently tied to the limit concept, as the accuracy of the approximation improves as the number of iterations approaches infinity. For example, if an MCMC algorithm is not \"well-mixed,\" the samples may fail to represent the true distribution, even after many iterations. Thus, analyzing the rate of convergence and ensuring proper mixing are critical for reliable probabilistic inference, directly connecting calculus limits to algorithmic performance."
+          }
+        ]
+      },
+      "topicCode": "Lim2",
+      "topicName": "The limit concept",
+      "course": "Calculus I",
+      "coreIdea": "Limits and Continuity"
+    },
+    {
+      "id": "C",
+      "number_id": 3,
+      "label": "Graphical and numerical limits",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Reinforcement learning",
+            "rationale": "Graphical and numerical limits in calculus are essential for understanding convergence, a concept central to reinforcement learning. In reinforcement learning, algorithms like value iteration rely on the convergence of the value function to a solution of the Bellman equations. This convergence ensures that the algorithm identifies optimal policies over time. Mathematically, the process involves iteratively updating the value function \\( V(s) \\) for states \\( s \\) until the difference between successive iterations approaches zero, i.e., \\( \\lim_{n \\to \\infty} |V_{n+1}(s) - V_n(s)| = 0 \\). For example, in large state spaces, approximate functional representations and temporal-difference methods use this principle to refine predictions and improve decision-making. Understanding limits helps ensure stability and accuracy in these iterative updates."
+          }
+        ]
+      },
+      "topicCode": "Lim3",
+      "topicName": "Graphical and numerical limits",
+      "course": "Calculus I",
+      "coreIdea": "Limits and Continuity"
+    },
+    {
+      "id": "H",
+      "number_id": 9,
+      "label": "Introduction to derivatives",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "topicCode": "Der1",
+      "topicName": "Introduction to derivatives",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives",
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent, a fundamental optimization algorithm in computer science, relies on derivatives to iteratively minimize a function. The derivative, or gradient \\( \\nabla f(x) \\), represents the direction and rate of steepest ascent for a function \\( f(x) \\). In gradient descent, the algorithm moves in the opposite direction of the gradient to find the local minimum of a loss function. For example, in machine learning, the gradient \\( \\nabla f(w) \\) is computed with respect to model parameters \\( w \\), and updates are made as \\( w \\leftarrow w - \\alpha \\nabla f(w) \\), where \\( \\alpha \\) is the learning rate. Understanding derivatives is essential for implementing and debugging such optimization processes effectively."
+          },
+          {
+            "cs_topic": "Model evaluation",
+            "rationale": "In calculus, derivatives measure the rate of change of a function, which is crucial in evaluating the sensitivity of outputs to input variations. In computer science, this concept is directly applied in model evaluation, particularly in optimization tasks like training machine learning models. For instance, gradient descent, a common optimization algorithm, uses derivatives to adjust model parameters by minimizing a loss function. The derivative of the loss function with respect to each parameter indicates the direction and magnitude of change needed to reduce error. Understanding derivatives ensures efficient parameter updates, improving model accuracy and performance in tasks such as classification or regression."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Matrix operations",
+            "rationale": "Derivatives play a crucial role in matrix operations within computer science, particularly in optimization problems. The derivative of a function \\( f(x) \\) provides the rate of change, which is essential for identifying critical points where \\( \\nabla f(x) = 0 \\). These points can represent local minima, maxima, or saddle points, depending on the second derivative or Hessian matrix. For example, in machine learning or robotics, optimizing the placement of objects (e.g., airports) involves minimizing a cost function defined over a multidimensional space. Using derivatives, algorithms like Newton-Raphson iteratively refine solutions by leveraging gradient and Hessian computations, enabling efficient convergence to optimal configurations."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Search in complex environments",
+            "rationale": "In computer science, derivatives play a crucial role in optimization techniques for searching complex environments. For example, the steepest-ascent hill climbing algorithm uses the gradient, a vector of partial derivatives, to determine the direction of the steepest slope in a continuous search space. The gradient \\(\\nabla f(x)\\) provides local information about the function's rate of change, enabling iterative updates like \\(x \\gets x + \\alpha \\nabla f(x)\\), where \\(\\alpha\\) is the step size. Similarly, the Newton-Raphson method leverages derivatives to refine solutions by approximating roots of \\(\\nabla f(x) = 0\\), which corresponds to finding maxima or minima. These methods illustrate how calculus concepts underpin efficient search strategies in dynamic and high-dimensional environments."
+          },
+          {
+            "cs_topic": "Deep learning",
+            "rationale": "Understanding derivatives is essential in deep learning because they quantify the rate of change, which is central to optimizing neural networks. During backpropagation, derivatives of the loss function with respect to model parameters are computed to adjust weights and minimize error. For example, the gradient descent algorithm updates weights \\( w_i \\) using \\( w_i \\leftarrow w_i - \\alpha \\frac{\\partial}{\\partial w_i} \\text{Loss}(w) \\), where \\( \\alpha \\) is the learning rate. This process relies on derivatives to determine the direction and magnitude of weight adjustments. Thus, derivatives enable efficient learning by guiding the network toward minimizing the loss function, improving predictive accuracy."
+          },
+          {
+            "cs_topic": "Reinforcement learning",
+            "rationale": "In reinforcement learning, derivatives play a crucial role in optimizing policies and value functions. For example, the gradient of an error function, \\( \\frac{\\partial E_j(s)}{\\partial \\theta_i} \\), is used to adjust parameters \\( \\theta_i \\) to minimize prediction errors. This adjustment ensures that the learned function, such as \\( \\hat{Q}_\\theta(s, a) \\), better approximates the true utility or Q-values. The differentiation power rule simplifies these calculations, especially when dealing with linear or nonlinear function approximators like neural networks. By iteratively updating parameters using derivatives, reinforcement learning algorithms improve decision-making policies, enabling agents to generalize from experiences and adapt to complex environments."
+          },
+          {
+            "cs_topic": "Robotics",
+            "rationale": "In robotics, derivatives play a crucial role in modeling and controlling dynamic systems. The derivative of a function, \\( \\frac{dy}{dx} \\), measures the rate of change, such as velocity being the derivative of position with respect to time. In robotic motion, derivatives are used to describe kinematic states, including velocity and acceleration, which are essential for dynamic state representations. For example, a PID controller uses proportional, integral, and derivative terms to adjust a robot's movement based on errors in position or velocity over time. Understanding derivatives enables precise control and optimization of robotic systems, ensuring accurate and efficient operation in dynamic environments."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Image composition",
+            "rationale": "The concept of derivatives is fundamental in image composition, particularly in texture mapping and transformations. In computer graphics, derivatives help approximate how a texture or image changes across a surface. For example, when mapping a 2D texture onto a 3D object, partial derivatives of the mapping function describe how texture coordinates (u, v) change with respect to image space coordinates (x, y). This allows for linear approximations, such as Taylor series expansions, to estimate transformations efficiently. These approximations are critical for rendering smooth transitions and minimizing distortions in images, ensuring realistic and visually appealing results in applications like video games or simulations."
+          },
+          {
+            "cs_topic": "Mathematics of vectors, curves, and surfaces",
+            "rationale": "The derivative, defined as the limit of the rate of change, measures the slope of the tangent line to a curve for a 1D function \\( g(x) \\). In higher dimensions, partial derivatives generalize this concept by examining how a multivariable function \\( f(x, y, z) \\) changes with respect to one variable while holding others constant. In computer graphics, derivatives are essential for analyzing curves and surfaces. For instance, the gradient \\( \\nabla f(x, y) = (\\partial f / \\partial x, \\partial f / \\partial y) \\) points in the direction of steepest ascent and is perpendicular to the tangent vector of an implicit curve \\( f(x, y) = 0 \\). This relationship helps compute normals for surfaces, which are critical for rendering and shading."
+          },
+          {
+            "cs_topic": "Texture mapping",
+            "rationale": "In texture mapping, derivatives play a crucial role in understanding how texture coordinates \\((u, v)\\) change relative to image coordinates \\((x, y)\\). The mapping function \\(\\psi : (x, y) \\to (u, v)\\) describes this relationship, and its derivative matrix, the Jacobian \\(J\\), encapsulates the partial derivatives \\(\\frac{\\partial u}{\\partial x}, \\frac{\\partial u}{\\partial y}, \\frac{\\partial v}{\\partial x}, \\frac{\\partial v}{\\partial y}\\). These derivatives approximate how a pixel in image space maps to a region in texture space, often visualized as a parallelogram. For example, larger derivatives indicate stretched texture regions, impacting rendering accuracy. This connection between calculus and computer graphics ensures precise texture placement and helps mitigate artifacts like distortion or aliasing."
+          },
+          {
+            "cs_topic": "Computer animation",
+            "rationale": "Derivatives play a crucial role in computer animation by enabling precise control over motion and transformations. In animation, the position of an object or character often depends on parameters such as time or joint angles, represented as functions \\(x = F(\\alpha)\\). The derivative, or Jacobian matrix, \\(\\frac{\\partial F}{\\partial \\alpha}\\), describes how small changes in these parameters (\\(\\delta \\alpha\\)) affect the object's position (\\(\\delta x\\)). For example, animators use the Jacobian to compute adjustments needed to achieve desired movements, ensuring smooth transitions and realistic motion. Understanding derivatives allows animators to translate mathematical models into dynamic, visually accurate animations."
+          },
+          {
+            "cs_topic": "Curves and surfaces",
+            "rationale": "In computer graphics, derivatives are essential for analyzing and constructing curves and surfaces. The derivative of a function \\( f(x) \\) represents the slope of the tangent line at a given point, which is crucial for understanding the local geometry of curves. For example, ensuring \\( C^1 \\) continuity‚Äîwhere the first derivatives match at the junction of two curve segments‚Äîavoids abrupt changes in slope, resulting in smooth transitions. This concept extends to surfaces in 3D, where partial derivatives help define tangent planes and curvature. For instance, when modeling a smooth surface, maintaining \\( C^1 \\) continuity ensures visually seamless connections between surface patches, critical for realistic rendering."
+          },
+          {
+            "cs_topic": "Implicit modeling",
+            "rationale": "In computer science, implicit modeling uses functions to define curves and surfaces, often represented as \\( f(x, y) = 0 \\). Derivatives, particularly gradients, play a crucial role in understanding these implicit functions. The gradient \\( \\nabla f(x, y) = (\\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y}) \\) points in the direction of steepest ascent and is perpendicular to the tangent of the curve \\( f(x, y) = 0 \\). This property is essential for operations like normal vector calculation, blending, and geometric transformations in implicit modeling. For example, in defining a circle \\( f(x, y) = x^2 + y^2 - r^2 \\), the gradient helps determine the direction and magnitude of changes around the curve, aiding visualization and manipulation in graphics applications."
+          }
+        ]
+      }
+    },
+    {
+      "id": "D",
+      "number_id": 4,
+      "label": "Limit laws",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Running time analysis",
+            "rationale": "Limit laws in calculus play a crucial role in analyzing the asymptotic behavior of functions, which is foundational in computer science for evaluating algorithm efficiency. For example, comparing the growth rates of polynomial functions \\(n^b\\) and exponential functions \\(a^n\\) (where \\(a > 1\\)) often involves computing limits, such as \\(\\lim_{n \\to \\infty} \\frac{n^b}{a^n} = 0\\), demonstrating that exponential functions grow faster than polynomial ones. Similarly, the exponential function \\(e^x\\) can be expressed as \\(\\lim_{n \\to \\infty} \\left(1 + \\frac{x}{n}\\right)^n\\), illustrating its rapid growth. These insights help classify algorithms using asymptotic notation (e.g., \\(O\\)-notation) to predict performance for large inputs."
+          },
+          {
+            "cs_topic": "Probabilistic and randomized algorithms",
+            "rationale": "Limit laws in calculus are foundational for understanding the behavior of functions as inputs approach specific values, including infinity. In computer science, these laws are critical for analyzing probabilistic and randomized algorithms, where bounds on probabilities or expected values often rely on limits. For example, the exponential function \\( e^x \\) can be expressed as \\( \\lim_{n \\to \\infty} (1 + x/n)^n \\), which is used to approximate probabilities in Bernoulli trials or bound the tail of a binomial distribution. This connection allows algorithms to estimate outcomes efficiently, leveraging mathematical precision to handle uncertainty and randomness in computations."
+          },
+          {
+            "cs_topic": "Approximation algorithms",
+            "rationale": "Limit laws in calculus are foundational for understanding approximation algorithms in computer science, as they provide a mathematical framework for analyzing the behavior of functions as variables approach infinity or other critical values. For example, the exponential function \\( e^x \\) can be expressed as \\( \\lim_{n \\to \\infty} (1 + x/n)^n \\), demonstrating how limits approximate complex functions. Approximation algorithms often rely on such limit-based reasoning to estimate solutions efficiently, especially in scenarios involving large-scale computations. For instance, when approximating exponential growth in algorithmic complexity, limit laws help simplify expressions and analyze asymptotic behavior, ensuring accurate and computationally feasible results."
+          }
+        ]
+      },
+      "topicCode": "Lim4",
+      "topicName": "Limit laws",
+      "course": "Calculus I",
+      "coreIdea": "Limits and Continuity"
+    },
+    {
+      "id": "E",
+      "number_id": 6,
+      "label": "Limits at infinity and infinite limits",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model overfitting and underfitting",
+            "rationale": "Limits at infinity and infinite limits are essential in understanding the behavior of loss functions in machine learning, particularly during training. As the number of epochs or iterations increases, the loss function \\( L(t) \\), where \\( t \\) represents the iteration count, often approaches a limit, indicating convergence to an optimal model. If the loss does not converge or diverges, it may signal issues such as overfitting or underfitting. For example, in gradient descent, the learning rate \\( \\alpha(t) \\) may decay over time to ensure convergence. Analyzing limits helps determine whether the loss stabilizes or diverges, guiding adjustments to hyperparameters for better model performance."
+          },
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "In gradient descent, a key concept in optimization, we iteratively adjust parameters to minimize a loss function. This process involves evaluating the gradient of the loss function and updating parameters in the direction of steepest descent. The convergence of this iterative sequence relies on understanding limits at infinity and infinite limits. Specifically, as the number of iterations approaches infinity, we analyze whether the parameter updates converge to a finite value, ideally a local or global minimum of the loss function. For example, in linear regression with a convex loss function, the gradient descent algorithm ensures convergence to the global minimum if the learning rate is appropriately chosen. This connection highlights how calculus concepts underpin the mathematical guarantees of machine learning algorithms."
+          },
+          {
+            "cs_topic": "Regularization",
+            "rationale": "In machine learning, regularization techniques like L1 (lasso) and L2 (ridge) regression help prevent overfitting by penalizing large weights in the model. The penalty term is scaled by a regularization parameter, \\( \\lambda \\), which controls the trade-off between minimizing empirical loss and model complexity. As \\( \\lambda \\to \\infty \\), the penalty dominates, forcing the weights \\( w_i \\) to approach zero, effectively simplifying the model. This behavior aligns with the calculus concept of limits at infinity, where a function approaches a specific value (e.g., zero) as its input grows indefinitely. For example, in ridge regression, increasing \\( \\lambda \\) reduces the magnitude of coefficients, ensuring a simpler, more generalizable model."
+          },
+          {
+            "cs_topic": "Learning theory",
+            "rationale": "Limits at infinity and infinite limits are fundamental in learning theory, particularly in understanding the asymptotic behavior of algorithms as data size grows. For example, PAC (Probably Approximately Correct) learning evaluates the performance of hypotheses as the number of training samples approaches infinity, ensuring convergence to a model that is \"probably approximately correct.\" This requires understanding \\(\\lim_{n \\to \\infty} f(n)\\), where \\(f(n)\\) represents the error or accuracy of the model as a function of sample size \\(n\\). By analyzing limits, computer scientists can predict long-term behavior and optimize learning algorithms for large-scale data, ensuring reliable and efficient outcomes in real-world applications."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Running time analysis",
+            "rationale": "Limits at infinity and infinite limits are foundational in analyzing the asymptotic behavior of functions, which is central to running time analysis in computer science. Asymptotic notations like \\(O(f(n))\\), \\(o(f(n))\\), \\(\\Omega(f(n))\\), and \\(\\omega(f(n))\\) describe the growth rates of functions as \\(n \\to \\infty\\), providing a framework to compare algorithm efficiency for large inputs. For example, \\(O(f(n))\\) represents an upper bound, ensuring that the running time \\(T(n)\\) does not exceed \\(c \\cdot f(n)\\) for sufficiently large \\(n\\). Limits formalize these bounds by evaluating the behavior of \\(T(n)/f(n)\\) as \\(n\\) approaches infinity. This analysis helps identify scalable algorithms, crucial for real-world applications like sorting large datasets."
+          },
+          {
+            "cs_topic": "Divide-and-conquer algorithms",
+            "rationale": "Limits at infinity and infinite limits are crucial for analyzing the growth rates of functions, which directly impact the efficiency of divide-and-conquer algorithms. The Master Theorem, a key tool in algorithm analysis, uses asymptotic comparisons to determine whether the cost of an algorithm is dominated by its root, leaves, or evenly distributed across levels of its recursion tree. For example, exponential functions like \\(a^n\\) grow faster than polynomial functions like \\(n^b\\) as \\(n \\to \\infty\\), which helps classify the algorithm's runtime complexity. Understanding these limits ensures accurate predictions of algorithm performance for large input sizes."
+          },
+          {
+            "cs_topic": "Probabilistic and randomized algorithms",
+            "rationale": "Limits at infinity and infinite limits are essential in analyzing probabilistic and randomized algorithms, particularly for bounding probabilities and understanding asymptotic behavior. For example, the exponential function \\( e^x \\) can be expressed as \\( \\lim_{n \\to \\infty} \\left(1 + \\frac{x}{n}\\right)^n \\), which is crucial in deriving bounds for probabilities in Bernoulli trials or analyzing the tail behavior of distributions. In randomized algorithms, such limits help estimate the likelihood of rare events or the expected runtime. For instance, exponential growth rates often dominate polynomial growth, ensuring efficient probabilistic guarantees in algorithm design."
+          },
+          {
+            "cs_topic": "Approximation algorithms",
+            "rationale": "Limits at infinity and infinite limits are essential in computer science, particularly in approximation algorithms, where understanding the behavior of functions as inputs grow large is crucial. For example, the exponential function \\( e^x \\) can be expressed as the limit \\( \\lim_{n \\to \\infty} (1 + x/n)^n = e^x \\), which illustrates how iterative approximations converge to precise values as \\( n \\) approaches infinity. This concept is foundational in analyzing algorithm efficiency and approximations, such as bounding errors in numerical methods or optimizing solutions in combinatorial problems. By leveraging limits, approximation algorithms can ensure scalability and accuracy in handling large-scale inputs."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic reasoning",
+            "rationale": "The concept of limits at infinity and infinite limits is essential in probabilistic reasoning, particularly in understanding stationary distributions. A stationary distribution represents a stable probability distribution that a stochastic process converges to as time approaches infinity. This convergence relies on the mathematical idea of \\(\\lim_{t \\to \\infty} P_t = P_{\\text{stationary}}\\), where \\(P_t\\) is the probability distribution at time \\(t\\). For example, in Markov chains, repeated sampling eventually leads to a stationary distribution, regardless of the initial state. This principle is foundational in computer science applications such as probabilistic analysis, decision theory, and machine learning, where long-term behavior and stability are critical for modeling uncertainty and optimizing outcomes."
+          },
+          {
+            "cs_topic": "Probabilistic reasoning over time",
+            "rationale": "The concept of limits at infinity is essential in probabilistic reasoning over time, particularly when analyzing stationary distributions in stochastic processes. A stationary distribution represents a probability distribution that remains constant as time approaches infinity, implying the system has reached equilibrium. Mathematically, this involves evaluating \\(\\lim_{t \\to \\infty} P_t(x)\\), where \\(P_t(x)\\) is the probability of a state \\(x\\) at time \\(t\\). For example, in Markov chains, the probabilities of states converge to a stationary distribution under certain conditions. Understanding limits at infinity allows computer scientists to model long-term behavior in systems like recommendation algorithms or simulations, ensuring predictions remain stable over time."
+          },
+          {
+            "cs_topic": "Multiagent decision making",
+            "rationale": "Limits at infinity and infinite limits are essential in multiagent decision-making, particularly in utility-based frameworks. Utility functions, which quantify the desirability of outcomes, often involve scenarios where agents aim to maximize utility over an infinite horizon or under conditions approaching infinity. For example, in the tragedy of the commons, agents might optimize local decisions to maximize global utility, effectively requiring calculations that approach limits as externalities are accounted for. By understanding limits, agents can model long-term impacts and ensure rational decisions under constraints. This connection highlights how calculus underpins the mathematical foundation of decision-theoretic agents in complex systems."
+          },
+          {
+            "cs_topic": "Learning from examples",
+            "rationale": "Limits at infinity and infinite limits are essential in understanding the behavior of learning algorithms as they process increasingly large datasets or iterate over time. In machine learning, concepts like no-regret learning and gradient descent rely on analyzing sequences of updates or predictions and their asymptotic behavior. For example, stochastic gradient descent evaluates the convergence of a model's parameters as the number of training steps approaches infinity. Similarly, no-regret learning ensures that the cumulative loss of an algorithm asymptotically approaches the performance of the best possible expert. These ideas leverage limits to assess long-term performance and stability, making them critical for designing efficient and adaptive learning systems."
+          },
+          {
+            "cs_topic": "Computer vision",
+            "rationale": "Limits at infinity and infinite limits are essential in computer vision, particularly in rendering and radiometry. Rendering involves creating shaded images from 3D models, where light interactions are modeled mathematically. Radiometry often assumes light as a continuum, enabling calculus tools like limits to analyze spectral energy \\( Q(\\lambda) \\) as wavelength \\(\\lambda\\) approaches infinity. For example, understanding how light intensity diminishes or saturates at extreme wavelengths helps optimize rendering algorithms for realistic visuals. Additionally, asymptotic analysis, a concept tied to limits, is used in computer vision algorithms to evaluate performance as input size grows, ensuring scalability and efficiency in processing large datasets."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Implicit modeling",
+            "rationale": "Limits at infinity and infinite limits are essential in implicit modeling for blending functions, such as the Ricci blend, which combines implicit surfaces in computer graphics. The Ricci blend is defined as \\( f_{A \\diamond B} = (f_A^n + f_B^n)^{1/n} \\), where \\( n \\) controls the blending behavior. As \\( n \\to +\\infty \\), the blend approaches \\( \\max(f_A, f_B) \\), creating a union-like effect, while \\( n \\to -\\infty \\) results in \\( \\min(f_A, f_B) \\), resembling an intersection. This use of limits enables smooth transitions between blending modes, simplifying complex surface modeling. For example, varying \\( n \\) allows dynamic adjustments in combining implicit volumes for animations or simulations."
+          }
+        ]
+      },
+      "topicCode": "Lim6",
+      "topicName": "Limits at infinity and infinite limits",
+      "course": "Calculus I",
+      "coreIdea": "Limits and Continuity"
+    },
+    {
+      "id": "F",
+      "number_id": 7,
+      "label": "Epsilon-delta definition of the limit",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Lim5",
+      "topicName": "Epsilon-delta definition of the limit",
+      "course": "Calculus I",
+      "coreIdea": "Limits and Continuity"
+    },
+    {
+      "id": "G",
+      "number_id": 8,
+      "label": "Continuity and the intermediate value theorem",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Computer Graphics": [
+          {
+            "cs_topic": "Signal processing",
+            "rationale": "In signal processing, continuity plays a crucial role in ensuring smooth transitions and accurate representations of signals. Continuous functions are often used to model real-world signals, but computers work with discrete samples. The intermediate value theorem guarantees that if a function \\(f(x)\\) is continuous on \\([a, b]\\) and \\(f(a) \\neq f(b)\\), then \\(f(x)\\) takes every value between \\(f(a)\\) and \\(f(b)\\) within \\([a, b]\\). This principle helps reconstruct values between sampled points, ensuring realistic interpolation. For example, when filtering an audio signal, continuity ensures smooth transitions between frequencies, avoiding abrupt changes that could distort the sound."
+          },
+          {
+            "cs_topic": "Curves and surfaces",
+            "rationale": "Continuity and the intermediate value theorem are fundamental in computer graphics for constructing smooth curves and surfaces. Continuity ensures that a curve or surface can be drawn without breaks, which is essential for realistic rendering and physical simulations. For instance, a curve is \\(C^0\\)-continuous if its points are connected, \\(C^1\\)-continuous if its first derivatives match (ensuring smooth transitions), and higher-order continuity (e.g., \\(C^2\\)) ensures even smoother changes. The intermediate value theorem guarantees that a continuous curve passes through all intermediate values between two points, which is crucial for interpolation and ensuring that a curve accurately represents data or motion paths. For example, when designing a car body, ensuring \\(C^2\\)-continuity avoids abrupt changes that could disrupt aerodynamics."
+          }
+        ]
+      },
+      "topicCode": "Lim7",
+      "topicName": "Continuity and the intermediate value theorem",
+      "course": "Calculus I",
+      "coreIdea": "Limits and Continuity"
+    },
+    {
+      "id": "J",
+      "number_id": 11,
+      "label": "Basic differentiation rules",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent, a key optimization algorithm in computer science, relies on calculating derivatives to minimize a loss function. Basic differentiation rules, such as the power rule, are essential for computing gradients, which indicate the direction of steepest descent in a function. For example, given \\(f(x) = x^2\\), the derivative \\(f'(x) = 2x\\) provides the slope at any point \\(x\\). In gradient descent, this derivative helps update \\(x\\) iteratively to reduce \\(f(x)\\). Understanding differentiation ensures accurate computation of gradients, enabling efficient optimization in tasks like training machine learning models or solving regression problems."
+          },
+          {
+            "cs_topic": "Regression analysis",
+            "rationale": "In regression analysis, differentiation plays a crucial role in optimizing the model by minimizing the loss function, which quantifies the error between predicted and actual values. For example, in linear regression, the loss function \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\), is convex and has a single global minimum. To find the optimal weights \\( w_0 \\) and \\( w_1 \\), we compute the partial derivatives of \\( L(w) \\) with respect to each parameter and use gradient descent: \\( w_i \\gets w_i - \\alpha \\frac{\\partial}{\\partial w_i} L(w) \\). Basic differentiation rules, such as \\( \\frac{\\partial}{\\partial x} x^2 = 2x \\), enable this process, ensuring efficient and accurate model training."
+          },
+          {
+            "cs_topic": "Classification methods",
+            "rationale": "Differentiation plays a crucial role in classification methods, particularly in models that involve continuous-valued functions, such as logistic regression or neural networks. These models often require optimization techniques to minimize a loss function, which involves computing derivatives to find critical points (e.g., minima or maxima). For instance, gradient descent relies on the derivative of the loss function \\(L(\\theta)\\) with respect to model parameters \\(\\theta\\) to iteratively update \\(\\theta\\) and improve classification accuracy. In contrast, discrete models like decision trees do not use differentiation directly; they rely on heuristics such as information gain to split nodes efficiently. Thus, differentiation is essential for continuous optimization but not for discrete decision-making processes."
+          },
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Autodifferentiation, a computational technique for efficiently calculating derivatives, is essential for backpropagation in neural networks. Backpropagation adjusts weights in the network to minimize error by propagating gradients backward through layers. Neural networks are composed of differentiable activation functions \\( g(x) \\), such as the sigmoid or ReLU, applied to weighted sums of inputs. Using basic differentiation rules, autodifferentiation computes derivatives of these functions and their compositions, enabling gradient-based optimization. For example, the derivative of the sigmoid function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) is \\( g'(x) = g(x)(1 - g(x)) \\), which is crucial for updating weights during training. Thus, calculus underpins the learning process in neural networks."
+          },
+          {
+            "cs_topic": "Probabilistic modeling",
+            "rationale": "Basic differentiation rules are essential in probabilistic modeling, particularly for optimizing parameters in models like Naïve Bayes. Differentiation helps compute gradients, which guide adjustments to model parameters to maximize likelihood or minimize error. For example, in Bayesian parameter learning, derivatives of likelihood functions with respect to parameters are used to find optimal values. This process often involves applying rules such as the power rule or chain rule to simplify computations. Understanding these rules ensures efficient implementation of algorithms and supports broader applications in machine learning, where probabilistic models rely on calculus for precise parameter tuning and decision-making."
+          },
+          {
+            "cs_topic": "Advanced deep learning",
+            "rationale": "Basic differentiation rules in calculus are foundational for understanding optimization techniques in advanced deep learning. Differentiation allows us to compute gradients, which are essential for algorithms like backpropagation used in training neural networks. For instance, the derivative of a loss function \\( L \\) with respect to model parameters \\( \\theta \\), denoted \\( \\frac{\\partial L}{\\partial \\theta} \\), guides the adjustment of \\( \\theta \\) to minimize \\( L \\). Gradient descent, a key optimization method, relies on these derivatives to iteratively update parameters. Without knowledge of differentiation, implementing and improving deep learning models would be infeasible, as gradient-based methods are central to their success."
+          },
+          {
+            "cs_topic": "Topic modeling",
+            "rationale": "Basic differentiation rules in calculus are essential for optimizing functions, a process central to expectation-maximization (EM) algorithms used in topic modeling. In EM, the maximization step involves finding the parameters that maximize a likelihood function, which often requires computing derivatives to locate critical points. For example, given a likelihood function \\( L(\\theta) \\), differentiation helps identify \\(\\theta\\) values where \\(\\frac{dL}{d\\theta} = 0\\), ensuring optimal parameter estimation. This connection highlights how calculus underpins algorithmic methods in machine learning, enabling efficient computation and model refinement in tasks like identifying latent topics in large text datasets."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Matrix operations",
+            "rationale": "Basic differentiation rules in calculus are essential for understanding matrix operations in computer science, particularly in optimization and graphics. Differentiation provides a way to compute gradients, which are crucial for minimizing functions like loss functions in machine learning or mapping transformations in computer graphics. For example, the derivative of \\( f(x) = x^2 \\) using the power rule (\\( f'(x) = 2x \\)) can be extended to matrix operations, such as calculating gradients of error norms or optimizing parameters in algorithms. In graphics, derivatives help approximate texture mappings by analyzing how changes in pixel coordinates affect texture space, using derivative matrices to capture variations."
+          },
+          {
+            "cs_topic": "Approximation algorithms",
+            "rationale": "Basic differentiation rules are foundational in approximation algorithms, where derivatives help analyze and optimize functions. The derivative \\( g'(x) \\) measures the rate of change or slope of a function \\( g(x) \\), indicating whether the function is increasing (\\( g'(x) > 0 \\)) or decreasing (\\( g'(x) < 0 \\)). In approximation algorithms, such as Newton-Raphson, derivatives guide iterative updates to approximate solutions efficiently. For example, Newton-Raphson uses \\( x \\leftarrow x - \\frac{g(x)}{g'(x)} \\) to refine estimates for roots of \\( g(x) = 0 \\). This reliance on differentiation ensures faster convergence and accuracy, making calculus essential for designing and analyzing algorithms in computational contexts."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Search in complex environments",
+            "rationale": "Basic differentiation rules are essential in computer science for optimization techniques in complex environments, particularly in local search algorithms like gradient ascent and the Newton-Raphson method. Gradient ascent uses the gradient, a vector of partial derivatives, to iteratively update the current state \\(x\\) by moving in the direction of steepest ascent, \\(x \\gets x + \\alpha \\nabla f(x)\\), where \\(\\alpha\\) is the step size. Similarly, the Newton-Raphson method refines estimates for roots of functions using derivatives, \\(x \\gets x - g(x)/g'(x)\\). These methods rely on differentiation rules to compute gradients and derivatives accurately, enabling efficient navigation of high-dimensional search spaces. For example, optimizing airport locations involves calculating gradients locally to adjust coordinates for maximum efficiency."
+          },
+          {
+            "cs_topic": "Simple decision making",
+            "rationale": "Basic differentiation rules, such as the power rule, are foundational in calculus and play a key role in computer science for decision-making processes. Differentiation provides a way to analyze how a function changes, which is crucial for optimizing algorithms or making decisions based on rates of change. For example, in a logical reasoning system, differentiation can simplify expressions like \\(f(x) = x^2\\) to \\(f'(x) = 2x\\), enabling efficient evaluation of conditions or thresholds. This principle can also be extended to memoization, where storing derivative results avoids redundant computation, improving performance in iterative decision-making tasks."
+          },
+          {
+            "cs_topic": "Learning from examples",
+            "rationale": "Basic differentiation rules are essential in machine learning, particularly in optimizing models during training. For example, in linear regression, the loss function \\( L(w) = \\sum_{j}(w_1x_j + w_0 - y_j)^2 \\) quantifies the error between predictions and actual values. To minimize this loss, partial derivatives with respect to \\( w_0 \\) and \\( w_1 \\) are computed using differentiation rules, guiding weight updates via gradient descent: \\( w_0 \\gets w_0 + \\alpha(y - h_w(x)) \\) and \\( w_1 \\gets w_1 + \\alpha(y - h_w(x))x \\). Similarly, in logistic regression, the derivative of the logistic function \\( g'(z) = g(z)(1 - g(z)) \\) is used to adjust weights. These differentiation rules enable efficient learning from examples by iteratively reducing error."
+          },
+          {
+            "cs_topic": "Learning probabilistic models",
+            "rationale": "Basic differentiation rules are essential in learning probabilistic models, particularly for parameter estimation tasks like maximum likelihood estimation (MLE). MLE involves finding the parameter values that maximize the likelihood function, which quantifies how well the model explains the observed data. To achieve this, one typically computes the derivative of the log-likelihood function with respect to the model parameters and solves for where the derivative equals zero, indicating critical points. For example, in a Bayesian network, the derivative of the log-likelihood function helps identify optimal conditional probabilities. Thus, differentiation provides the mathematical foundation for optimizing probabilistic models efficiently."
+          },
+          {
+            "cs_topic": "Deep learning",
+            "rationale": "Basic differentiation rules are fundamental in deep learning, particularly for optimizing neural networks. During training, the loss function, \\( L(w) \\), quantifies the error between predicted and actual outputs. To minimize this loss, gradient descent is employed, which requires computing partial derivatives of \\( L(w) \\) with respect to model parameters \\( w \\). For example, if \\( L(w) = (y - hw(x))^2 \\), differentiation yields \\( \\frac{\\partial L}{\\partial w_0} = -2(y - hw(x)) \\) and \\( \\frac{\\partial L}{\\partial w_1} = -2(y - hw(x))x \\). These derivatives guide parameter updates to reduce loss. Basic rules like \\( \\frac{d}{dx}x^2 = 2x \\) and the chain rule are essential for deriving gradients efficiently, enabling neural networks to learn from data."
+          },
+          {
+            "cs_topic": "Reinforcement learning",
+            "rationale": "In reinforcement learning, differentiation plays a critical role in optimizing policies and value functions. Specifically, the gradient of an error function, such as \\( E_j(s) = \\frac{1}{2}(\\hat{U}_\\theta(s) - u_j(s))^2 \\), is computed with respect to parameters \\(\\theta_i\\) to minimize prediction errors. Using basic differentiation rules, such as the power rule, we calculate partial derivatives like \\(\\frac{\\partial E_j(s)}{\\partial \\theta_i}\\) to adjust parameters iteratively: \\(\\theta_i \\gets \\theta_i + \\alpha (u_j(s) - \\hat{U}_\\theta(s)) \\frac{\\partial \\hat{U}_\\theta(s)}{\\partial \\theta_i}\\). For example, in Q-learning, these updates refine the Q-function approximation, enabling the agent to generalize from past experiences and improve decision-making. Thus, differentiation underpins the learning process in reinforcement learning algorithms."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Curves and surfaces",
+            "rationale": "Basic differentiation rules are essential in computer science for analyzing and manipulating curves and surfaces, which are fundamental in graphics and geometric modeling. The first derivative of a function, \\(f'(u)\\), provides the slope or direction of the curve at a given point, while the second derivative, \\(f''(u)\\), indicates the rate of change of the slope, helping to understand curvature. For example, in cubic Bézier curves, the first derivative at the endpoints relates to control points, determining tangent directions, and the second derivative describes acceleration or sharpness of the curve. These derivatives enable precise control over smooth transitions and realistic rendering in computer graphics applications."
+          }
+        ]
+      },
+      "topicCode": "Der3",
+      "topicName": "Basic differentiation rules",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "BB",
+      "number_id": 5,
+      "label": "Sequences",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Sequences in calculus are closely tied to gradient descent in computer science, as both involve iterative processes that approach a desired outcome. In gradient descent, the algorithm updates a variable \\(x\\) iteratively using the formula \\(x \\gets x - \\alpha \\nabla f(x)\\), where \\(\\alpha\\) is the step size and \\(\\nabla f(x)\\) is the gradient of the function \\(f(x)\\). This iterative process forms a sequence of values for \\(x\\) that ideally converges to a local minimum of \\(f(x)\\). Understanding sequences helps analyze the convergence behavior of gradient descent, ensuring the sequence approaches the optimal solution. For example, in machine learning, gradient descent is used to minimize loss functions, with the sequence of weights converging to values that improve model accuracy."
+          },
+          {
+            "cs_topic": "Learning theory",
+            "rationale": "In learning theory, sequences play a crucial role in understanding how algorithms improve with increasing data. A sequence, \\( \\{a_n\\} \\), represents a progression of data points or observations, and its behavior as \\( n \\to \\infty \\) helps evaluate the convergence of learning models. For example, machine learning algorithms often aim to approximate a target function \\( f(x) \\) by minimizing error over a sequence of training data. As the size of the dataset grows, the algorithm's predictions typically converge to the true function, assuming the model and hypothesis space are appropriately chosen. This connection highlights the importance of sequences in analyzing the scalability and reliability of learning systems."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Summations",
+            "rationale": "Sequences in calculus form the foundation for understanding summations in computer science, particularly when analyzing algorithm performance. A sequence represents an ordered list of terms, and its convergence determines whether the associated series (sum of terms) has a finite value. In CS, summations often model the running time of iterative algorithms, where the total time is expressed as the sum of time spent in each loop iteration. For example, the worst-case runtime of insertion sort involves summing terms proportional to \\(j\\) for \\(j = 1\\) to \\(n\\), forming a summation \\( \\sum_{j=1}^{n} j \\). Understanding convergence and properties of sequences, such as geometric or harmonic series, helps bound and manipulate these summations effectively."
+          }
+        ]
+      },
+      "topicCode": "SeqSer1",
+      "topicName": "Sequences",
+      "course": "Calculus II",
+      "coreIdea": "Sequences and Series"
+    },
+    {
+      "id": "I",
+      "number_id": 10,
+      "label": "Derivatives as functions",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Understanding derivatives as functions is essential for gradient descent, a key optimization algorithm in machine learning. Gradient descent minimizes a loss function \\(L(w)\\) by iteratively updating parameters \\(w\\) in the direction opposite to the gradient \\(\\nabla L(w)\\), which represents the rate of change of \\(L(w)\\) with respect to \\(w\\). The derivative as a function provides the foundation for calculating gradients, particularly in multivariate contexts where \\(\\nabla L(w)\\) is a vector of partial derivatives. For example, minimizing a quadratic loss function \\(L(w) = w^2\\) involves using \\(\\frac{\\partial L}{\\partial w} = 2w\\) to adjust \\(w\\) iteratively until convergence, illustrating how derivatives guide optimization in parameter spaces."
+          },
+          {
+            "cs_topic": "Regression analysis",
+            "rationale": "In regression analysis, derivatives as functions play a crucial role in optimizing loss functions, which measure the error between predicted and actual values. For example, the mean absolute error (MAE) uses the absolute value function, which is not differentiable at \\(x = 0\\). This lack of differentiability can complicate optimization algorithms that rely on gradient-based methods, as gradients cannot be computed at non-differentiable points. In contrast, differentiable loss functions like mean squared error (MSE) provide smooth gradients, enabling efficient optimization. Understanding derivatives helps computer scientists choose appropriate loss functions and optimization techniques for regression models, ensuring accurate predictions and computational efficiency."
+          },
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Autodifferentiation, a computational technique for efficiently calculating derivatives, is essential for backpropagation in neural networks. Neural networks are composed of layers of interconnected units, each applying an activation function \\( g(x) \\) to weighted inputs. These activation functions, such as the sigmoid function, are differentiable, enabling the calculation of gradients. Backpropagation uses the chain rule to compute the derivative of the loss function with respect to each weight, leveraging the fact that neural networks represent compositions of functions. For instance, in training a network to classify images, gradients guide weight updates to minimize classification errors, ensuring the network learns effectively."
+          },
+          {
+            "cs_topic": "Advanced deep learning",
+            "rationale": "In advanced deep learning, derivatives as functions play a crucial role in optimizing neural networks. The derivative of a function \\( f(x) \\), denoted \\( f'(x) \\), provides the rate of change, which is essential for gradient-based optimization methods like backpropagation. Backpropagation calculates gradients of loss functions with respect to network parameters to update weights and minimize errors. For example, in a multilayer network, the derivative of the activation function at each layer determines how much each weight contributes to the error, guiding adjustments. Understanding derivatives as functions enables efficient computation and generalization, critical for scaling deep learning models effectively."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Computer vision",
+            "rationale": "Edge detection in computer vision relies on derivatives as functions to identify significant changes in image brightness, which correspond to edges. By applying a Gaussian convolution to smooth the image \\(I\\), the gradient \\(\\nabla(I \\ast N_\\sigma)\\) is computed to capture the rate and direction of change in brightness. This process highlights areas where brightness transitions sharply, such as depth discontinuities or shadows. For example, detecting the edge between a desk and a wall involves analyzing the gradient magnitude along a cross-section perpendicular to the edge. Understanding derivatives enables algorithms to abstract complex image data into meaningful contours, facilitating tasks like object recognition and scene analysis."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Signal processing",
+            "rationale": "In signal processing, derivatives are essential for analyzing changes in signals over time or space. The derivative of a function \\( f(t) \\) can be approximated using finite differences, such as \\( \\frac{f(t+\\Delta t) - f(t)}{\\Delta t} \\). This discrete approximation is computationally efficient and can be expressed as a convolution operation, which is fundamental in digital signal processing. For example, detecting edges in an image involves applying a convolution kernel that approximates the derivative of pixel intensity. This connection between calculus and computational techniques enables efficient analysis and transformation of signals in various applications, from audio processing to image recognition."
+          },
+          {
+            "cs_topic": "Computer animation",
+            "rationale": "In computer animation, derivatives play a crucial role in modeling motion and ensuring smooth transitions. The derivative of a position function \\( p(t) \\) with respect to time \\( t \\), denoted \\( p'(t) \\), represents velocity, while the second derivative \\( p''(t) \\) corresponds to acceleration. Animators often use these relationships to create realistic motion by controlling speed and acceleration along curves. For instance, ensuring \\( C^1 \\) continuity (continuous velocity) avoids abrupt changes in motion, while \\( C^2 \\) continuity (smooth acceleration) may be less critical for sudden forces like collisions. Procedural techniques often compute motion by solving differential equations, where derivatives define the behavior of objects over time."
+          }
+        ]
+      },
+      "topicCode": "Der2",
+      "topicName": "Derivatives as functions",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "N",
+      "number_id": 18,
+      "label": "Rates of change and exponential models",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Computer vision",
+            "rationale": "In computer vision, rates of change and exponential models are essential for analyzing image data and detecting features. Edge detection, for instance, identifies regions in an image where brightness changes sharply, corresponding to high spatial gradients \\( \\nabla I(x, y) \\). These gradients represent rates of change in pixel intensity, helping to locate boundaries or transitions in the scene. Similarly, optical flow estimates motion by analyzing changes in pixel positions over time, modeled as \\( v = \\frac{\\Delta x}{\\Delta t} \\), where \\( v \\) is the velocity of movement. Both processes rely on calculus concepts to extract meaningful patterns, enabling tasks like object recognition and motion tracking in dynamic environments."
+          }
+        ]
+      },
+      "topicCode": "Der9",
+      "topicName": "Rates of change and exponential models",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "P",
+      "number_id": 24,
+      "label": "Linear approximations",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Der11",
+      "topicName": "Linear approximations",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "K",
+      "number_id": 12,
+      "label": "The product and quotient rules",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent, a key optimization algorithm in machine learning, relies on calculating derivatives to minimize a loss function. When the loss function involves products or quotients of variables, the product and quotient rules from calculus are essential for computing these derivatives accurately. For example, if the loss function is \\(f(x) = \\frac{g(x)h(x)}{k(x)}\\), the gradient descent algorithm requires the derivative \\(\\frac{d}{dx}f(x)\\), which involves applying both the product rule (\\( \\frac{d}{dx}[g(x)h(x)] = g'(x)h(x) + g(x)h'(x) \\)) and the quotient rule (\\( \\frac{d}{dx}\\left[\\frac{g(x)}{k(x)}\\right] = \\frac{g'(x)k(x) - g(x)k'(x)}{k(x)^2} \\)). These rules ensure precise updates to model parameters, enabling efficient convergence to optimal solutions."
+          },
+          {
+            "cs_topic": "Classification methods",
+            "rationale": "The product and quotient rules in calculus are essential for computing derivatives of complex functions, such as the logistic function used in classification methods like logistic regression. Logistic regression models the probability of a class label using the logistic function \\( f(x) = \\frac{1}{1 + e^{-x}} \\), which requires differentiation during optimization processes like gradient descent. For example, when optimizing the model parameters, the derivative of the logistic function is computed to update weights. The product and quotient rules enable accurate differentiation of composite functions, ensuring reliable convergence in classification tasks across domains like medicine, marketing, and public health."
+          }
+        ]
+      },
+      "topicCode": "Der4",
+      "topicName": "The product and quotient rules",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "L",
+      "number_id": 14,
+      "label": "Trigonometric derivatives",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Trigonometric derivatives are essential in neural networks when using activation functions like sinusoidal or hyperbolic tangent (\\(\\tanh\\)). These functions are differentiable, a critical property for backpropagation, the algorithm used to train neural networks. Backpropagation relies on computing gradients of the loss function with respect to weights, which involves the derivative of the activation function. For example, \\(\\tanh(x)\\) has a derivative \\(1 - \\tanh^2(x)\\), enabling efficient gradient computation during weight updates. Sinusoidal functions, such as \\(\\sin(x)\\) and \\(\\cos(x)\\), also have well-defined derivatives (\\(\\cos(x)\\) and \\(-\\sin(x)\\), respectively), which can be used in specialized neural network architectures for periodic or oscillatory data modeling."
+          },
+          {
+            "cs_topic": "Advanced deep learning",
+            "rationale": "Trigonometric derivatives play a crucial role in advanced deep learning, particularly in optimizing neural networks with nonlinear activation functions. Deep learning models often use activation functions like $\\sin(x)$ or $\\cos(x)$ to introduce nonlinearity, enabling the network to learn complex patterns. Calculating derivatives of these functions is essential for backpropagation, where gradients are computed to update weights and minimize loss. For example, the derivative of $\\sin(x)$, which is $\\cos(x)$, helps determine how changes in input affect the output during training. This connection highlights the importance of calculus in ensuring accurate gradient calculations, which are foundational for the success of deep learning algorithms."
+          }
+        ]
+      },
+      "topicCode": "Der5",
+      "topicName": "Trigonometric derivatives",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "M",
+      "number_id": 16,
+      "label": "Logarithmic and exponential derivatives",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Classification methods",
+            "rationale": "Logarithmic and exponential derivatives are essential in classification methods like logistic regression, where the logistic function \\( g(z) = \\frac{1}{1 + e^{-z}} \\) maps inputs to probabilities. The derivative of this function, \\( g'(z) = g(z)(1 - g(z)) \\), is used in gradient descent to minimize the loss function, which measures prediction error. Calculating these derivatives efficiently is crucial for updating model weights during training. For example, in logistic regression, the derivative of the loss function combines \\( g(z) \\) and \\( g'(z) \\) to adjust weights iteratively, enabling the model to classify data accurately in applications such as credit scoring or medical diagnosis."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Learning from examples",
+            "rationale": "Logarithmic and exponential derivatives are essential in machine learning, particularly in optimizing models like logistic regression. Logistic regression uses the logistic function \\( g(z) = \\frac{1}{1 + e^{-z}} \\), whose derivative \\( g'(z) = g(z)(1 - g(z)) \\) is crucial for gradient-based optimization methods such as gradient descent. These derivatives help compute the gradient of the loss function, guiding updates to model parameters to minimize prediction errors. For example, in logistic regression, the weight update formula \\( w_i \\gets w_i + \\alpha (y - h_w(x)) h_w(x)(1 - h_w(x)) \\) relies on \\( g'(z) \\) to adjust weights effectively. This connection demonstrates how calculus underpins learning algorithms in computer science."
+          },
+          {
+            "cs_topic": "Learning probabilistic models",
+            "rationale": "Logarithmic and exponential derivatives are essential in learning probabilistic models, particularly when optimizing parameters in statistical methods like logistic regression or Bayesian networks. In these models, the log-likelihood function is often used because logarithms simplify complex probability expressions into additive terms, enabling efficient computation of derivatives. For example, in logistic regression, the gradient of the loss function involves the derivative of the logistic function, which is computed using the chain rule. Similarly, in Bayesian parameter estimation, derivatives of log-likelihoods with respect to model parameters help identify optimal values. These derivatives guide optimization algorithms, such as gradient descent, to minimize loss or maximize likelihood, ensuring accurate probabilistic predictions."
+          }
+        ]
+      },
+      "topicCode": "Der6",
+      "topicName": "Logarithmic and exponential derivatives",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "O",
+      "number_id": 19,
+      "label": "The chain rule",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The chain rule in calculus is essential for understanding gradient descent, a fundamental optimization algorithm in computer science. Gradient descent involves iteratively updating parameters to minimize a function, typically a loss function \\(f(x)\\). The chain rule enables the computation of derivatives for composite functions, which is crucial when \\(f(x)\\) depends on intermediate variables. For example, in training a neural network, the loss function depends on weights through multiple layers. Using the chain rule, we compute gradients efficiently by propagating partial derivatives backward through the network. This ensures accurate updates to weights, guiding the model toward optimal performance."
+          },
+          {
+            "cs_topic": "Classification methods",
+            "rationale": "The chain rule is essential in classification methods like logistic regression, where the negative log-likelihood objective function is optimized using gradient-based approaches. Logistic regression uses the logistic function \\( g(z) = \\frac{1}{1 + e^{-z}} \\), which is differentiable and enables smooth updates to model parameters during training. To compute the gradient of the loss function with respect to the weights, the chain rule is applied to handle the composition of functions, such as the logistic function and the linear combination of inputs \\( z = w^T x \\). For example, the derivative of \\( g(z) \\) with respect to \\( w \\) requires \\( \\frac{\\partial g}{\\partial z} \\cdot \\frac{\\partial z}{\\partial w} \\), illustrating how the chain rule facilitates efficient parameter updates in classification tasks."
+          },
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "The chain rule in calculus is fundamental to backpropagation in neural networks, as it enables efficient computation of gradients for weight updates. Neural networks consist of layers where each layer's output is a composition of functions, such as activation functions \\( g(x) \\). During backpropagation, the error gradient at the output layer is propagated backward through the network using the chain rule to compute partial derivatives of the loss function with respect to each weight. For example, if \\( g(x) \\) is the activation function and \\( L \\) is the loss function, the derivative \\( \\frac{\\partial L}{\\partial w} \\) involves \\( g'(x) \\) and intermediate derivatives. This process ensures accurate weight adjustments, optimizing the network's performance."
+          },
+          {
+            "cs_topic": "Advanced deep learning",
+            "rationale": "The chain rule in calculus is fundamental to advanced deep learning, particularly in the backpropagation algorithm used to train neural networks. Backpropagation computes gradients of a loss function \\( L \\) with respect to network parameters by applying the chain rule across layers. For a neural network with layers \\( f_1, f_2, \\dots, f_n \\), the gradient of \\( L \\) with respect to earlier layers depends on the composition of functions: \\( L'(x) = f_n'(f_{n-1}(\\dots f_1(x))) \\cdot f_{n-1}'(\\dots) \\cdot \\dots \\cdot f_1'(x) \\). This efficient gradient computation enables optimization of complex, multilayer networks, which are central to tasks like image recognition and natural language processing."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Learning from examples",
+            "rationale": "The chain rule is essential in machine learning, particularly for optimizing models through gradient descent. Gradient descent minimizes a loss function \\( L(w) \\), which quantifies prediction errors, by iteratively updating model parameters \\( w \\) in the direction of steepest descent. The chain rule enables the computation of partial derivatives when \\( L(w) \\) depends on intermediate variables, such as the output of a hypothesis function \\( h_w(x) \\). For example, in linear regression, the gradient of \\( L(w) = (y - h_w(x))^2 \\) with respect to \\( w \\) involves applying the chain rule to \\( h_w(x) = w_1x + w_0 \\). This systematic differentiation is crucial for learning from examples and refining model predictions."
+          },
+          {
+            "cs_topic": "Learning probabilistic models",
+            "rationale": "The chain rule in calculus is essential for learning probabilistic models, particularly in parameter estimation tasks like Maximum Likelihood Estimation (MLE). Probabilistic models often involve optimizing a likelihood function, which depends on multiple parameters. To compute the gradient of the likelihood with respect to these parameters, the chain rule is applied to handle nested dependencies between variables. For example, in Bayesian networks, the likelihood of observed data may depend on conditional probabilities, which are functions of model parameters. Using the chain rule allows efficient computation of gradients, enabling iterative optimization methods like gradient descent to refine parameters and improve model accuracy."
+          },
+          {
+            "cs_topic": "Deep learning",
+            "rationale": "The chain rule is fundamental in deep learning for computing gradients during backpropagation, which is essential for training neural networks. In backpropagation, the loss function \\( L \\) is minimized by adjusting weights \\( w \\) using gradient descent. The chain rule enables the calculation of partial derivatives of \\( L \\) with respect to weights across multiple layers. For example, if \\( L \\) depends on intermediate activations \\( a \\), and \\( a \\) depends on weights \\( w \\), the chain rule computes \\( \\frac{\\partial L}{\\partial w} = \\frac{\\partial L}{\\partial a} \\cdot \\frac{\\partial a}{\\partial w} \\). This recursive application allows efficient propagation of gradients through the network, ensuring accurate weight updates."
+          }
+        ]
+      },
+      "topicCode": "Der7",
+      "topicName": "The chain rule",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "S",
+      "number_id": 27,
+      "label": "L'Hôpital's rule",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Running time analysis",
+            "rationale": "L'Hôpital's Rule is essential in running time analysis when comparing the growth rates of functions, particularly in asymptotic notation like \\(o\\), \\(\\omega\\), and \\(\\Theta\\). These notations often involve limits of ratios of functions as input size \\(n \\to \\infty\\). When these ratios result in indeterminate forms (e.g., \\(\\frac{\\infty}{\\infty}\\)), L'Hôpital's Rule provides a systematic way to evaluate the limit by differentiating the numerator and denominator. For example, to determine if \\(f(n) \\in o(g(n))\\), we compute \\(\\lim_{n \\to \\infty} \\frac{f(n)}{g(n)}\\). If this limit is 0, \\(f(n)\\) grows asymptotically slower than \\(g(n)\\). This analysis is crucial for comparing algorithm efficiencies and selecting optimal solutions for large inputs."
+          }
+        ]
+      },
+      "topicCode": "Der16",
+      "topicName": "L'Hôpital's rule",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "W",
+      "number_id": 30,
+      "label": "Newton's method",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Newton's method and gradient descent are both optimization techniques used in computer science, but they differ in their reliance on derivatives. Gradient descent is a first-order optimization method that uses the gradient (‚àáf(x)) to iteratively move towards a function's minimum by updating \\(x \\leftarrow x - \\alpha \\nabla f(x)\\), where \\(\\alpha\\) is the step size. Newton's method, a second-order optimization technique, incorporates the second derivative (Hessian matrix, \\(H\\)) to refine updates as \\(x \\leftarrow x - H^{-1} \\nabla f(x)\\), allowing it to converge faster near minima by approximating the function as quadratic. For example, in machine learning, gradient descent is commonly used for minimizing loss functions, while Newton's method can be applied when higher precision is needed and computational resources allow."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Search in complex environments",
+            "rationale": "Newton's method is a powerful tool in computer science for solving optimization problems in complex environments, particularly when searching for solutions in continuous spaces. It refines estimates for the roots of a function \\( g(x) = 0 \\) using the update formula \\( x \\leftarrow x - \\frac{g(x)}{g'(x)} \\). In optimization, this translates to finding points where the gradient \\( \\nabla f(x) \\) is zero, indicating local maxima, minima, or saddle points. For example, in high-dimensional search spaces, Newton's method can efficiently navigate toward optimal solutions by leveraging gradient and Hessian information, though approximations may be necessary due to computational costs. This method is especially useful in scenarios like optimizing resource placement or navigating belief-state spaces in partially observable environments."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Implicit modeling",
+            "rationale": "Newton's method is a numerical technique for finding roots of equations, and it plays a crucial role in implicit modeling within computer graphics. Implicit modeling defines surfaces or curves using equations of the form \\(f(x, y, z) = 0\\), where \\(f\\) represents the implicit function. To render these surfaces, intersections between rays and the implicit function must be computed. Newton's method iteratively refines guesses for the intersection point by leveraging the derivative of \\(f\\) to approximate solutions efficiently. For example, finding the intersection of a ray with a sphere defined by \\(f(x, y, z) = x^2 + y^2 + z^2 - r^2\\) involves solving \\(f(x, y, z) = 0\\) using Newton's method, enabling accurate visualization of implicit surfaces in 3D graphics."
+          }
+        ]
+      },
+      "topicCode": "Der18",
+      "topicName": "Newton's method",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "R",
+      "number_id": 26,
+      "label": "The shape of graphs and concavity",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent is a key optimization algorithm in machine learning, relying on calculus concepts like concavity and the shape of graphs. The loss function \\( L(w) \\), which measures prediction error, often exhibits convexity in simple models like linear regression. Convexity ensures a single global minimum, simplifying convergence analysis. Gradient descent iteratively updates parameters \\( w \\) using \\( w_i \\leftarrow w_i - \\alpha \\frac{\\partial L}{\\partial w_i} \\), where \\( \\alpha \\) is the learning rate and \\( \\frac{\\partial L}{\\partial w_i} \\) indicates the slope. Concavity helps determine whether the algorithm is approaching a minimum efficiently. For example, in logistic regression, the chain rule is applied to compute gradients when the loss function is non-linear, ensuring accurate updates."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Approximation algorithms",
+            "rationale": "The concept of concavity and the shape of graphs in calculus is essential for understanding and designing approximation algorithms in computer science. Concavity, determined by the second derivative \\( f''(x) \\), indicates whether a function curves upwards (concave up) or downwards (concave down). This property helps identify local minima or maxima, which are critical in optimization problems. For example, the Newton-Raphson method uses derivatives to approximate roots of functions by iteratively updating \\( x \\) based on \\( f'(x) \\) and \\( f''(x) \\). In CS, this method is applied to minimize functions in machine learning or computational geometry, where concavity guides efficient convergence to optimal solutions. Understanding graph shapes ensures accurate algorithm design and performance."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Deep learning",
+            "rationale": "The shape of graphs and concavity are crucial in deep learning, particularly in understanding activation functions within neural networks. Activation functions, such as sigmoid or ReLU, determine the output of neurons and influence the network's ability to model nonlinear relationships. The derivative \\( g'(x) \\) of an activation function reflects its slope, which impacts gradient-based optimization methods like backpropagation. For example, sigmoid functions are differentiable and exhibit concavity changes, enabling smooth transitions in outputs but may suffer from the \"vanishing gradient\" problem when \\( g'(x) \\) approaches zero for large inputs. This problem affects learning efficiency, highlighting the importance of function shape in designing effective neural networks."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Signal processing",
+            "rationale": "The second derivative, \\(f''(x)\\), reveals the concavity of a function, which is crucial in signal processing for analyzing how signals change over time or space. In computational applications, \\(f''(x)\\) can be approximated using finite differences, enabling discrete representation of continuous functions. This approximation can be expressed as a convolution, a key operation in signal processing that combines input signals with filters to extract features or smooth data. For example, detecting edges in an image involves applying a convolution with a kernel approximating \\(f''(x)\\), highlighting regions of rapid intensity change. Understanding concavity thus bridges calculus and computational signal analysis."
+          }
+        ]
+      },
+      "topicCode": "Der14",
+      "topicName": "The shape of graphs and concavity",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "Q",
+      "number_id": 25,
+      "label": "Extreme values",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model overfitting and underfitting",
+            "rationale": "Extreme values in calculus are critical for understanding overfitting and underfitting in machine learning models. A loss function \\( L(w) \\), which quantifies prediction error, often depends on model parameters \\( w \\). Minimizing \\( L(w) \\) involves finding extreme values, typically global minima, to optimize model performance. Overfitting occurs when \\( L(w) \\) is minimized excessively on training data, capturing noise rather than general patterns, while underfitting happens when \\( L(w) \\) remains high due to insufficient model complexity. For example, in linear regression, \\( L(w) = \\sum_j (w_1 x_j + w_0 - y_j)^2 \\) is convex, ensuring a single global minimum. Identifying this minimum balances model accuracy and generalization, a key computational task in machine learning."
+          },
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent, a fundamental optimization algorithm in computer science, relies on the calculus concept of extreme values to minimize a loss function \\( L(w) \\) over a parameter space \\( w \\). By iteratively updating parameters using \\( w_i \\leftarrow w_i - \\alpha \\frac{\\partial L(w)}{\\partial w_i} \\), where \\( \\alpha \\) is the learning rate, the algorithm follows the gradient to approach a local minimum. Calculus ensures the gradient points in the direction of steepest descent, guiding convergence. For example, in linear regression, the loss function is convex, guaranteeing a unique global minimum. Gradient descent applies this principle to optimize models efficiently, even in high-dimensional spaces."
+          },
+          {
+            "cs_topic": "Regression analysis",
+            "rationale": "Extreme values in calculus are crucial in regression analysis, where the goal is to optimize a loss function to fit a model to data. Regression involves minimizing a loss function, such as the sum of squared errors \\( \\text{Loss}(w) = \\sum_{j}(w_1x_j + w_0 - y_j)^2 \\), to find the parameters \\( w_0 \\) and \\( w_1 \\) that best predict the target variable. This process relies on identifying the global minimum of the convex loss function, which corresponds to the optimal parameter values. For example, in linear regression, calculus techniques like computing derivatives help determine the slope and intercept that minimize prediction error, ensuring accurate model fitting."
+          },
+          {
+            "cs_topic": "Classification methods",
+            "rationale": "In classification methods, particularly for continuous models, calculus plays a key role in optimizing functions like loss or likelihood functions to improve model accuracy. Extreme values‚Äîmaximums and minimums‚Äîare critical for identifying optimal parameter values that minimize error or maximize predictive performance. For example, in decision-tree learning, split points are chosen to maximize information gain, which involves evaluating continuous-valued attributes efficiently. Similarly, in probabilistic models like Naive Bayes, maximum-likelihood estimation often requires finding parameter values that optimize the likelihood function. These optimization tasks rely on calculus concepts such as differentiation to locate extreme values, ensuring the model generalizes well to unseen data."
+          },
+          {
+            "cs_topic": "Probabilistic modeling",
+            "rationale": "In probabilistic modeling, determining the optimal parameters for a probability distribution often involves finding extreme values of a function, such as the likelihood or posterior probability. For instance, in Maximum Likelihood Estimation (MLE) or Maximum a Posteriori (MAP) estimation, the goal is to identify the parameter values that maximize the likelihood \\( P(D|\\theta) \\) or the posterior \\( P(\\theta|D) \\), respectively, where \\( \\theta \\) represents the parameters and \\( D \\) is the observed data. This optimization process relies on calculus techniques for locating maxima or minima, such as setting the derivative of the function to zero and solving for critical points. These methods are foundational in training probabilistic models, enabling accurate predictions and inference in applications like Bayesian networks or density estimation."
+          },
+          {
+            "cs_topic": "Topic modeling",
+            "rationale": "Extreme values in calculus are critical for optimizing functions, which is essential in topic modeling within computer science. Topic modeling often employs the Expectation-Maximization (EM) algorithm to estimate parameters in probabilistic models, especially when latent variables are involved. The maximization step in EM requires identifying extreme values‚Äîspecifically, the maximum of a likelihood function \\( L(\\theta) \\)‚Äîto refine model parameters iteratively. For instance, in learning a Bayesian network with hidden variables, the EM algorithm optimizes conditional probabilities by maximizing \\( L(\\theta) \\) over the parameter space. This connection highlights how calculus-based optimization techniques underpin efficient learning in probabilistic models used for tasks like text analysis and clustering."
+          }
+        ]
+      },
+      "topicCode": "Der12",
+      "topicName": "Extreme values",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "U",
+      "number_id": 29,
+      "label": "Implicit differentiation",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Computer Graphics": [
+          {
+            "cs_topic": "Mathematics of vectors, curves, and surfaces",
+            "rationale": "Implicit differentiation is essential in computer graphics for working with implicit equations that define curves, surfaces, and volumes. Implicit equations, such as \\( f(x, y) = 0 \\), describe geometric objects by specifying conditions that points must satisfy to lie on the object. Implicit differentiation allows us to compute derivatives of these equations without explicitly solving for one variable in terms of another, which is often impractical for complex shapes. For example, the gradient of \\( f(x, y) = x^2 + y^2 - r^2 \\), representing a circle, can be used to determine normals at points on the curve, aiding in shading and rendering. This technique simplifies geometric operations like blending and intersection in modeling."
+          },
+          {
+            "cs_topic": "Curves and surfaces",
+            "rationale": "Implicit differentiation is essential in computer graphics for working with curves and surfaces defined by implicit equations. An implicit curve is represented by an equation \\( f(x, y) = 0 \\), where \\( f(x, y) \\) is a scalar function. Implicit differentiation allows us to compute derivatives of \\( y \\) with respect to \\( x \\) without explicitly solving for \\( y \\), which is particularly useful when the curve's equation is complex or cannot be expressed explicitly. For example, the implicit equation of a circle, \\( f(x, y) = x^2 + y^2 - r^2 = 0 \\), can be differentiated to find the slope at any point on the curve. This technique is critical in rendering smooth surfaces and calculating normals for lighting and shading in 3D graphics."
+          },
+          {
+            "cs_topic": "Implicit modeling",
+            "rationale": "Implicit differentiation in calculus is essential for understanding implicit modeling in computer graphics, where shapes and surfaces are defined by implicit equations of the form \\( f(x, y, z) = 0 \\). These equations describe curves or surfaces without explicitly solving for one variable in terms of others. For example, a circle can be represented implicitly as \\( f(x, y) = x^2 + y^2 - r^2 = 0 \\). Implicit differentiation allows us to compute derivatives of such functions, which is crucial for tasks like calculating normals to surfaces or gradients in rendering. In implicit modeling, these derivatives enable operations like blending, deformation, and collision detection, enhancing geometric flexibility in 3D design."
+          }
+        ]
+      },
+      "topicCode": "Der8",
+      "topicName": "Implicit differentiation",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "AJ",
+      "number_id": 21,
+      "label": "Integration by substitution",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Int7",
+      "topicName": "Integration by substitution",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AL",
+      "number_id": 22,
+      "label": "Inverse trigonometric integrals",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Int13",
+      "topicName": "Inverse trigonometric integrals",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AB",
+      "number_id": 20,
+      "label": "Hyperbolic functions",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Hyperbolic functions, such as \\(\\tanh(x)\\), play a crucial role in neural networks as activation functions. These functions are nonlinear and differentiable, enabling the network to model complex, nonlinear relationships between inputs and outputs. For example, \\(\\tanh(x)\\) maps real numbers to the range \\([-1, 1]\\), providing a smooth gradient for optimization during backpropagation. This property ensures efficient learning by minimizing issues like vanishing gradients. In practice, \\(\\tanh(x)\\) is often used in hidden layers to introduce nonlinearity, allowing the network to approximate intricate functions. For instance, in a classification task, \\(\\tanh(x)\\) can help the network separate data points that are not linearly separable."
+          },
+          {
+            "cs_topic": "Advanced deep learning",
+            "rationale": "Hyperbolic functions, such as $\\sinh(x)$ and $\\cosh(x)$, are essential in advanced deep learning due to their role in activation functions and optimization processes. These functions exhibit smooth gradients, which are crucial for backpropagation in neural networks, enabling efficient weight updates during training. For instance, the hyperbolic tangent ($\\tanh(x)$) is a commonly used activation function that maps inputs to a range of $[-1, 1]$, improving gradient flow compared to sigmoid functions. This property helps mitigate issues like vanishing gradients, especially in deep architectures. Understanding hyperbolic functions enhances the ability to design and optimize neural networks for complex tasks, such as reinforcement learning or function approximation in dynamic environments."
+          }
+        ]
+      },
+      "topicCode": "Int12",
+      "topicName": "Hyperbolic functions",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "BJ",
+      "number_id": 23,
+      "label": "Parametric equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Computer Graphics": [
+          {
+            "cs_topic": "Mathematics of vectors, curves, and surfaces",
+            "rationale": "Parametric equations are essential in computer science for representing vectors, curves, and surfaces in geometric modeling and computer graphics. A parametric curve is defined by vector-valued functions \\( p(t) = [g(t), h(t)] \\), where \\( t \\) is a parameter that continuously varies, generating points along the curve. This approach allows precise control over the shape and behavior of curves, enabling smooth transitions and complex geometries. For instance, in animation, parametric equations can describe the trajectory of a moving object, where \\( g(t) \\) and \\( h(t) \\) represent its position over time. Additionally, derivatives of parametric functions provide tangent and normal vectors, critical for calculating lighting and surface interactions in 3D rendering."
+          },
+          {
+            "cs_topic": "Curves and surfaces",
+            "rationale": "Parametric equations are essential in computer science for modeling curves and surfaces, as they allow precise control over geometric shapes using a parameter \\( t \\). A parametric curve is defined by functions \\( x = g(t) \\) and \\( y = h(t) \\), where \\( t \\) continuously varies to trace the curve. This is particularly useful in computer graphics to represent complex shapes, such as a curve composed of line segments and arcs. Arc-length parameterization, where \\( t \\) corresponds to the distance along the curve, ensures uniform traversal speed, which is critical for animations or simulations. For example, rendering a smooth transition along a circular arc requires calculating positions using \\( t \\) mapped to arc length."
+          }
+        ]
+      },
+      "topicCode": "ParamPol1",
+      "topicName": "Parametric equations",
+      "course": "Calculus II",
+      "coreIdea": "Parametric Equations and Polar Coordinates"
+    },
+    {
+      "id": "AM",
+      "number_id": 13,
+      "label": "Integration by parts",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "AdvInt1",
+      "topicName": "Integration by parts",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "T",
+      "number_id": 28,
+      "label": "Antiderivatives",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Int1",
+      "topicName": "Antiderivatives",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "BH",
+      "number_id": 17,
+      "label": "Taylor series",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The Taylor series is fundamental in approximating complex functions using polynomials, which directly supports optimization techniques like gradient descent in computer science. Gradient descent iteratively minimizes a loss function by updating parameters in the direction of the negative gradient. When higher-order derivatives are included, as in second-order optimization methods like Newton-Raphson, the Taylor series provides a local polynomial approximation of the function, enabling more precise updates. For example, Newton-Raphson uses the second derivative (Hessian matrix) to refine parameter updates, improving convergence speed compared to first-order methods. This connection highlights how calculus tools like Taylor series enhance computational efficiency in machine learning and optimization tasks."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Robotics",
+            "rationale": "The Taylor series is essential in robotics for approximating nonlinear functions with simpler linear models, enabling efficient computation and real-time decision-making. For instance, in robot motion planning, a nonlinear motion model \\( f(x_t, a_t) \\) can be linearized around the mean state estimate \\( \\mu_t \\) using a first-degree Taylor expansion: \\( \\tilde{f}(x_t, a_t) = f(\\mu_t, a_t) + F_t(x_t - \\mu_t) \\), where \\( F_t \\) is the Jacobian matrix. This linearization simplifies calculations, such as predicting the robot's future state or updating uncertainty in localization tasks, as seen in extended Kalman filters. By leveraging Taylor series, robots can efficiently navigate and adapt to dynamic environments."
+          }
+        ]
+      },
+      "topicCode": "SeqSer7",
+      "topicName": "Taylor series",
+      "course": "Calculus II",
+      "coreIdea": "Sequences and Series"
+    },
+    {
+      "id": "BK",
+      "number_id": 15,
+      "label": "Polar coordinates",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Data analysis",
+            "rationale": "Polar coordinates provide an alternative representation of data, using radius \\( r \\) and angle \\( \\theta \\) instead of Cartesian \\( (x, y) \\). This transformation is valuable in data analysis, particularly when working with circular or periodic patterns, as polar coordinates can simplify feature extraction and visualization. For example, in machine learning, nonlinear transformations like the kernel trick in Support Vector Machines (SVMs) embed data into higher-dimensional spaces for linear separability. Similarly, polar transformations can reveal structure or clusters in datasets that are obscured in Cartesian form, aiding dimensionality reduction and anomaly detection in visualization pipelines. This flexibility enhances computational efficiency and interpretability in complex datasets."
+          }
+        ]
+      },
+      "topicCode": "ParamPol2",
+      "topicName": "Polar coordinates",
+      "course": "Calculus II",
+      "coreIdea": "Parametric Equations and Polar Coordinates"
+    },
+    {
+      "id": "V",
+      "number_id": 19,
+      "label": "Related rates",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Der10",
+      "topicName": "Related rates",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "X",
+      "number_id": 26,
+      "label": "Optimization",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent is a computational method for optimization that relies on the gradient, ‚àáf, to iteratively adjust parameters to minimize a function, often called the objective or loss function. In calculus, optimization involves finding critical points where the derivative (or gradient in multivariate cases) equals zero, indicating maxima, minima, or saddle points. Gradient descent applies this principle by using the gradient to determine the steepest descent direction, updating parameters proportionally to the negative gradient. For example, in machine learning, gradient descent minimizes a loss function \\( L(\\theta) \\) to optimize model parameters \\( \\theta \\). This iterative approach is crucial when closed-form solutions are impractical, as in training neural networks."
+          },
+          {
+            "cs_topic": "Regularization",
+            "rationale": "Optimization in calculus involves finding the minimum or maximum of a function, which is critical in computer science for tasks like model training. Regularization, a technique in machine learning, explicitly applies optimization principles to balance empirical loss and model complexity. By introducing a penalty term \\( \\lambda \\cdot \\text{Complexity}(h) \\) into the cost function \\( \\text{Cost}(h) = \\text{EmpLoss}(h) + \\lambda \\cdot \\text{Complexity}(h) \\), regularization ensures that the optimization process avoids overfitting by preferring simpler models. For example, in linear regression, \\( L_1 \\) or \\( L_2 \\) regularization penalizes large coefficients, guiding the optimization to select models that generalize better to unseen data. This connection highlights how calculus-based optimization underpins robust machine learning techniques."
+          },
+          {
+            "cs_topic": "Regression analysis",
+            "rationale": "In regression analysis, optimization plays a crucial role in determining the best-fit model by minimizing a loss function, typically the sum of squared errors \\( L(w_0, w_1) = \\sum_j (w_1 x_j + w_0 - y_j)^2 \\). Calculus provides the tools to find the global minimum of this convex function, ensuring the optimal weights \\( w_0 \\) and \\( w_1 \\) for the regression line. For linear regression, this often involves solving for the gradient and using techniques like gradient descent when a closed-form solution is unavailable. For example, fitting house prices to floor space data involves minimizing the squared error between predicted and actual prices, a direct application of optimization principles."
+          },
+          {
+            "cs_topic": "Classification methods",
+            "rationale": "In classification problems, optimization plays a critical role in training models to accurately predict outcomes. Calculus-based optimization techniques, such as minimizing a loss function \\( L(x, y, \\hat{y}) \\), are used to adjust model parameters so that the predicted values \\( \\hat{y} = h(x) \\) closely match the true values \\( y = f(x) \\). For example, in supervised learning, the loss function quantifies the error between predictions and actual labels, guiding the model to improve its accuracy. Gradient descent, a calculus-based method, iteratively minimizes the loss by computing derivatives to find optimal parameter values. This ensures the classifier generalizes well to unseen data, a cornerstone of effective machine learning."
+          },
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Optimization in calculus is central to training neural networks, as the process involves finding the optimal set of weights \\( w \\) that minimize a loss function \\( L(w) \\). The loss function quantifies the error between the network's predictions and the actual target values. Using techniques like gradient descent, the weights are iteratively updated to converge toward values that reduce \\( L(w) \\) as much as possible. For example, in a neural network with a sigmoid activation function \\( g \\), the output \\( a_j = g\\left(\\sum_{i=0}^n w_{i,j} a_i\\right) \\) depends on the weights \\( w_{i,j} \\). Optimizing these weights ensures the network learns effectively, enabling tasks like image classification or regression."
+          },
+          {
+            "cs_topic": "Probabilistic modeling",
+            "rationale": "Optimization in calculus plays a crucial role in probabilistic modeling within computer science, particularly in parameter learning for models like Bayesian networks or Gaussian distributions. Probabilistic models often require finding optimal parameters that maximize a likelihood function or posterior probability, such as Maximum Likelihood Estimation (MLE) or Maximum a Posteriori (MAP). These optimization tasks involve identifying values of parameters \\( \\theta \\) that minimize or maximize a function \\( f(\\theta) \\), often derived from probability density functions or conditional probabilities. For example, fitting a Gaussian distribution \\( N(\\mu, \\sigma^2) \\) to data requires optimizing \\( \\mu \\) and \\( \\sigma^2 \\) to best represent the observed data, ensuring accurate predictions and robust decision-making."
+          },
+          {
+            "cs_topic": "Graphical models",
+            "rationale": "Optimization in calculus is crucial for graphical models in computer science, as these models often rely on finding optimal configurations or probabilities. Graphical models, such as Bayesian networks or decision networks, represent relationships between variables and are used in tasks like probabilistic inference or constraint satisfaction. Optimization techniques, including gradient-based methods or Newton-Raphson updates, help minimize or maximize objective functions, such as likelihoods or costs, within these models. For example, in a Bayesian network, optimization can determine the most probable explanation for observed data by maximizing the posterior probability. This connection highlights how calculus-based optimization underpins efficient computation in graphical models."
+          },
+          {
+            "cs_topic": "Advanced deep learning",
+            "rationale": "Optimization in calculus is fundamental to advanced deep learning, as it underpins the training of neural networks. In deep learning, optimization techniques are used to minimize a loss function \\( L(\\mathbf{w}) \\), where \\( \\mathbf{w} \\) represents the weights of the network. Calculus concepts such as gradients and second-order derivatives are employed to navigate the weight space and converge toward a global or local minimum. For example, gradient descent, a common optimization algorithm, iteratively updates weights using the gradient \\( \\nabla L(\\mathbf{w}) \\) to reduce error. Efficient optimization ensures better generalization and performance, which is critical for complex tasks like image recognition or natural language processing."
+          },
+          {
+            "cs_topic": "Topic modeling",
+            "rationale": "Optimization in calculus is essential for fitting topic models in computer science, particularly when using the Expectation-Maximization (EM) algorithm. The maximization step in EM involves finding the parameters that maximize a likelihood function, which requires solving optimization problems. For example, in topic modeling, the likelihood function \\(L(\\theta)\\) represents how well a probabilistic model explains observed data, such as word distributions across topics. Calculus techniques, such as setting \\(\\frac{\\partial L}{\\partial \\theta} = 0\\) to locate critical points, are used to iteratively refine parameters until convergence. This connection highlights how mathematical optimization underpins efficient algorithms for analyzing large-scale text data."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Matrix operations",
+            "rationale": "Optimization in calculus is crucial for solving problems in computer science, particularly in matrix operations. Many computational tasks, such as linear regression, involve minimizing or maximizing an objective function. For example, in linear regression, the goal is to minimize the loss function \\( L(w_0, w_1) = \\sum_{j}(w_1x_j + w_0 - y_j)^2 \\), which measures the error between predicted and actual values. Matrix operations, such as multiplication and inversion, are integral to solving these optimization problems efficiently, especially when dealing with systems of linear equations or least-squares approximations. These techniques enable scalable solutions to real-world problems like data fitting and resource allocation."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Search in complex environments",
+            "rationale": "Optimization in calculus is directly applicable to search problems in computer science, where the goal is to find the best solution within a complex environment. Search algorithms often aim to minimize or maximize a cost function, which mirrors the calculus concept of finding extrema of a function \\(f(x)\\). For example, in robotic navigation, the state space represents possible paths, and optimization techniques are used to identify the path with minimal cost, such as shortest distance or least energy consumption. Methods like simulated annealing or genetic algorithms leverage optimization principles to explore solutions efficiently, demonstrating the interplay between calculus-based optimization and computational search strategies."
+          },
+          {
+            "cs_topic": "Learning from examples",
+            "rationale": "Optimization in calculus plays a critical role in machine learning, particularly in learning from examples. Machine learning models often aim to minimize a loss function \\( L(w) \\), which quantifies the error between predicted outputs and actual data. This process involves finding optimal parameters \\( w \\) (e.g., weights in linear regression) that minimize \\( L(w) \\). For example, in linear regression, the loss function \\( L(w_0, w_1) = \\sum_j (w_1 x_j + w_0 - y_j)^2 \\) is convex, ensuring a single global minimum. Calculus techniques, such as gradient descent, are used to iteratively adjust \\( w \\) toward this minimum, enabling the model to learn effectively from data."
+          },
+          {
+            "cs_topic": "Learning probabilistic models",
+            "rationale": "Optimization in calculus is central to learning probabilistic models in computer science, particularly for parameter estimation tasks like Maximum Likelihood Estimation (MLE) and Maximum a Posteriori (MAP) estimation. These methods aim to find the optimal parameters \\(\\theta\\) that maximize a likelihood function \\(L(\\theta)\\) or a posterior probability \\(P(\\theta | \\text{data})\\). For example, MAP estimation involves solving an optimization problem to identify the most probable hypothesis given prior beliefs and observed data, as opposed to performing complex summations or integrations. This connection highlights how calculus-based optimization techniques enable efficient learning in probabilistic models, which are foundational in areas like Bayesian networks and density estimation."
+          },
+          {
+            "cs_topic": "Deep learning",
+            "rationale": "Optimization in calculus is fundamental to deep learning, where the goal is to minimize a loss function that quantifies prediction errors. In deep learning, models adjust parameters (weights and biases) to reduce the loss, often using gradient descent methods. Gradient descent iteratively updates parameters by computing the gradient of the loss function with respect to each parameter, guiding the model toward optimal values. For example, in training a neural network, the loss function might measure the difference between predicted and actual outputs. By minimizing this loss, the model improves its accuracy. This process directly applies calculus concepts like derivatives and critical points to achieve optimal performance."
+          },
+          {
+            "cs_topic": "Robotics",
+            "rationale": "Optimization in calculus plays a critical role in robotics, particularly in designing controllers that guide robots to achieve specific objectives efficiently. By leveraging gradients and cost functions, optimal controllers adjust robot actions in real-time to minimize errors or maximize performance metrics, such as energy efficiency or path safety. For example, potential field techniques use a cost function combining distance to obstacles and proximity to a goal, enabling robots to navigate while avoiding collisions. Calculus-based optimization ensures that robots can adapt dynamically to environmental changes, improving their ability to follow paths or achieve tasks with precision and reliability."
+          }
+        ]
+      },
+      "topicCode": "Der17",
+      "topicName": "Optimization",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "Y",
+      "number_id": 22,
+      "label": "The mean value theorem",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Der13",
+      "topicName": "The mean value theorem",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "Z",
+      "number_id": 24,
+      "label": "Graphing with derivatives",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Der15",
+      "topicName": "Graphing with derivatives",
+      "course": "Calculus I",
+      "coreIdea": "Derivatives"
+    },
+    {
+      "id": "AA",
+      "number_id": 29,
+      "label": "Introduction to integrals and area approximation",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model evaluation",
+            "rationale": "In machine learning, evaluating model performance often involves calculating metrics like the area under the curve (AUC) for a receiver operating characteristic (ROC) curve. This metric quantifies how well a model distinguishes between classes, which directly relates to the calculus concept of integrals. The AUC is computed as \\( \\int_{x_1}^{x_2} f(x) \\, dx \\), representing the total area under the curve \\( f(x) \\) between \\( x_1 \\) and \\( x_2 \\). Since exact integration is often infeasible for complex models, numerical approximation methods are employed, similar to those used in calculus for estimating areas. For example, approximating AUC helps compare classifiers in scenarios like medical diagnosis, where accurate predictions are critical."
+          },
+          {
+            "cs_topic": "Regression analysis",
+            "rationale": "In regression analysis, integrals play a crucial role in approximating areas under curves, which are essential for evaluating confidence intervals and error metrics. For example, the loss function in linear regression, often expressed as \\( \\sum_{j}(w_1x_j + w_0 - y_j)^2 \\), can be analyzed using integral approximations to understand its behavior over continuous domains. Similarly, bounding summations with integrals, as shown in numerical methods, helps approximate discrete data trends with continuous functions. This connection allows computer scientists to leverage calculus techniques, such as area approximation, to optimize models and assess their reliability in predicting outcomes."
+          },
+          {
+            "cs_topic": "Classification methods",
+            "rationale": "In classification methods, evaluating the performance of a model often involves metrics derived from calculus concepts, such as the area under the curve (AUC) of a receiver operating characteristic (ROC) curve. The AUC represents the integral of the curve \\( \\int_{x \\in S} f(x) \\, dx \\), where \\( f(x) \\) is the classifier's true positive rate as a function of the false positive rate over a region \\( S \\). This integral quantifies the model's ability to distinguish between classes. Additionally, Gaussian-based classifiers use the error function, which is closely tied to integral approximations. For example, in supervised learning, the AUC helps compare models by summarizing their classification accuracy across thresholds, directly linking calculus to decision-making in machine learning."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Summations",
+            "rationale": "In computer science, summations are often used to analyze algorithm performance, such as calculating the total running time of iterative loops. Calculus introduces integrals as a tool for approximating areas under curves, which can also be applied to bound discrete summations. For example, a summation \\( \\sum_{k=m}^{n} f(k) \\), where \\( f(k) \\) is a monotonically increasing function, can be approximated using integrals: \\( \\int_{m}^{n} f(x) \\, dx \\leq \\sum_{k=m}^{n} f(k) \\leq \\int_{m}^{n+1} f(x) \\, dx \\). This connection is particularly useful in algorithm analysis, where bounding summations helps estimate computational complexity. Visualizing summations as areas of rectangles and integrals as the shaded region under a curve reinforces this relationship."
+          },
+          {
+            "cs_topic": "Probabilistic and randomized algorithms",
+            "rationale": "The concept of integrals and area approximation is foundational in probabilistic and randomized algorithms, particularly in Monte Carlo methods. Integrals are used to compute expected values or probabilities by summing over continuous spaces, which is analogous to approximating areas under curves using Riemann sums. In computer science, Monte Carlo integration leverages random sampling to estimate the value of definite integrals, especially when analytical solutions are infeasible. For example, to estimate the expected value of a function \\( f(x) \\) over a domain \\( S \\), random samples \\( x_i \\) are drawn, and the average \\( \\frac{1}{N} \\sum_{i=1}^N f(x_i) \\) approximates the integral \\( \\int_S f(x) dx \\). This approach is critical in graphics, optimization, and algorithm analysis, where probabilistic techniques simplify complex computations."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Signal processing",
+            "rationale": "In signal processing, integrals play a crucial role in defining convolution, a fundamental operation used for filtering and reconstructing signals. Convolution combines two functions, \\(f\\) and \\(g\\), to produce a new function \\(f \\ast g\\), defined as \\( (f \\ast g)(x) = \\int_{-\\infty}^{\\infty} f(t)g(x-t) \\, dt \\). This integral represents the area under the curve of the product of \\(f\\) and a shifted version of \\(g\\), effectively blending the two functions. For example, smoothing a signal involves integrating over a range to compute a moving average. Additionally, filters are scaled to ensure their integrals equal 1, preserving the signal's average value during reconstruction. Understanding integrals enables precise manipulation of signals in applications like image processing and audio filtering."
+          },
+          {
+            "cs_topic": "Global illumination",
+            "rationale": "The concept of integrals and area approximation in calculus is fundamental to solving the transport equation in global illumination, a key problem in computer graphics. Global illumination models how light interacts with surfaces in a scene, often requiring the computation of radiance at a point by integrating contributions from all incoming light directions. For example, the radiance \\( L_s(k_o) \\) can be expressed as \\( L_s(k_o) = \\int_{k_i} \\rho(k_i, k_o) L_f(k_i) \\cos \\theta_i \\, d\\sigma_i \\), where \\( \\rho(k_i, k_o) \\) represents reflectance, \\( L_f(k_i) \\) is incoming radiance, and \\( \\cos \\theta_i \\, d\\sigma_i \\) accounts for geometric factors. Numerical methods, such as Monte Carlo integration, are often used to approximate these integrals efficiently, enabling realistic rendering in applications like path tracing. Understanding integrals equips computer scientists to model and approximate such complex phenomena accurately."
+          }
+        ]
+      },
+      "topicCode": "Int2",
+      "topicName": "Introduction to integrals and area approximation",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AC",
+      "number_id": 30,
+      "label": "Definite integrals",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model evaluation",
+            "rationale": "Definite integrals play a crucial role in evaluating machine learning models, particularly through metrics like the Area Under the Curve (AUC). The AUC quantifies the performance of a classifier by calculating the area under its Receiver Operating Characteristic (ROC) curve, which plots the true positive rate against the false positive rate. Mathematically, this area is expressed as \\( \\int_{a}^{b} f(x) \\, dx \\), where \\( f(x) \\) represents the curve function and \\( [a, b] \\) defines the interval. Since many ROC curves are non-linear, numerical integration methods are often employed to approximate the definite integral. For example, evaluating the AUC helps determine how well a model distinguishes between classes, guiding improvements in classification algorithms."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic reasoning",
+            "rationale": "Definite integrals play a crucial role in probabilistic reasoning, particularly in modeling uncertainty with smooth transitions, such as soft thresholds. For example, the integral of the standard normal distribution, \\( \\Phi(x) = \\int_{-\\infty}^x N(0,1)(t) \\, dt \\), is used in the probit model to represent probabilities that transition smoothly rather than abruptly. In this context, definite integrals quantify cumulative probabilities, enabling the calculation of the likelihood of events over continuous ranges. This is essential in AI systems for decision-making under uncertainty, such as predicting the probability of a user purchasing a product based on cost. Understanding integrals helps computer scientists design and analyze such probabilistic models effectively."
+          },
+          {
+            "cs_topic": "Probabilistic reasoning over time",
+            "rationale": "Definite integrals play a crucial role in probabilistic reasoning over time, particularly in modeling and predicting systems with uncertainty. In AI, probabilistic reasoning often involves calculating probabilities over continuous variables, such as time or sensor data. Definite integrals allow us to compute the total probability across a range of values, ensuring that the probability distribution is normalized and meaningful. For example, in a hidden Markov model, the forward algorithm uses integration to compute the likelihood of observations over time by summing probabilities across states. This connection between calculus and AI enables precise reasoning in dynamic, uncertain environments, such as speech recognition or robotics."
+          },
+          {
+            "cs_topic": "Learning probabilistic models",
+            "rationale": "Definite integrals play a crucial role in learning probabilistic models, particularly in ensuring probability distributions are valid. For example, the integral of a probability density function (PDF), such as a Gaussian \\( f(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}} \\), over its entire domain must equal 1 to satisfy the normalization condition of probabilities. In machine learning, probabilistic models like Bayesian networks rely on such distributions to represent uncertainty and make predictions. By calculating definite integrals, algorithms ensure that learned models adhere to probability theory, enabling accurate inference and decision-making in uncertain environments. For instance, integrating a Gaussian PDF validates its use in modeling continuous random variables."
+          },
+          {
+            "cs_topic": "Robotics",
+            "rationale": "Definite integrals are essential in robotics for tasks like motion planning and control. In dynamic systems, a robot's state, such as position or velocity, often evolves according to differential equations. To compute quantities like total displacement or energy consumption over time, definite integrals are used to aggregate these continuous changes. For example, a robot following a preplanned path might use a PID controller to minimize deviations, where the integral term accounts for accumulated errors over time. Additionally, integrals are applied in potential field methods to calculate forces guiding a robot toward a goal while avoiding obstacles, ensuring smooth and efficient navigation."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Signal processing",
+            "rationale": "Definite integrals are fundamental in signal processing, particularly for operations like smoothing and convolution. Smoothing a continuous signal, such as \\( g(x) \\), involves calculating a moving average over an interval, which is expressed as \\( h(x) = \\frac{1}{2r} \\int_{x-r}^{x+r} g(t) \\, dt \\). This integral averages the signal over a range, reducing noise. Similarly, convolution, a key operation in signal processing, combines two functions \\( f(x) \\) and \\( g(x) \\) to produce a new function \\( h(x) = \\int_{-\\infty}^{\\infty} f(t) g(x-t) \\, dt \\), which represents the overlap of \\( f \\) and a shifted \\( g \\). For example, convolving an image with a Gaussian filter smooths noise while preserving essential features. These integral-based techniques are crucial for analyzing and transforming signals in computer science applications."
+          },
+          {
+            "cs_topic": "Implicit modeling",
+            "rationale": "Definite integrals play a crucial role in implicit modeling, particularly in constructing convolution surfaces. In computer graphics, convolution surfaces are generated by integrating a fall-off function over skeletal primitives, blending their contributions to define smooth implicit surfaces. For example, the convolution of two continuous functions \\(f\\) and \\(g\\) can be expressed as \\((f \\ast g)(x) = \\int_{-\\infty}^{\\infty} f(t)g(x-t) \\, dt\\), where the integral combines the influence of skeletal elements at each point. This technique simplifies geometric operations like blending and composition, enabling efficient rendering of complex models such as a hand composed of multiple primitives. The mathematical foundation provided by definite integrals ensures precise and smooth transitions in implicit surface modeling."
+          }
+        ]
+      },
+      "topicCode": "Int3",
+      "topicName": "Definite integrals",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AD",
+      "number_id": 31,
+      "label": "The fundamental theorem of calculus",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Simple decision making",
+            "rationale": "The fundamental theorem of calculus (FTC) connects differentiation and integration, which is essential for understanding the relationship between the cumulative distribution function (CDF) and the probability density function (PDF) in probability theory. In computer science, this relationship is crucial for decision-making processes involving probabilistic models. The CDF, \\( F(x) = \\int_{-\\infty}^x f(t) \\, dt \\), represents the probability that a random variable \\( X \\) is less than or equal to \\( x \\), while the PDF, \\( f(x) = \\frac{dF(x)}{dx} \\), provides the likelihood of \\( X \\) taking a specific value. For example, in machine learning, the PDF helps evaluate the likelihood of data points, while the CDF aids in threshold-based decisions, such as classifying data into categories. Understanding the FTC ensures accurate interpretation and application of these functions in computational tasks."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Signal processing",
+            "rationale": "The fundamental theorem of calculus, which connects differentiation and integration, is crucial in signal processing, particularly for operations like filtering. Filters, such as box filters, often involve convolution, which is defined as the integral of the product of two functions, \\( (f \\ast g)(x) = \\int_{-\\infty}^{\\infty} f(t)g(x-t)dt \\). This integral-based operation smooths or modifies signals, enabling tasks like noise reduction or feature extraction. For example, in Fourier analysis, the box filter's Fourier transform, \\( F\\{f_{\\text{box}}\\} = \\frac{\\sin(\\pi u)}{\\pi u} \\), highlights frequency components, demonstrating how calculus underpins signal transformations. Thus, integration facilitates signal manipulation in both time and frequency domains."
+          }
+        ]
+      },
+      "topicCode": "Int4",
+      "topicName": "The fundamental theorem of calculus",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AE",
+      "number_id": 38,
+      "label": "Area between curves",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Int8",
+      "topicName": "Area between curves",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AF",
+      "number_id": 40,
+      "label": "Volume of solids of revolution",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Int9",
+      "topicName": "Volume of solids of revolution",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AG",
+      "number_id": 43,
+      "label": "Arc length and surface area",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "Int11",
+      "topicName": "Arc length and surface area",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AH",
+      "number_id": 41,
+      "label": "Physical applications of integrals",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Computer Graphics": [
+          {
+            "cs_topic": "Computer animation",
+            "rationale": "Physics-based computer animation relies on solving differential equations to simulate realistic motion, often derived from physical laws such as Hooke's Law for springs. Hooke's Law, \\( F = -kx \\), describes the force exerted by a spring based on its displacement \\( x \\) and spring constant \\( k \\). Integrals are used to calculate quantities like work done by the spring or energy stored in it, which are essential for animating elastic deformations or oscillatory motion. For example, simulating a bouncing object attached to a spring requires integrating the force over time to compute its position and velocity, ensuring realistic and accurate animation."
+          }
+        ]
+      },
+      "topicCode": "Int10",
+      "topicName": "Physical applications of integrals",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AI",
+      "number_id": 32,
+      "label": "Indefinite integrals and the net change theorem",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Deep learning",
+            "rationale": "Indefinite integrals and the net change theorem are foundational in deep learning, particularly in probabilistic models and optimization. For example, cross-entropy loss, a common objective function in neural networks, involves integrating probability density functions to measure divergence between predicted and true distributions. Similarly, variational inference uses integrals to approximate complex probability distributions, such as KL divergence, which quantifies the difference between two distributions. These integrals often cannot be solved analytically and require numerical methods. Understanding the calculus behind these operations enables precise implementation and optimization in deep learning frameworks, ensuring accurate model training and probabilistic reasoning."
+          }
+        ]
+      },
+      "topicCode": "Int5",
+      "topicName": "Indefinite integrals and the net change theorem",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AK",
+      "number_id": 33,
+      "label": "Logarithmic and exponential integrals",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model evaluation",
+            "rationale": "Logarithmic and exponential integrals are essential in evaluating models in computer science, particularly when dealing with Gaussian error models. Gaussian distributions, common in statistical modeling, describe data with a bell-shaped curve, where errors or deviations are probabilistically distributed. The cumulative probability density function \\( F_X(x) = \\int_{-\\infty}^x P(u) \\, du \\) helps quantify the likelihood of errors within a range, enabling precise model evaluation. For example, in robotics or sensor systems, the Gaussian error model accounts for measurement noise, ensuring that large errors are unlikely. Integrating exponential functions allows us to compute probabilities and refine models, improving reliability in applications like automated sensing."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic reasoning over time",
+            "rationale": "Logarithmic and exponential integrals play a crucial role in probabilistic reasoning over time, particularly in modeling and predicting dynamic systems. In probabilistic reasoning, the belief state evolves by projecting the current state distribution forward and updating it with new evidence, often requiring integration over probability distributions. For example, the one-step predicted distribution \\( P(X_{t+1} | e_{1:t}) \\) involves integrating exponential functions derived from prior probabilities and conditional probabilities, as seen in Bayesian inference. These integrals allow agents to compute probabilities of future states efficiently, enabling decision-making in uncertain environments, such as predicting sensor readings or planning actions in robotics."
+          },
+          {
+            "cs_topic": "Learning probabilistic models",
+            "rationale": "Logarithmic and exponential integrals are essential in learning probabilistic models because they often arise in the computation of probabilities and likelihoods, especially in Bayesian inference. Probabilistic models rely on integrating over continuous probability distributions to calculate posterior probabilities or expected values, which frequently involve functions like \\(e^x\\) or \\(\\ln(x)\\). For example, in Bayesian learning, the posterior probability of a hypothesis given evidence requires integrating the product of prior probabilities and likelihood functions. These integrals help agents update their belief states and make predictions in uncertain environments. Understanding these calculus concepts enables efficient computation and optimization in probabilistic reasoning tasks, such as training neural networks or modeling complex systems."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Mathematics of vectors, curves, and surfaces",
+            "rationale": "Logarithmic and exponential integrals play a crucial role in computer science applications involving vectors, curves, and surfaces. The natural logarithm, \\( \\ln(x) \\), is particularly significant due to its unique derivative properties, \\( \\frac{d}{dx} \\ln(x) = \\frac{1}{x} \\), which simplify computations in gradient-based methods. For example, in parametric surfaces defined by vector-valued functions \\( p(u, v) \\), the gradient and tangent vectors are derived using partial derivatives, often involving logarithmic or exponential terms. These integrals also appear in optimization algorithms, such as gradient descent, where logarithmic functions model growth or decay rates. Understanding these integrals enables efficient handling of geometric transformations and surface modeling in computer graphics and machine learning."
+          }
+        ]
+      },
+      "topicCode": "Int6",
+      "topicName": "Logarithmic and exponential integrals",
+      "course": "Calculus I",
+      "coreIdea": "Integrals"
+    },
+    {
+      "id": "AN",
+      "number_id": 48,
+      "label": "Trigonometric integrals",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "AdvInt2",
+      "topicName": "Trigonometric integrals",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AO",
+      "number_id": 49,
+      "label": "Trigonometric substitutions",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "AdvInt3",
+      "topicName": "Trigonometric substitutions",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AP",
+      "number_id": 50,
+      "label": "Integration by partial fractions",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "AdvInt4",
+      "topicName": "Integration by partial fractions",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AQ",
+      "number_id": 51,
+      "label": "Integration strategies",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "AdvInt5",
+      "topicName": "Integration strategies",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AR",
+      "number_id": 52,
+      "label": "Numerical and table-based integration",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "AdvInt6",
+      "topicName": "Numerical and table-based integration",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AS",
+      "number_id": 53,
+      "label": "Improper integrals",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "AdvInt7",
+      "topicName": "Improper integrals",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AT",
+      "number_id": 54,
+      "label": "Probability applications",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model evaluation",
+            "rationale": "Probability theory is essential in model evaluation within computer science, particularly for understanding and mitigating errors in classification tasks. Type I errors (false positives) and Type II errors (false negatives) are directly tied to probabilistic reasoning, as they reflect the likelihood of incorrect predictions based on evidence. For instance, in binary classification, the model learns a conditional probability distribution \\( P(Y|X) \\), where \\( Y \\) represents the predicted class and \\( X \\) the input features. Evaluating models involves analyzing error functions and p-values to assess performance and robustness. This probabilistic approach ensures that decisions maximize expected utility, balancing accuracy and uncertainty effectively."
+          },
+          {
+            "cs_topic": "Bias-variance tradeoff",
+            "rationale": "The bias-variance tradeoff in machine learning involves balancing two sources of error: bias, which arises from overly simplistic models, and variance, which stems from overly complex models sensitive to fluctuations in training data. Calculus concepts like probability density functions, mean, and variance are essential for understanding this tradeoff. Variance quantifies the spread of predictions, while bias measures systematic deviation from the true values. Probability theory helps model uncertainty and compute expected utility, guiding decisions under incomplete information. For example, minimizing prediction error in a regression task requires analyzing how bias and variance contribute to the mean squared error, \\( \\text{MSE} = \\text{Bias}^2 + \\text{Variance} + \\text{Irreducible Error} \\)."
+          },
+          {
+            "cs_topic": "Regression analysis",
+            "rationale": "In regression analysis, probability plays a crucial role in modeling uncertainty and optimizing predictions. For example, maximum likelihood estimation (MLE) is a probabilistic method used to determine the parameters of a regression model by maximizing the likelihood function, often assuming a Gaussian distribution for errors. Calculus concepts, such as integration, are essential for understanding the likelihood function and computing areas under probability density curves, which are used in confidence interval estimation. Additionally, probabilistic reasoning enhances regression models by accounting for noise and variability in data, as seen in applications like predicting house prices based on features like size and location. This connection highlights how calculus underpins statistical learning in computer science."
+          },
+          {
+            "cs_topic": "Classification methods",
+            "rationale": "Understanding probability is essential for classification methods in computer science, particularly probabilistic classifiers like Naïve Bayes. These models rely on probability theory to make predictions based on evidence, using prior and conditional probabilities to infer relationships between features and classes. For example, Naïve Bayes assumes conditional independence among features given a class, simplifying the computation of the joint probability \\( P(C, E_1, \\dots, E_n) = P(C) \\prod_{i} P(E_i | C) \\). This approach enables efficient classification in scenarios with uncertainty, such as spam email detection, where the model predicts whether an email is spam based on probabilities derived from word occurrences. Probability thus provides the foundation for reasoning under uncertainty in classification tasks."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic reasoning",
+            "rationale": "Probability applications in calculus are foundational for probabilistic reasoning in computer science, particularly in handling uncertainty and making decisions under incomplete information. The integral of probability density functions, such as the standard normal distribution, is used to calculate probabilities over continuous ranges, which is critical for defining thresholds or confidence intervals. In AI, probabilistic reasoning leverages these principles to model beliefs and uncertainties, enabling agents to make decisions that maximize expected utility. For example, in diagnosing a system failure, an AI might calculate the probability of various causes using conditional probabilities and integrate over distributions to determine the most likely cause, guiding effective action."
+          },
+          {
+            "cs_topic": "Probabilistic reasoning over time",
+            "rationale": "Probabilistic reasoning over time in computer science relies on calculus-based probability theory to model and predict changes in uncertain environments. Specifically, the one-step predicted distribution of a system's state is computed using integrals that account for prior probabilities and new evidence, as described by Bayes' rule. For example, in a dynamic system, the probability of a future state \\( P(X_{t+1} | e_{1:t+1}) \\) is derived by projecting the current state \\( P(X_{t+1} | e_{1:t}) \\) forward and updating it with new observations \\( P(e_{t+1} | X_{t+1}) \\). This approach enables agents to make informed decisions under uncertainty, crucial for applications like robotics and AI planning."
+          },
+          {
+            "cs_topic": "Simple decision making",
+            "rationale": "Probability theory and calculus play a crucial role in simple decision-making in computer science by enabling rational agents to choose actions that maximize expected utility. Using integrals, stochastic dominance compares actions based on their probability distributions, identifying the action that consistently leads to better outcomes. For example, in decision networks, which extend Bayesian networks, probability and utility nodes are combined to evaluate actions under uncertainty. Calculus helps compute expected utilities by integrating over probability distributions, ensuring optimal decisions even with partial observability. This mathematical foundation allows systems to handle uncertainty effectively, making decisions robust and applicable to real-world scenarios."
+          },
+          {
+            "cs_topic": "Learning probabilistic models",
+            "rationale": "In computer science, learning probabilistic models is essential for handling uncertainty in complex, nondeterministic, or partially observable environments. Calculus plays a key role in this process, as probabilities are often computed using integrals to quantify the likelihood of events over continuous domains. For example, the probability density function \\( f(x) \\) can be integrated over an interval \\([a, b]\\) to find the probability \\( P(a \\leq X \\leq b) = \\int_a^b f(x) \\, dx \\). Probabilistic models, such as Bayesian networks, rely on these calculations to infer relationships and make predictions based on observed data. This connection enables agents to reason under uncertainty and optimize decisions, such as selecting actions that maximize expected utility."
+          },
+          {
+            "cs_topic": "Deep learning",
+            "rationale": "In deep learning, probability concepts and calculus integrals are foundational for modeling uncertainty and optimizing neural networks. For example, the cross-entropy loss function, widely used in classification tasks, measures the difference between predicted probabilities and actual labels. It is defined as an integral over the probability distribution, \\(-\\int p(x) \\log q(x) dx\\), where \\(p(x)\\) is the true distribution and \\(q(x)\\) is the predicted distribution. Similarly, KL divergence, used in variational inference, quantifies the difference between two probability distributions via an integral. These probabilistic measures guide learning algorithms, enabling neural networks to adjust weights effectively during training, ensuring accurate predictions and robust models."
+          },
+          {
+            "cs_topic": "Robotics",
+            "rationale": "In robotics, probabilistic methods are essential for tasks like perception and decision-making in uncertain environments. Calculus plays a key role in these methods, particularly through integrals used in recursive filtering equations. For example, the belief state \\( P(X_{t+1} | z_{1:t+1}, a_{1:t}) \\), representing the robot's understanding of its environment, is updated using integrals to account for continuous variables: \\( P(X_{t+1} | z_{1:t+1}, a_{1:t}) = \\alpha P(z_{t+1} | X_{t+1}) \\int P(X_{t+1} | x_t, a_t) P(x_t | z_{1:t}, a_{1:t-1}) dx_t \\). This integration enables the robot to combine sensor data and actions efficiently, improving navigation and decision-making in dynamic settings."
+          }
+        ]
+      },
+      "topicCode": "AdvInt8",
+      "topicName": "Probability applications",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AU",
+      "number_id": 55,
+      "label": "Advanced physical applications",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Computer Graphics": [
+          {
+            "cs_topic": "Perception",
+            "rationale": "The concept of tristimulus values, derived from integrating spectral composition functions with cone response functions \\( L(\\lambda), M(\\lambda), S(\\lambda) \\), is fundamental in both calculus and computer science applications like perception modeling. In CS, these values enable precise color representation and matching by encoding how human photoreceptors integrate light across wavelengths. For example, two distinct spectral functions \\( \\Phi_1(\\lambda) \\) and \\( \\Phi_2(\\lambda) \\) can yield identical tristimulus values \\( (L, M, S) \\), a phenomenon known as metamerism. This principle underpins technologies such as monitors and printers, where color reproduction relies on matching tristimulus values to simulate human visual perception."
+          }
+        ]
+      },
+      "topicCode": "AdvInt9",
+      "topicName": "Advanced physical applications",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AV",
+      "number_id": 56,
+      "label": "Economics applications",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "AdvInt10",
+      "topicName": "Economics applications",
+      "course": "Calculus II",
+      "coreIdea": "Advanced integration"
+    },
+    {
+      "id": "AW",
+      "number_id": 57,
+      "label": "Introduction to differential equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Artificial Intelligence",
+        "Computer Graphics"
+      ],
+      "rationales": {
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Robotics",
+            "rationale": "Differential equations play a crucial role in robotics by modeling dynamic systems, such as the motion of a robot. These equations describe how quantities like position, velocity, and acceleration change over time, enabling precise predictions of a robot's state. For example, the kinematic state of a robot, represented as \\( X_t = (x_t, y_t, \\theta_t)^\\top \\), can be updated using a differential equation that incorporates velocity (\\(v_t\\)) and angular velocity (\\(\\omega_t\\)). This allows the robot to compute its future pose based on current motion inputs. Such models are essential for tasks like path planning and control, ensuring robots navigate safely and efficiently in dynamic environments."
+          }
+        ],
+        "Computer Graphics": [
+          {
+            "cs_topic": "Advanced ray tracing",
+            "rationale": "The study of differential equations is crucial in advanced ray tracing, as it enables the modeling of light behavior in complex environments. Ray tracing involves solving the rendering equation, which describes how light interacts with surfaces and materials. This equation often requires numerical solutions to differential equations to simulate phenomena like reflection, refraction, and global illumination. For example, path tracing, a ray tracing technique, uses recursive differential equations to calculate light transport, accounting for multiple bounces and scattering. Understanding differential equations allows computer scientists to implement realistic lighting models, enhancing visual fidelity in applications like 3D rendering, virtual reality, and visual effects."
+          },
+          {
+            "cs_topic": "Computer animation",
+            "rationale": "In computer animation, differential equations play a crucial role in simulating realistic motion by modeling the physics governing objects' behavior. For instance, the motion of a particle can be described using an ordinary differential equation (ODE) that relates its position, velocity, and acceleration over time. Animators use numerical methods to solve these equations, ensuring smooth transitions and realistic dynamics. For example, simulating a bouncing ball requires solving an ODE to account for gravity and collisions. By setting initial conditions and boundary constraints, animators can control the motion while maintaining physical accuracy. This connection between calculus and computer science enables the creation of lifelike animations in films, games, and simulations."
+          }
+        ]
+      },
+      "topicCode": "DiffEq1",
+      "topicName": "Introduction to differential equations",
+      "course": "Calculus II",
+      "coreIdea": "Differential Equations"
+    },
+    {
+      "id": "AX",
+      "number_id": 58,
+      "label": "Direction fields and Euler's method",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "DiffEq2",
+      "topicName": "Direction fields and Euler's method",
+      "course": "Calculus II",
+      "coreIdea": "Differential Equations"
+    },
+    {
+      "id": "AY",
+      "number_id": 59,
+      "label": "Separable differential equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "DiffEq3",
+      "topicName": "Separable differential equations",
+      "course": "Calculus II",
+      "coreIdea": "Differential Equations"
+    },
+    {
+      "id": "AZ",
+      "number_id": 60,
+      "label": "Modeling with differential equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "DiffEq4",
+      "topicName": "Modeling with differential equations",
+      "course": "Calculus II",
+      "coreIdea": "Differential Equations"
+    },
+    {
+      "id": "BA",
+      "number_id": 61,
+      "label": "Special first-order linear differential equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "DiffEq5",
+      "topicName": "Special first-order linear differential equations",
+      "course": "Calculus II",
+      "coreIdea": "Differential Equations"
+    },
+    {
+      "id": "BC",
+      "number_id": 63,
+      "label": "Series",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Regression analysis",
+            "rationale": "In regression analysis, particularly in autoregressive models for time series, calculus concepts like series play a crucial role. A series represents the summation of terms, often used to model cumulative effects over time. In autoregressive models, the current value of a variable \\( y_t \\) is expressed as a weighted sum of its previous values, \\( y_{t-1}, y_{t-2}, \\dots \\), plus a noise term. This summation inherently relies on series concepts to capture dependencies across time intervals. For example, predicting stock prices might involve summing weighted past prices to forecast future trends. Understanding series enables computer scientists to design and optimize such models effectively, ensuring accurate predictions in dynamic systems."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Summations",
+            "rationale": "In calculus, a series represents the sum of terms in a sequence, and its convergence depends on whether the sequence of partial sums approaches a finite limit. In computer science, summations are used to analyze algorithm performance, such as calculating the running time of iterative loops. For example, the worst-case running time of insertion sort can be expressed as \\( \\sum_{j=2}^{n} j \\), which simplifies to \\( \\frac{n(n+1)}{2} \\), showing \\( O(n^2) \\) complexity. Understanding series convergence, such as geometric or harmonic series, helps bound summations and ensures accurate algorithm analysis, especially when dealing with infinite or asymptotic behavior."
+          },
+          {
+            "cs_topic": "Divide-and-conquer algorithms",
+            "rationale": "In computer science, series, particularly geometric series, are essential for analyzing the efficiency of divide-and-conquer algorithms. These algorithms often involve recursive structures, where the running time can be expressed as a recurrence relation. Solving these recurrences frequently requires summing terms that represent the work done at each level of recursion. For example, the recurrence \\( T(n) = 2T(n/2) + n \\) for merge sort can be solved by summing a geometric series, yielding an \\( O(n \\log n) \\) time complexity. Understanding how to bound and manipulate series allows us to derive such asymptotic bounds, which are critical for evaluating algorithm performance."
+          },
+          {
+            "cs_topic": "Dynamic programming",
+            "rationale": "In dynamic programming, series, particularly geometric series, are essential for analyzing algorithm efficiency and bounding computations. Dynamic programming often involves iterative processes where the solution to a problem is built incrementally, such as computing optimal solutions in rod cutting or matrix chain multiplication. The running time of these algorithms can be expressed as summations over iterations, which are often bounded using series. For example, a geometric series \\( \\sum_{k=0}^{n} r^k \\) with \\( r < 1 \\) can provide a bound for the time complexity of certain iterative steps. Understanding series enables precise evaluation and optimization of dynamic programming algorithms, ensuring efficient computation."
+          },
+          {
+            "cs_topic": "Quicksort algorithms",
+            "rationale": "The analysis of the quicksort algorithm's average-case running time involves summations, specifically the harmonic series, to compute bounds on recursive calls. In quicksort, balanced partitioning leads to subproblems of roughly equal size, and the expected number of comparisons can be expressed as a summation over the harmonic series. This summation evaluates to \\(O(n \\log n)\\), which represents the algorithm's average-case time complexity. Understanding series, such as the harmonic series, is crucial for bounding iterative processes in algorithms. For example, when analyzing quicksort, the harmonic series helps quantify the cumulative cost of partitioning and recursive calls, ensuring accurate performance predictions."
+          },
+          {
+            "cs_topic": "Medians and order statistics",
+            "rationale": "In computer science, series are often used to analyze the efficiency of algorithms, particularly those involving iterative processes like finding medians or order statistics. For example, the worst-case running time of a median-finding algorithm can be expressed as a summation of comparisons across recursive partitions. Bounding such summations frequently involves geometric series, which provide an upper limit on the number of operations required. For instance, in a randomized median-finding algorithm, the expected number of comparisons can be bounded using a geometric series, ensuring the algorithm runs efficiently. Understanding series helps computer scientists optimize algorithms and predict their performance in practical scenarios."
+          },
+          {
+            "cs_topic": "Hash tables",
+            "rationale": "In computer science, series, particularly geometric series, are essential for analyzing algorithm efficiency and bounding computational costs. For example, in hash table operations, the expected number of probes during collision resolution can be bounded using a geometric series. If the load factor \\( \\alpha \\) (ratio of elements to table size) is less than 1, the probability of successive probes decreases geometrically, allowing us to bound the expected cost of operations like search or insertion. By summing the probabilities of probing \\( k \\) times, we use the geometric series formula \\( \\sum_{k=0}^{\\infty} x^k = \\frac{1}{1-x} \\) (for \\( |x| < 1 \\)) to ensure efficient performance analysis."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Complex decision making",
+            "rationale": "In computer science, series, particularly geometric series, play a crucial role in complex decision-making scenarios, such as optimizing sequential actions in Markov Decision Processes (MDPs). For example, when evaluating the utility of an infinite sequence of rewards in MDPs, a geometric series is used to compute a finite value by applying a discount factor \\( \\gamma \\) (where \\( 0 < \\gamma < 1 \\)). The utility \\( U \\) of a sequence \\( [s_0, s_1, s_2, \\dots] \\) is calculated as \\( U = \\sum_{t=0}^\\infty \\gamma^t R(s_t) \\), ensuring convergence to a manageable value. This mathematical tool enables rational agents to make decisions in environments with long-term consequences, balancing immediate and future rewards effectively."
+          }
+        ]
+      },
+      "topicCode": "SeqSer2",
+      "topicName": "Series",
+      "course": "Calculus II",
+      "coreIdea": "Sequences and Series"
+    },
+    {
+      "id": "BD",
+      "number_id": 64,
+      "label": "Convergence and divergence",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent, a key optimization algorithm in machine learning, relies on the principles of convergence and divergence to minimize a loss function \\( L(w) \\). Convergence occurs when the algorithm iteratively updates parameters \\( w \\) using \\( w_i \\leftarrow w_i - \\alpha \\frac{\\partial L(w)}{\\partial w_i} \\), where \\( \\alpha \\) is the step size or learning rate. If \\( \\alpha \\) is too large, the updates may overshoot the minimum, causing divergence; if too small, convergence may be excessively slow. For example, in stochastic gradient descent, convergence to a global minimum is guaranteed with a sufficiently small \\( \\alpha \\), but the process may require many iterations. Understanding convergence ensures efficient and accurate model training in computer science applications."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Summations",
+            "rationale": "Convergence and divergence of series are critical concepts in analyzing summations, which frequently arise in computer science, particularly in algorithm analysis. A series converges if the limit of its partial sums exists, enabling precise bounds on computational tasks, such as determining the runtime of iterative algorithms. For example, the geometric series \\( \\sum_{k=0}^\\infty x^k \\) converges for \\( |x| < 1 \\), allowing efficient bounding of algorithmic complexity. Conversely, divergent series, like the harmonic series \\( \\sum_{k=1}^\\infty \\frac{1}{k} \\), highlight cases where runtime grows unbounded. Understanding convergence ensures accurate modeling of summations, essential for optimizing algorithms and predicting performance."
+          }
+        ]
+      },
+      "topicCode": "SeqSer3",
+      "topicName": "Convergence and divergence",
+      "course": "Calculus II",
+      "coreIdea": "Sequences and Series"
+    },
+    {
+      "id": "BE",
+      "number_id": 65,
+      "label": "Comparison tests",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Summations",
+            "rationale": "Comparison tests in calculus are essential for determining the convergence of infinite series, which directly relates to analyzing summations in computer science. Summations often arise in algorithm analysis, where the running time of iterative constructs, such as loops, is expressed as the sum of individual iteration costs. For example, the worst-case running time of insertion sort involves summing terms proportional to \\(j\\), resulting in a summation like \\(\\sum_{j=1}^{n} j\\). Comparison tests, such as bounding a summation by a geometric series or approximating it with integrals, help determine convergence or asymptotic behavior. This ensures accurate performance analysis and optimization of algorithms."
+          },
+          {
+            "cs_topic": "Probabilistic and randomized algorithms",
+            "rationale": "In computer science, comparison tests from calculus are crucial for analyzing the efficiency of probabilistic and randomized algorithms, particularly when bounding the runtime of iterative processes. For example, when an algorithm's runtime is expressed as a summation (e.g., the sum of loop execution times), comparison tests help determine whether the series converges or diverges and provide bounds for its growth. This is essential in probabilistic analysis, where runtime or cost is analyzed using probability. For instance, bounding a summation with an integral test can help approximate the expected runtime of a randomized algorithm, ensuring accurate performance predictions and resource allocation."
+          },
+          {
+            "cs_topic": "Heapsort algorithms",
+            "rationale": "Comparison tests in calculus are essential for bounding the behavior of series, which directly applies to analyzing the efficiency of algorithms like heapsort. Heapsort's runtime involves summations derived from iterative processes, such as building a max-heap or sorting elements. For example, the runtime of building a max-heap can be bounded using the summation \\( \\sum_{h=0}^{\\lfloor \\log n \\rfloor} h \\cdot 2^{-h} \\), which converges to a constant. Comparison tests help determine convergence and provide upper bounds for such series, ensuring accurate asymptotic analysis. This connection highlights how calculus tools underpin algorithmic efficiency evaluations in computer science."
+          },
+          {
+            "cs_topic": "Hash tables",
+            "rationale": "Comparison tests in calculus are essential for analyzing the convergence of series, which directly connects to bounding summations in computer science. When evaluating the efficiency of algorithms, such as insertion sort, the running time can often be expressed as a summation over loop iterations. To determine whether this summation converges or diverges, comparison tests help establish bounds by comparing the series to simpler, well-understood series like geometric or harmonic series. For example, bounding the summation \\( \\sum_{k=1}^{n} k \\) involves recognizing its growth rate as \\( O(n^2) \\). Similarly, hash table performance analysis may involve bounding probabilities of collisions, which can rely on summation bounds derived using comparison tests."
+          }
+        ]
+      },
+      "topicCode": "SeqSer4",
+      "topicName": "Comparison tests",
+      "course": "Calculus II",
+      "coreIdea": "Sequences and Series"
+    },
+    {
+      "id": "BF",
+      "number_id": 66,
+      "label": "The ratio and root tests",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "SeqSer5",
+      "topicName": "The ratio and root tests",
+      "course": "Calculus II",
+      "coreIdea": "Sequences and Series"
+    },
+    {
+      "id": "BG",
+      "number_id": 67,
+      "label": "Alternating series",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "SeqSer6",
+      "topicName": "Alternating series",
+      "course": "Calculus II",
+      "coreIdea": "Sequences and Series"
+    },
+    {
+      "id": "BI",
+      "number_id": 69,
+      "label": "Power series and functions",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Summations",
+            "rationale": "Power series in calculus and summations in computer science are closely related, as both involve the study of series and their convergence. In calculus, power series represent functions as infinite sums of terms, allowing differentiation and integration term-by-term. Similarly, in CS, summations are used to analyze algorithm performance, such as calculating the time complexity of iterative loops. For example, the running time of insertion sort can be expressed as a summation \\( \\sum_{j=2}^n j \\), which is bounded by \\( O(n^2) \\). Techniques like approximating summations with integrals or bounding them using geometric series are directly applicable from calculus, enabling precise algorithm analysis."
+          }
+        ]
+      },
+      "topicCode": "SeqSer8",
+      "topicName": "Power series and functions",
+      "course": "Calculus II",
+      "coreIdea": "Sequences and Series"
+    },
+    {
+      "id": "BL",
+      "number_id": 72,
+      "label": "Area and arc length in polar coordinates",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "ParamPol3",
+      "topicName": "Area and arc length in polar coordinates",
+      "course": "Calculus II",
+      "coreIdea": "Parametric Equations and Polar Coordinates"
+    },
+    {
+      "id": "BM",
+      "number_id": 73,
+      "label": "Conic sections",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {},
+      "topicCode": "ParamPol4",
+      "topicName": "Conic sections",
+      "course": "Calculus II",
+      "coreIdea": "Parametric Equations and Polar Coordinates"
+    }
+  ],
+  "edges": [
+    {
+      "source": "A",
+      "target": "B"
+    },
+    {
+      "source": "B",
+      "target": "C"
+    },
+    {
+      "source": "B",
+      "target": "H"
+    },
+    {
+      "source": "C",
+      "target": "D"
+    },
+    {
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "source": "D",
+      "target": "F"
+    },
+    {
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "source": "D",
+      "target": "J"
+    },
+    {
+      "source": "D",
+      "target": "BB"
+    },
+    {
+      "source": "H",
+      "target": "I"
+    },
+    {
+      "source": "I",
+      "target": "J"
+    },
+    {
+      "source": "I",
+      "target": "N"
+    },
+    {
+      "source": "I",
+      "target": "P"
+    },
+    {
+      "source": "O",
+      "target": "R"
+    },
+    {
+      "source": "O",
+      "target": "Q"
+    },
+    {
+      "source": "O",
+      "target": "U"
+    },
+    {
+      "source": "O",
+      "target": "AJ"
+    },
+    {
+      "source": "O",
+      "target": "AL"
+    },
+    {
+      "source": "O",
+      "target": "AB"
+    },
+    {
+      "source": "O",
+      "target": "BJ"
+    },
+    {
+      "source": "K",
+      "target": "Q"
+    },
+    {
+      "source": "K",
+      "target": "AM"
+    },
+    {
+      "source": "L",
+      "target": "Q"
+    },
+    {
+      "source": "L",
+      "target": "T"
+    },
+    {
+      "source": "L",
+      "target": "BH"
+    },
+    {
+      "source": "L",
+      "target": "BK"
+    },
+    {
+      "source": "M",
+      "target": "Q"
+    },
+    {
+      "source": "M",
+      "target": "T"
+    },
+    {
+      "source": "M",
+      "target": "BH"
+    },
+    {
+      "source": "N",
+      "target": "V"
+    },
+    {
+      "source": "N",
+      "target": "AA"
+    },
+    {
+      "source": "N",
+      "target": "AW"
+    },
+    {
+      "source": "U",
+      "target": "V"
+    },
+    {
+      "source": "Q",
+      "target": "X"
+    },
+    {
+      "source": "Q",
+      "target": "Y"
+    },
+    {
+      "source": "Q",
+      "target": "Z"
+    },
+    {
+      "source": "R",
+      "target": "Z"
+    },
+    {
+      "source": "AA",
+      "target": "AC"
+    },
+    {
+      "source": "AC",
+      "target": "AD"
+    },
+    {
+      "source": "AC",
+      "target": "AE"
+    },
+    {
+      "source": "AC",
+      "target": "AF"
+    },
+    {
+      "source": "AC",
+      "target": "AG"
+    },
+    {
+      "source": "AC",
+      "target": "AH"
+    },
+    {
+      "source": "AC",
+      "target": "AR"
+    },
+    {
+      "source": "AC",
+      "target": "AS"
+    },
+    {
+      "source": "AC",
+      "target": "AU"
+    },
+    {
+      "source": "AC",
+      "target": "AV"
+    },
+    {
+      "source": "AC",
+      "target": "AZ"
+    },
+    {
+      "source": "AC",
+      "target": "BL"
+    },
+    {
+      "source": "T",
+      "target": "AD"
+    },
+    {
+      "source": "T",
+      "target": "AK"
+    },
+    {
+      "source": "T",
+      "target": "AJ"
+    },
+    {
+      "source": "T",
+      "target": "AL"
+    },
+    {
+      "source": "T",
+      "target": "AB"
+    },
+    {
+      "source": "T",
+      "target": "AM"
+    },
+    {
+      "source": "T",
+      "target": "AN"
+    },
+    {
+      "source": "T",
+      "target": "AP"
+    },
+    {
+      "source": "AD",
+      "target": "AI"
+    },
+    {
+      "source": "AJ",
+      "target": "AH"
+    },
+    {
+      "source": "AJ",
+      "target": "AG"
+    },
+    {
+      "source": "AJ",
+      "target": "AO"
+    },
+    {
+      "source": "AJ",
+      "target": "AY"
+    },
+    {
+      "source": "AJ",
+      "target": "BA"
+    },
+    {
+      "source": "AJ",
+      "target": "BL"
+    },
+    {
+      "source": "AK",
+      "target": "AH"
+    },
+    {
+      "source": "AN",
+      "target": "AO"
+    },
+    {
+      "source": "AP",
+      "target": "AQ"
+    },
+    {
+      "source": "AO",
+      "target": "AQ"
+    },
+    {
+      "source": "AM",
+      "target": "AQ"
+    },
+    {
+      "source": "AQ",
+      "target": "AR"
+    },
+    {
+      "source": "AQ",
+      "target": "AS"
+    },
+    {
+      "source": "AQ",
+      "target": "AU"
+    },
+    {
+      "source": "AQ",
+      "target": "AV"
+    },
+    {
+      "source": "AS",
+      "target": "AT"
+    },
+    {
+      "source": "AW",
+      "target": "AX"
+    },
+    {
+      "source": "AW",
+      "target": "AY"
+    },
+    {
+      "source": "AW",
+      "target": "BA"
+    },
+    {
+      "source": "AY",
+      "target": "AZ"
+    },
+    {
+      "source": "BB",
+      "target": "BC"
+    },
+    {
+      "source": "BC",
+      "target": "BD"
+    },
+    {
+      "source": "BD",
+      "target": "BE"
+    },
+    {
+      "source": "BD",
+      "target": "BF"
+    },
+    {
+      "source": "BD",
+      "target": "BG"
+    },
+    {
+      "source": "BD",
+      "target": "BH"
+    },
+    {
+      "source": "BH",
+      "target": "BI"
+    },
+    {
+      "source": "BK",
+      "target": "BL"
+    },
+    {
+      "source": "BK",
+      "target": "BM"
+    },
+    {
+      "source": "BJ",
+      "target": "BM"
+    },
+    {
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "source": "A",
+      "target": "D"
+    },
+    {
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "source": "B",
+      "target": "D"
+    },
+    {
+      "source": "B",
+      "target": "F"
+    },
+    {
+      "source": "B",
+      "target": "E"
+    },
+    {
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "source": "B",
+      "target": "I"
+    },
+    {
+      "source": "B",
+      "target": "AA"
+    },
+    {
+      "source": "B",
+      "target": "AC"
+    },
+    {
+      "source": "B",
+      "target": "AD"
+    },
+    {
+      "source": "B",
+      "target": "AS"
+    },
+    {
+      "source": "B",
+      "target": "BB"
+    },
+    {
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "source": "C",
+      "target": "BB"
+    },
+    {
+      "source": "D",
+      "target": "L"
+    },
+    {
+      "source": "D",
+      "target": "M"
+    },
+    {
+      "source": "D",
+      "target": "S"
+    },
+    {
+      "source": "D",
+      "target": "BC"
+    },
+    {
+      "source": "D",
+      "target": "BD"
+    },
+    {
+      "source": "D",
+      "target": "BE"
+    },
+    {
+      "source": "D",
+      "target": "BF"
+    },
+    {
+      "source": "D",
+      "target": "BG"
+    },
+    {
+      "source": "H",
+      "target": "O"
+    },
+    {
+      "source": "H",
+      "target": "W"
+    },
+    {
+      "source": "I",
+      "target": "Q"
+    },
+    {
+      "source": "I",
+      "target": "Y"
+    },
+    {
+      "source": "I",
+      "target": "R"
+    },
+    {
+      "source": "I",
+      "target": "W"
+    },
+    {
+      "source": "I",
+      "target": "AD"
+    },
+    {
+      "source": "I",
+      "target": "AW"
+    },
+    {
+      "source": "I",
+      "target": "AX"
+    },
+    {
+      "source": "I",
+      "target": "BJ"
+    },
+    {
+      "source": "J",
+      "target": "U"
+    },
+    {
+      "source": "J",
+      "target": "V"
+    },
+    {
+      "source": "J",
+      "target": "Q"
+    },
+    {
+      "source": "J",
+      "target": "R"
+    },
+    {
+      "source": "J",
+      "target": "Z"
+    },
+    {
+      "source": "J",
+      "target": "X"
+    },
+    {
+      "source": "J",
+      "target": "T"
+    },
+    {
+      "source": "J",
+      "target": "AG"
+    },
+    {
+      "source": "J",
+      "target": "AB"
+    },
+    {
+      "source": "J",
+      "target": "AL"
+    },
+    {
+      "source": "J",
+      "target": "AM"
+    },
+    {
+      "source": "J",
+      "target": "BH"
+    },
+    {
+      "source": "J",
+      "target": "BJ"
+    },
+    {
+      "source": "J",
+      "target": "BK"
+    },
+    {
+      "source": "J",
+      "target": "BM"
+    },
+    {
+      "source": "O",
+      "target": "V"
+    },
+    {
+      "source": "O",
+      "target": "Z"
+    },
+    {
+      "source": "O",
+      "target": "X"
+    },
+    {
+      "source": "O",
+      "target": "AG"
+    },
+    {
+      "source": "K",
+      "target": "Z"
+    },
+    {
+      "source": "K",
+      "target": "X"
+    },
+    {
+      "source": "L",
+      "target": "Z"
+    },
+    {
+      "source": "L",
+      "target": "X"
+    },
+    {
+      "source": "L",
+      "target": "AN"
+    },
+    {
+      "source": "L",
+      "target": "AO"
+    },
+    {
+      "source": "L",
+      "target": "BL"
+    },
+    {
+      "source": "M",
+      "target": "Z"
+    },
+    {
+      "source": "M",
+      "target": "X"
+    },
+    {
+      "source": "M",
+      "target": "AK"
+    },
+    {
+      "source": "N",
+      "target": "AI"
+    },
+    {
+      "source": "N",
+      "target": "AH"
+    },
+    {
+      "source": "N",
+      "target": "AU"
+    },
+    {
+      "source": "N",
+      "target": "AV"
+    },
+    {
+      "source": "N",
+      "target": "AZ"
+    },
+    {
+      "source": "AC",
+      "target": "AT"
+    },
+    {
+      "source": "T",
+      "target": "AO"
+    },
+    {
+      "source": "T",
+      "target": "AQ"
+    },
+    {
+      "source": "T",
+      "target": "AR"
+    },
+    {
+      "source": "T",
+      "target": "AY"
+    },
+    {
+      "source": "T",
+      "target": "BA"
+    },
+    {
+      "source": "T",
+      "target": "AI"
+    },
+    {
+      "source": "AJ",
+      "target": "AQ"
+    },
+    {
+      "source": "AJ",
+      "target": "AU"
+    },
+    {
+      "source": "AJ",
+      "target": "AV"
+    },
+    {
+      "source": "AQ",
+      "target": "AT"
+    },
+    {
+      "source": "AW",
+      "target": "AZ"
+    },
+    {
+      "source": "BC",
+      "target": "BE"
+    },
+    {
+      "source": "BC",
+      "target": "BF"
+    },
+    {
+      "source": "BC",
+      "target": "BG"
+    },
+    {
+      "source": "BC",
+      "target": "BH"
+    },
+    {
+      "source": "BC",
+      "target": "BI"
+    },
+    {
+      "source": "BD",
+      "target": "BI"
+    }
+  ]
+}

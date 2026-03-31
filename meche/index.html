@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus Connections Explorer — Mechanical Engineering</title>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('cce-theme');
+                var dark = t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.classList.add('theme-dark');
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <link rel="stylesheet" href="../style.css">
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+<body class="app-with-topbar">
+    <header class="app-top-bar" role="banner">
+        <div class="app-top-bar-inner">
+            <a href="../index.html" class="app-top-bar-brand">Calculus Connections Explorer</a>
+            <div class="app-top-bar-actions">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
+                <button type="button" id="instructions-open" class="instructions-button">Instructions</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="instructions-overlay" class="instructions-overlay">
+        <div class="instructions-modal">
+            <button type="button" id="instructions-close" class="instructions-close" aria-label="Close instructions">&times;</button>
+            <h2>How to Explore ME–Calculus Connections</h2>
+            <p class="instructions-tagline">
+                Discover how Mechanical Engineering topics connect to key calculus ideas and why those links matter.
+            </p>
+            <ol class="instructions-steps">
+                <li>
+                    <strong>Select MechE topics:</strong>
+                    Use the list under "MechE Topics" to choose one or more ME topics or entire courses.
+                    You can combine multiple selections to see overlapping calculus needs.
+                </li>
+                <li>
+                    <strong>Browse connected calculus ideas:</strong>
+                    The middle panel opens on the Full calculus concept map by default; switch to the Connected calculus list tab for a ranked list of calculus topics connected to your ME selections.
+                    Darker colors indicate topics with more or stronger connections.
+                </li>
+                <li>
+                    <strong>Open details for a calculus topic:</strong>
+                    Click any colored calculus pill to focus the graph on that topic and its nearby connections.
+                </li>
+                <li>
+                    <strong>Read rationales:</strong>
+                    After you click a pill, the right-hand sidebar shows written explanations ("rationales")
+                    that describe how the selected calculus idea supports the ME topics you chose.
+                    These rationales are automatically filtered by your current ME selections.
+                </li>
+                <li>
+                    <strong>Full calculus concept map:</strong>
+                    The default graph-based visualization supports zoom and pan so you can explore prerequisites and connections across the calculus topics.
+                </li>
+            </ol>
+            <div class="instructions-actions">
+                <button type="button" id="instructions-dismiss" class="primary-btn">Start Exploring</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar-left">
+            <div class="sidebar-header">
+                <h2>Explore</h2>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>MechE Topics</h3>
+                <div id="cs-topic-tree" class="cs-topic-tree">
+                    <!-- MechE topics will be inserted here -->
+                </div>
+                <button type="button" id="cs-topic-clear" class="tertiary-btn">Clear ME Selection</button>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Calculus Courses</h3>
+                <div id="calculus-tree" class="calculus-tree">
+                    <!-- Calculus hierarchy will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="main-header">
+                <div class="main-title-group">
+                    <h1>Calculus Connections Explorer</h1>
+                    <p class="main-subtitle">Mechanical Engineering — Select ME topics on the left to see connected calculus ideas, prerequisites, and rationales.</p>
+                </div>
+                <div class="main-header-right">
+                    <div id="course-selection-summary" class="course-selection-summary"></div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="view-tabs">
+                    <button type="button" id="full-map-tab" class="view-tab active">Full calculus concept map</button>
+                    <button type="button" id="calc-list-tab" class="view-tab">Connected calculus list</button>
+                </div>
+
+                <div id="calc-list-panel" class="calc-list-panel hidden">
+                    <div class="calc-list-header">
+                        <div id="cs-selection-summary" class="cs-selection-summary"></div>
+                        <div class="calc-list-filters">
+                            <label class="calc-filter">
+                                <span>Min connections per calculus topic</span>
+                                <div class="calc-filter-control">
+                                    <input type="range" id="connection-threshold" min="1" max="1" value="1">
+                                    <span id="connection-threshold-value">1</span>
+                                </div>
+                            </label>
+                            <label class="calc-filter">
+                                <span>Sort by</span>
+                                <select id="calc-sort-mode">
+                                    <option value="default">Course &amp; topic order</option>
+                                    <option value="connections">Connections (most to fewest)</option>
+                                    <option value="alpha">Topic name (A–Z)</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="calc-list-empty" class="empty-state calc-list-empty">
+                        <h3>Select MechE Topics</h3>
+                        <p>Choose a ME course or topic on the left to see the list of connected calculus ideas here.</p>
+                    </div>
+                    <div id="calc-topic-list" class="calc-topic-list">
+                        <!-- Connected calculus topics will be rendered here -->
+                    </div>
+                </div>
+
+                <div id="chart-panel" class="chart-panel">
+                    <svg id="chart"></svg>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar-right">
+            <div id="rationale-display" class="hidden">
+                <h3>Details</h3>
+                <h4 id="rationale-title"></h4>
+                <p id="rationale-level"></p>
+                <div id="rationale-content"></div>
+            </div>
+
+            <div id="empty-selection" class="empty-state">
+                <h3>Select a Calculus Topic</h3>
+                <p>Click any node in the visualization or in the hierarchy to view rationales that match the active ME topic filters.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" style="opacity:0;"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../theme-toggle.js"></script>
+    <script src="app-meche.js?v=22"></script>
+</body>
+</html>

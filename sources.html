@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source materials — Calculus Connections Explorer</title>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('cce-theme');
+                var dark = t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.classList.add('theme-dark');
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body home-splash sources-body">
+    <header class="app-top-bar app-top-bar--splash" role="banner">
+        <div class="app-top-bar-inner">
+            <a href="index.html" class="app-top-bar-brand">Calculus Connections Explorer</a>
+            <div class="app-top-bar-actions">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="sources-main" id="main">
+        <h1 class="sources-title">Source materials</h1>
+        <p class="sources-lead">
+            Connection maps and data used to build this explorer. Files open in the browser or save when you use the download links (CSV and other formats).
+            Formal PDF connection maps and rationale documents—placeholders below—will be linked here when available.
+        </p>
+
+        <section class="sources-section" aria-labelledby="sec-pdf">
+            <h2 id="sec-pdf" class="sources-heading">Documents (PDF)</h2>
+            <p class="sources-note">Placeholder—add files under this site and link below when ready.</p>
+            <ul class="sources-list">
+                <li><span class="sources-placeholder">Connection maps (PDF) — coming soon</span></li>
+                <li><span class="sources-placeholder">Rationale summaries (PDF) — coming soon</span></li>
+            </ul>
+        </section>
+
+        <section class="sources-section" aria-labelledby="sec-app-csv">
+            <h2 id="sec-app-csv" class="sources-heading">Application data (CSV)</h2>
+            <p class="sources-note">These files are loaded by or aligned with the live explorer.</p>
+            <ul class="sources-list">
+                <li><a href="Calculus%20topic%20list-Table%201.csv" download>Calculus topic list-Table 1.csv</a></li>
+                <li><a href="CS%20topic%20lists-Table%201.csv" download>CS topic lists-Table 1.csv</a></li>
+                <li><a href="ME%20topic%20lists.csv" download>ME topic lists.csv</a></li>
+                <li><a href="Calculus%20topic%20labeling%20scheme.csv" download>Calculus topic labeling scheme.csv</a></li>
+                <li><a href="ML-Calc-Table%201.csv" download>ML-Calc-Table 1.csv</a></li>
+                <li><a href="Alg-Calc-Table%201.csv" download>Alg-Calc-Table 1.csv</a></li>
+                <li><a href="AI-Calc-Table%201.csv" download>AI-Calc-Table 1.csv</a></li>
+                <li><a href="CG-Calc-Table%201.csv" download>CG-Calc-Table 1.csv</a></li>
+                <li><a href="ML_Alg_AI_CG_Rationales_081525%28Rationales%29.csv" download>ML_Alg_AI_CG_Rationales_081525(Rationales).csv</a></li>
+            </ul>
+        </section>
+
+        <section class="sources-section" aria-labelledby="sec-meche">
+            <h2 id="sec-meche" class="sources-heading">Mechanical Engineering reference exports</h2>
+            <p class="sources-note">CSV bundle under <code class="sources-code">resources/</code>.</p>
+            <ul class="sources-list">
+                <li><a href="resources/MechE-Calc%20connections_030626/Calculus%20topic%20list-Table%201.csv" download>Calculus topic list-Table 1.csv</a></li>
+                <li><a href="resources/MechE-Calc%20connections_030626/ME%20topic%20list-Table%201.csv" download>ME topic list-Table 1.csv</a></li>
+                <li><a href="resources/MechE-Calc%20connections_030626/Dynamics-Calc-Table%201.csv" download>Dynamics-Calc-Table 1.csv</a></li>
+                <li><a href="resources/MechE-Calc%20connections_030626/Fluids-Calc-Table%201.csv" download>Fluids-Calc-Table 1.csv</a></li>
+            </ul>
+        </section>
+
+        <section class="sources-section" aria-labelledby="sec-graph">
+            <h2 id="sec-graph" class="sources-heading">Graph sources (Mermaid)</h2>
+            <p class="sources-note">Diagram sources for CS topic structure (not loaded by the web app).</p>
+            <ul class="sources-list">
+                <li><a href="resources/All_Computer_Science_Topics%20(3).mmd" download>All_Computer_Science_Topics (3).mmd</a></li>
+                <li><a href="resources/All_Computer_Science_Topics_Update.mmd" download>All_Computer_Science_Topics_Update.mmd</a></li>
+            </ul>
+        </section>
+
+        <p class="sources-back"><a href="index.html">← Back to home</a></p>
+    </main>
+
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

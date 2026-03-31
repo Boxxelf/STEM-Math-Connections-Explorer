@@ -1,0 +1,2082 @@
+{
+    "nodes": [
+        {
+            "id": "A",
+            "number_id": 1,
+            "label": "Introduction to calculus and limits",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid properties and definitions",
+                        "rationale": "A fluid particle is the infinitesmal limit of small cube of fluid. Properties (e.g. density pressure internal energy) are all limits of ratios in the limt."
+                    }
+                ]
+            },
+            "topicCode": "Lim1",
+            "topicName": "Introduction to calculus and limits",
+            "course": "Calculus I",
+            "coreIdea": "Limits and Continuity"
+        },
+        {
+            "id": "B",
+            "number_id": 2,
+            "label": "The limit concept",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid properties and definitions",
+                        "rationale": "A fluid particle is the infinitesmal limit of small cube of fluid. Properties (e.g. density pressure internal energy) are all limits of ratios in the limt."
+                    }
+                ]
+            },
+            "topicCode": "Lim2",
+            "topicName": "The limit concept",
+            "course": "Calculus I",
+            "coreIdea": "Limits and Continuity"
+        },
+        {
+            "id": "C",
+            "number_id": 3,
+            "label": "Graphical and numerical limits",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "General notions",
+                        "rationale": "Basic limits of trigfunctions (e.g. sin theta approx theta) are ubiquitous, as is  the use of vectors, tangents, and normals."
+                    },
+                    {
+                        "cs_topic": "General notions",
+                        "rationale": "Graphical reasoning (e.g. free body diagrams) dominates the translation of physical models into equations."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Differential analysis",
+                        "rationale": "Analyzing mass conservation in a shrinking control volume, and making use of the divergence theorem derives the continuity equation relating the time rate of change of density to the divergence of the flow field. The continuity equation, paired with the navier stokes equations, are the basis for Computational Fluid Dyanmics. Choosing the control volume to be a shrinking cube allows the derivation to utilize the fundamental theorem of calculus and integration by parts rather than the more advanced divergence theorem."
+                    }
+                ]
+            },
+            "topicCode": "Lim3",
+            "topicName": "Graphical and numerical limits",
+            "course": "Calculus I",
+            "coreIdea": "Limits and Continuity"
+        },
+        {
+            "id": "H",
+            "number_id": 9,
+            "label": "Introduction to derivatives",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "topicCode": "Der1",
+            "topicName": "Introduction to derivatives",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives",
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Lagrangian dynamics",
+                        "rationale": "Finding the equations of motion requires calclulating the derivative of the action integral. Although this derivative is part of the more advanced  calculus of variations, it follows exactly the same line of reasoning as in the defintion of the derivative of a funtion of a single variable."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid properties and definitions",
+                        "rationale": "The coefficient of compressibility and volume expansivity are fudamental quantities defined as derivtives using limits."
+                    },
+                    {
+                        "cs_topic": "Newtonian fluids",
+                        "rationale": "Newtonian fluids are those that exhibit a linear relationship between  shear stress, viscosity, and shear rate, which is the spatial  derivative of shear."
+                    },
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "The linear Strain Rate, the shear strain rate, and the volumetric strain rate  are all defined, using limiting arguments, as derivatives of functions of displacement."
+                    },
+                    {
+                        "cs_topic": "Navier-Stokes equations",
+                        "rationale": "These are the central equations of Computational Fluid Dyanmics, derived from conservation of momentum in a shrinking control volume."
+                    },
+                    {
+                        "cs_topic": "Control volume analysis",
+                        "rationale": "A control volume is a region, with physical or imagined boundaries, through which fluid flows (e.g. the bottom half of a cylindrical tank with a hole at the bottom (outlet)). Applying conservation laws to shrinking control volumes yields results about the properties of the flow."
+                    },
+                    {
+                        "cs_topic": "Conservation of Mass",
+                        "rationale": "Mass flow rate and volume flow rate are time derivatives of the total mass/volume in a control volume (a control volume is a fixed or moving region within the flow)."
+                    },
+                    {
+                        "cs_topic": "Compressible flows",
+                        "rationale": "The coefficient of compressibility is the logarithmic derivative of volume with respect to pressure at constant temperature, developped as a limiting quantity."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "D",
+            "number_id": 4,
+            "label": "Limit laws",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Vibrations",
+                        "rationale": "Deriving formulas for resonant vibrations requires calculating limits of functions as the frequency approaches a resonant frequency."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Lim4",
+            "topicName": "Limit laws",
+            "course": "Calculus I",
+            "coreIdea": "Limits and Continuity"
+        },
+        {
+            "id": "E",
+            "number_id": 6,
+            "label": "Limits at infinity and infinite limits",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Vibrations",
+                        "rationale": "Separating forced vibrations into transient and steady state solutions requires calulating the limiting behavior of a function as time approaches infinity."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Lim6",
+            "topicName": "Limits at infinity and infinite limits",
+            "course": "Calculus I",
+            "coreIdea": "Limits and Continuity"
+        },
+        {
+            "id": "F",
+            "number_id": 7,
+            "label": "Epsilon-delta definition of the limit",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Lim5",
+            "topicName": "Epsilon-delta definition of the limit",
+            "course": "Calculus I",
+            "coreIdea": "Limits and Continuity"
+        },
+        {
+            "id": "G",
+            "number_id": 8,
+            "label": "Continuity and the intermediate value theorem",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Lim7",
+            "topicName": "Continuity and the intermediate value theorem",
+            "course": "Calculus I",
+            "coreIdea": "Limits and Continuity"
+        },
+        {
+            "id": "J",
+            "number_id": 11,
+            "label": "Basic differentiation rules",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Particle motion",
+                        "rationale": "Calcluating velocity and acceleration from a formula for the path of a particle requires basic differentiation formulas."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der3",
+            "topicName": "Basic differentiation rules",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "BB",
+            "number_id": 5,
+            "label": "Sequences",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "SeqSer1",
+            "topicName": "Sequences",
+            "course": "Calculus II",
+            "coreIdea": "Sequences and Series"
+        },
+        {
+            "id": "I",
+            "number_id": 10,
+            "label": "Derivatives as functions",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "General notions",
+                        "rationale": "The derivation of a mathematical model starts with a small change in position, velocity or mass which has taken place in a short time, contrained by  a physical principle (e.g a conservation law), which must be satisfied. The limiting form of the principle is then formulated as a relationship between derivatives. The ability to calculate a derivative from its definition as a limit is crucial."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der2",
+            "topicName": "Derivatives as functions",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "N",
+            "number_id": 18,
+            "label": "Rates of change and exponential models",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "The rate of translation is a time derivative of of the path of the particle."
+                    },
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "The rate of rotation of a fluid particle is the angular velocity vector."
+                    },
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "Vorticity, the  curl of velocity field, is computed in cartesian and cylindrical coordinates for simple flow fields."
+                    }
+                ]
+            },
+            "topicCode": "Der9",
+            "topicName": "Rates of change and exponential models",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "P",
+            "number_id": 24,
+            "label": "Linear approximations",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid properties and definitions",
+                        "rationale": "The coefficient of compressibility and volume expansivity are fudamental quantities defined as derivtives using limits."
+                    }
+                ]
+            },
+            "topicCode": "Der11",
+            "topicName": "Linear approximations",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "K",
+            "number_id": 12,
+            "label": "The product and quotient rules",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der4",
+            "topicName": "The product and quotient rules",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "L",
+            "number_id": 14,
+            "label": "Trigonometric derivatives",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Particle motion",
+                        "rationale": "Analysis of periodic motion requires the use of  trigonometric functions and their derivatives."
+                    },
+                    {
+                        "cs_topic": "Dynamics of Rigid Bodies and Angular Momentum",
+                        "rationale": "Evaluating cross products to calculate angular momentum (componentwise to keep calculations simple) requires the calculus of trigonometric functions"
+                    },
+                    {
+                        "cs_topic": "Dynamics of Rigid Bodies and Angular Momentum",
+                        "rationale": "Calculating the linear and angular velocities and accelerations of rolling wheels and pulleys requires the calculus of trigonometric functions."
+                    },
+                    {
+                        "cs_topic": "Vibrations",
+                        "rationale": "Vibrations are typically described by  trigonometric functions (as functions of time rather than angle)."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "Computing gage pressure in an accelerated fluid utilizes modelling and trig/inverse trig relations in related rate problems."
+                    }
+                ]
+            },
+            "topicCode": "Der5",
+            "topicName": "Trigonometric derivatives",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "M",
+            "number_id": 16,
+            "label": "Logarithmic and exponential derivatives",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der6",
+            "topicName": "Logarithmic and exponential derivatives",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "O",
+            "number_id": 19,
+            "label": "The chain rule",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "The material derivative, which relates the eulerian and lagrangian descriptions of fluid flow, is calculated using  the  chain rule for partial derivatives."
+                    },
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "Streamlines are  curves tangent to the velcity field. In 2D, we compute them by solving an ODE which is separable in many examples. The chain rule converts the time derivatives of the flow field to the spatial derivatives in the ODE."
+                    }
+                ]
+            },
+            "topicCode": "Der7",
+            "topicName": "The chain rule",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "S",
+            "number_id": 27,
+            "label": "L'Hôpital's rule",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Vibrations",
+                        "rationale": "L'Hopital's rule provides the most efficient (if not always the most transparent)  way to evaluate the limits that describe resonant vibrations."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der16",
+            "topicName": "L'Hôpital's rule",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "W",
+            "number_id": 30,
+            "label": "Newton's method",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "External flow - Lift and drag",
+                        "rationale": "Terminal velocity is a function of drag coeficent, while drag coefficient is a function of reynolds number, which is in turn a function of terminal velocity. Calculating the terminal velocity (a,k.a. settling speed) of a sphere requires solving a system of three nonlinear equations via an iterative root finding method. The suggested method is Regula Falsa. The iterative nature is similar to that encountered in the study of Newton's method."
+                    },
+                    {
+                        "cs_topic": "External flow - Lift and drag",
+                        "rationale": "Computinng the relationship between mach number and cross sectional area requires itertive root finding methods like Newton's method."
+                    }
+                ]
+            },
+            "topicCode": "Der18",
+            "topicName": "Newton's method",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "R",
+            "number_id": 26,
+            "label": "The shape of graphs and concavity",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der14",
+            "topicName": "The shape of graphs and concavity",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "Q",
+            "number_id": 25,
+            "label": "Extreme values",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der12",
+            "topicName": "Extreme values",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "U",
+            "number_id": 29,
+            "label": "Implicit differentiation",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Particle motion",
+                        "rationale": "Implicit differentiation is used to calculate the relationship between derivatives in cartesian coordinates and those in polar coordinates. Students routinely use these formulas, but are not asked to derive them."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der8",
+            "topicName": "Implicit differentiation",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "AJ",
+            "number_id": 21,
+            "label": "Integration by substitution",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Potentials, conservativation of energy, and momentum",
+                        "rationale": "Calculating work requires integrating force with respect to displacement. The change of variables dx = vdt relates the work integral to the impulse integral."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Int7",
+            "topicName": "Integration by substitution",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AL",
+            "number_id": 22,
+            "label": "Inverse trigonometric integrals",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Int13",
+            "topicName": "Inverse trigonometric integrals",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AB",
+            "number_id": 20,
+            "label": "Hyperbolic functions",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Int12",
+            "topicName": "Hyperbolic functions",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "BJ",
+            "number_id": 23,
+            "label": "Parametric equations",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Particle motion",
+                        "rationale": "This is the calculus of moving particles parametrized by time in two and three dimensions. By treating special cases and doing the calculus componentwise, one can avoid the vector calculus of line integrals and gradients."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "ParamPol1",
+            "topicName": "Parametric equations",
+            "course": "Calculus II",
+            "coreIdea": "Parametric Equations and Polar Coordinates"
+        },
+        {
+            "id": "AM",
+            "number_id": 13,
+            "label": "Integration by parts",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Lagrangian dynamics",
+                        "rationale": "Integration by parts in the derivative of the action integral that characterizes the stationary points  results in a  differential equation known as the Equations of Motion."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Differential analysis",
+                        "rationale": "Analyzing mass conservation in a shrinking control volume, and making use of the divergence theorem derives the continuity equation relating the time rate of change of density to the divergence of the flow field. The continuity equation, paired with the navier stokes equations, are the basis for Computational Fluid Dyanmics. Choosing the control volume to be a shrinking cube allows the derivation to utilize the fundamental theorem of calculus and integration by parts rather than the more advanced divergence theorem."
+                    },
+                    {
+                        "cs_topic": "Navier-Stokes equations",
+                        "rationale": "These are the central equations of Computational Fluid Dyanmics, derived from conservation of momentum in a shrinking control volume. Choosing the control volume to be a shrinking cube allows the derivation to utilize the fundamental theorem of calculus and integration by parts rather than the more advanced divergence theorem."
+                    },
+                    {
+                        "cs_topic": "Computational fluid dynamics",
+                        "rationale": "Computational fluid dynamics uses numerical analysis, algorithms, and computer simulation to predict the behavior of liquids and gases. The centerpieces of the model are the continuity( conservaton of mass) and Navier Stokes (conservation o f momenutm equations. These are complicated systems of partial differential equations and boundary conditons that usually do not allow explicit solutions. Their derivation requires the divergnece theorem, which can reduce to one dimensional integration by parts under simplifying assumptions."
+                    }
+                ]
+            },
+            "topicCode": "AdvInt1",
+            "topicName": "Integration by parts",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "T",
+            "number_id": 28,
+            "label": "Antiderivatives",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Inviscid flow",
+                        "rationale": "The stream function is used to describe two dimensional incompressible inviscid flow. It's partial derivatives are perpendicular to the flow velocity field. Finding the stream function involves integrating partial derivatives. In some rectangular and cylindrical geometries only 1D methods of integration are required."
+                    }
+                ]
+            },
+            "topicCode": "Int1",
+            "topicName": "Antiderivatives",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "BH",
+            "number_id": 17,
+            "label": "Taylor series",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "SeqSer7",
+            "topicName": "Taylor series",
+            "course": "Calculus II",
+            "coreIdea": "Sequences and Series"
+        },
+        {
+            "id": "BK",
+            "number_id": 15,
+            "label": "Polar coordinates",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Particle motion",
+                        "rationale": "Motion under central forces requires computing velocity and accelaration in polar, cylindrical, and spherical coordinates."
+                    },
+                    {
+                        "cs_topic": "Kinetics and Newton’s second law",
+                        "rationale": "Describing the motion of objects accelerated by central forces requires expressing acceleration,velocity, and displacement in polar, cylindrical, and spherical coordinates, as well as well as calcualating the derivatives and integras that relate them.."
+                    },
+                    {
+                        "cs_topic": "Dynamics of Rigid Bodies and Angular Momentum",
+                        "rationale": "Relating linear and angular velocity and acceleration requires calculus in polar coordinates."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "Vorticity, the  curl of velocity field, is computed in cartesian and cylindrical coordinates for simple flow fields."
+                    },
+                    {
+                        "cs_topic": "Differential analysis",
+                        "rationale": "Differential analysis means deriving and using the partial differential equations of Computational Fluid Dynamics, i.e the continuity equation (conservation of mass)  and the Navier Stokes system (conservation of momentum). Special geometries allow some examples that do not require advanced vector calculus or partial diffential equations, relying on only 1D calculus and frequently, cylindrical coordinates."
+                    },
+                    {
+                        "cs_topic": "Conservation of Mass",
+                        "rationale": "They are frequently applied in special geometries that require only  one dimensional integrals and derivatives, many  in polar coordinates."
+                    }
+                ]
+            },
+            "topicCode": "ParamPol2",
+            "topicName": "Polar coordinates",
+            "course": "Calculus II",
+            "coreIdea": "Parametric Equations and Polar Coordinates"
+        },
+        {
+            "id": "V",
+            "number_id": 19,
+            "label": "Related rates",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Dynamics of Rigid Bodies and Angular Momentum",
+                        "rationale": "Pulleys pull cables attached to masses. Rolling wheels have related angular and linear velocity (of the center or the point of contact). The relation between these rates of change is a related rates problem."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "Computing gage pressure in an accelerated fluid utilizes  modelling and trig/inverse trig relations in related rate problems."
+                    }
+                ]
+            },
+            "topicCode": "Der10",
+            "topicName": "Related rates",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "X",
+            "number_id": 26,
+            "label": "Optimization",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Lagrangian dynamics",
+                        "rationale": "Lagrangian dynamics that is based on the calculus of variations. It calculates the  particle dynamics (e.g the path of an object) as a stationary point of the Lagrangian  Action integral. Although it takes place in a much more sophisticated regime, the methods for finding that stationary point are esseentially the same as those in one dimensional optimaization problems."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der17",
+            "topicName": "Optimization",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "Y",
+            "number_id": 22,
+            "label": "The mean value theorem",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Der13",
+            "topicName": "The mean value theorem",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "Z",
+            "number_id": 24,
+            "label": "Graphing with derivatives",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid properties and definitions",
+                        "rationale": "Surface tension forces depend on the contact angle  between the tangents to the liquid and solid surfaces."
+                    },
+                    {
+                        "cs_topic": "Newtonian fluids",
+                        "rationale": "Computing the resultant forces on submerged (flat or curved) plates due to pressure forces requires calculating normals to the surfaces."
+                    },
+                    {
+                        "cs_topic": "Inviscid flow",
+                        "rationale": "The stream function is used to describe two dimensional incompressible inviscid flow. It's partial derivatives are perpendicular to the flow velocity field."
+                    }
+                ]
+            },
+            "topicCode": "Der15",
+            "topicName": "Graphing with derivatives",
+            "course": "Calculus I",
+            "coreIdea": "Derivatives"
+        },
+        {
+            "id": "AA",
+            "number_id": 29,
+            "label": "Introduction to integrals and area approximation",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Conservation of Mass",
+                        "rationale": "Mass flow rate and volume flow rate are time derivatives of the total mass/volume in a control volume (a control volume is a fixed or moving region within the flow). The total mass is the integral of a density over a volume or, in two dimension an area."
+                    },
+                    {
+                        "cs_topic": "Conservation of Mass",
+                        "rationale": "Surface integrals are approximated  by averaging flows over inlets and outlets. These approximations are  Riemann sums with one term."
+                    }
+                ]
+            },
+            "topicCode": "Int2",
+            "topicName": "Introduction to integrals and area approximation",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AC",
+            "number_id": 30,
+            "label": "Definite integrals",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Particle motion",
+                        "rationale": "Calculating velocity and displacement based on forces that determine particle acceleration requires computing definite integrals."
+                    },
+                    {
+                        "cs_topic": "Kinetics and Newton’s second law",
+                        "rationale": "Newton's second law translates forces into acceleration. That acceleration must be integrated to  find velocity and integrated again to find displacement."
+                    },
+                    {
+                        "cs_topic": "Work-energy principle",
+                        "rationale": "Work is the integral of force with respect to  displacement (distance)."
+                    },
+                    {
+                        "cs_topic": "Mass distribution and inertia",
+                        "rationale": "Calculating the center of mass and moment of inertia of an object requires evaluating multidimensional integrals. In important special cases (e.g disks rings bars) these integrals become ond dimensional area type integrals."
+                    },
+                    {
+                        "cs_topic": "Lagrangian dynamics",
+                        "rationale": "The  Lagrangian Action is the definte integral of the Lagrangian function."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Newtonian fluids",
+                        "rationale": "The force a fluid exerts on a surface is the integral of the pressure over the surface."
+                    },
+                    {
+                        "cs_topic": "Control volume analysis",
+                        "rationale": "A control volume is a region, with physical or imagined boundaries, through which fluid flows (e.g. the bottom half of a cylindrical tank with a hole at the bottom (outlet)). Applying conservation laws to shrinking control volumes yields results about the properties of the flow. The application of these laws involve derivatives and flux integrals (typically over simple inlet and outlet regions in undergraduate courses)."
+                    },
+                    {
+                        "cs_topic": "Conservation of Momentum",
+                        "rationale": "Conservation of momentum is a vector conservation law expressing the (material) time derivative of total linear momentum in the control volume as the time derivative of a volume integral plus  surfaces integrals of fluxes. For control volumes with simple inlets and outlets these surface integrals reduce to simple one dimensional integrals,frequently in polar coordinates, that are treated in calculus."
+                    }
+                ]
+            },
+            "topicCode": "Int3",
+            "topicName": "Definite integrals",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AD",
+            "number_id": 31,
+            "label": "The fundamental theorem of calculus",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Kinetics and Newton’s second law",
+                        "rationale": "The fundamental theorem of calculus provides the link between derivatives an integrals, thereby the link between acceleration and  velocity, and then displacements."
+                    },
+                    {
+                        "cs_topic": "Work-energy principle",
+                        "rationale": "Force is the derivative of (minus) the potential energy with respect to displacement, so the change in the  potential energy is the integral of the force, which is an expression of the fundamental theorem of calculus."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid statics/hydrostatics",
+                        "rationale": "The fundamental theorem of calculus and Newtons second law are applied to a static fluid to calculate pressure as a function of depth (P = rho*g*z). Combining this with the fact that force on a surface is the integral of the pressure over the surface yields the basis for using  barometers and manometers."
+                    }
+                ]
+            },
+            "topicCode": "Int4",
+            "topicName": "The fundamental theorem of calculus",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AE",
+            "number_id": 38,
+            "label": "Area between curves",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Int8",
+            "topicName": "Area between curves",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AF",
+            "number_id": 40,
+            "label": "Volume of solids of revolution",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Int9",
+            "topicName": "Volume of solids of revolution",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AG",
+            "number_id": 43,
+            "label": "Arc length and surface area",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Int11",
+            "topicName": "Arc length and surface area",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AH",
+            "number_id": 41,
+            "label": "Physical applications of integrals",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Vibrations",
+                        "rationale": "A substantial amount of physical modelling and approximation is required to formulate the differential equations  that describe vibrations."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Newtonian fluids",
+                        "rationale": "Modelling problems in calculus courses treat these sorts of problems, including the subtelty that the shape of the contianer does not matter for the pressure calculation (except for very small diameter tubes, where surface tension and the capillary effect become important).\""
+                    },
+                    {
+                        "cs_topic": "Conservation of Mass",
+                        "rationale": "The Reynolds Transport Theorem, which links Lagrangian system descriptions to Eulerian control volume analyses by relating the time rate of change of an extensive property (e.g mass, momentum, energy) to the net flux across control surfaces and changes within a control volume. These will become the conservation laws that are the workhorses of engineering fluid dynamics calculations."
+                    },
+                    {
+                        "cs_topic": "Conservation of Mass",
+                        "rationale": "The viscous velocity profile for a circular inlet or outlet from  a control volume is typicaly circular, with a simple dependence on the radius, e.g. (R^2-r^2),. This  results in a simple integral in polar coordinates to calculate flux."
+                    },
+                    {
+                        "cs_topic": "Bernoulli’s equation",
+                        "rationale": "Bernoulli's equation is the head form of conservation of energy, which states that pressure plus a kinetic energy term plus a loss term (head loss) is constant along streamlines.The equation is written so that the terms have units of length, so that they are easily related to piezometer measurements of pressure taps. In  most undergraduate treatments, this is a form of the conservtion law whose underpinnings are in calculus, but will be used to reduce many problems to just modelling and algebra."
+                    },
+                    {
+                        "cs_topic": "Bernoulli’s equation",
+                        "rationale": "Bernoulli's equation is the head form of conservation of energy, which states that pressure plus a kinetic energy term plus a loss term (head loss) is constant along streamlines.The equation is written so that the terms have units of length, so that they are easily related to piezometer measurements of pressure taps. In  most undergraduate treatments, this is a form of the conservtion law whose underpinnings are in calculus, but will be used to reduce many problems to just modelling and algebra. Applications of Bernouilli's equation appear in many application problems in calculus."
+                    },
+                    {
+                        "cs_topic": "Internal flow -  pipe flow",
+                        "rationale": "For pipes networks, including pipes in series or in parallel, the Bernoulli equations for each section can be combined, just as is done with the equations describing voltage and current in electrical networks, with pressure being the analog of voltage and energy or mass flux the analog of current. The application is modelling and algebra, but based on conservation of energy."
+                    }
+                ]
+            },
+            "topicCode": "Int10",
+            "topicName": "Physical applications of integrals",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AI",
+            "number_id": 32,
+            "label": "Indefinite integrals and the net change theorem",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Kinetics and Newton’s second law",
+                        "rationale": "This is another formulation of the fundamental theorem of calculus, which also serves as a link between acceleration and  velocity, and then displacements."
+                    },
+                    {
+                        "cs_topic": "Work-energy principle",
+                        "rationale": "Work is the net change in Energy caused by the action (integral) of force over distance."
+                    },
+                    {
+                        "cs_topic": "Potentials, conservativation of energy, and momentum",
+                        "rationale": "Impulse is the  change in momentum with respect to time, which equals the integral of force with respect to time, yet another expression of the net change theorem."
+                    },
+                    {
+                        "cs_topic": "Mass distribution and inertia",
+                        "rationale": "The multidimensional integrals required to compute the center of mass and moment of inertia for disks and rings often reduce to one dimensional integrals in polar coordinates\""
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Int5",
+            "topicName": "Indefinite integrals and the net change theorem",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AK",
+            "number_id": 33,
+            "label": "Logarithmic and exponential integrals",
+            "calc_level": "Calculus I",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "Int6",
+            "topicName": "Logarithmic and exponential integrals",
+            "course": "Calculus I",
+            "coreIdea": "Integrals"
+        },
+        {
+            "id": "AN",
+            "number_id": 48,
+            "label": "Trigonometric integrals",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "AdvInt2",
+            "topicName": "Trigonometric integrals",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AO",
+            "number_id": 49,
+            "label": "Trigonometric substitutions",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "AdvInt3",
+            "topicName": "Trigonometric substitutions",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AP",
+            "number_id": 50,
+            "label": "Integration by partial fractions",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "AdvInt4",
+            "topicName": "Integration by partial fractions",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AQ",
+            "number_id": 51,
+            "label": "Integration strategies",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "AdvInt5",
+            "topicName": "Integration strategies",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AR",
+            "number_id": 52,
+            "label": "Numerical and table-based integration",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "AdvInt6",
+            "topicName": "Numerical and table-based integration",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AS",
+            "number_id": 53,
+            "label": "Improper integrals",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "External flow - Boundary layers",
+                        "rationale": "A viscous fluid has zero velocity where it touches a physical boundary, but often behaves like a non-viscous fluid at an appropriate distance from the boundary. The region near the coundary is the boundary layer, and different approximations are used inside and outside that layer. The imaginary increase in wall thickness due to the boundary layer is estimated by an improper integral involving the velocity in the direction parallel to the boundary."
+                    }
+                ]
+            },
+            "topicCode": "AdvInt7",
+            "topicName": "Improper integrals",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AT",
+            "number_id": 54,
+            "label": "Probability applications",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "AdvInt8",
+            "topicName": "Probability applications",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AU",
+            "number_id": 55,
+            "label": "Advanced physical applications",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "AdvInt9",
+            "topicName": "Advanced physical applications",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AV",
+            "number_id": 56,
+            "label": "Economics applications",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "AdvInt10",
+            "topicName": "Economics applications",
+            "course": "Calculus II",
+            "coreIdea": "Advanced integration"
+        },
+        {
+            "id": "AW",
+            "number_id": 57,
+            "label": "Introduction to differential equations",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Lagrangian dynamics",
+                        "rationale": "The Equations of Motion differential equation is, in many cases, an ordinary differential equation."
+                    }
+                ],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "Streamlines are  curves tangent to the velcity field. In 2D, we compute them by solving an ODE which is separable in many examples. The chain rule converts the time derivatives of the flow field to the spatial derivatives in the ODE."
+                    }
+                ]
+            },
+            "topicCode": "DiffEq1",
+            "topicName": "Introduction to differential equations",
+            "course": "Calculus II",
+            "coreIdea": "Differential Equations"
+        },
+        {
+            "id": "AX",
+            "number_id": 58,
+            "label": "Direction fields and Euler's method",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "DiffEq2",
+            "topicName": "Direction fields and Euler's method",
+            "course": "Calculus II",
+            "coreIdea": "Differential Equations"
+        },
+        {
+            "id": "AY",
+            "number_id": 59,
+            "label": "Separable differential equations",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "Streamlines are  curves tangent to the velcity field. In 2D, we compute them by solving an ODE which is separable in many examples. The chain rule converts the time derivatives of the flow field to the spatial derivatives in the ODE."
+                    }
+                ]
+            },
+            "topicCode": "DiffEq3",
+            "topicName": "Separable differential equations",
+            "course": "Calculus II",
+            "coreIdea": "Differential Equations"
+        },
+        {
+            "id": "AZ",
+            "number_id": 60,
+            "label": "Modeling with differential equations",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "Streamlines are  curves tangent to the velcity field. In 2D, we compute them by solving an ODE which is separable in many examples. The chain rule converts the time derivatives of the flow field to the spatial derivatives in the ODE."
+                    },
+                    {
+                        "cs_topic": "Fluid kinematics",
+                        "rationale": "A pathline, the path of fluid particle, solves a system of ODE's: dx/dt= u(x,y); dy/dt =v(x,y)."
+                    }
+                ]
+            },
+            "topicCode": "DiffEq4",
+            "topicName": "Modeling with differential equations",
+            "course": "Calculus II",
+            "coreIdea": "Differential Equations"
+        },
+        {
+            "id": "BA",
+            "number_id": 61,
+            "label": "Special first-order linear differential equations",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Vibrations",
+                        "rationale": "Vibrations of a single mass or particle are periodic motions modelled by linear ordinary differential equations."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "DiffEq5",
+            "topicName": "Special first-order linear differential equations",
+            "course": "Calculus II",
+            "coreIdea": "Differential Equations"
+        },
+        {
+            "id": "BC",
+            "number_id": 63,
+            "label": "Series",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "SeqSer2",
+            "topicName": "Series",
+            "course": "Calculus II",
+            "coreIdea": "Sequences and Series"
+        },
+        {
+            "id": "BD",
+            "number_id": 64,
+            "label": "Convergence and divergence",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "SeqSer3",
+            "topicName": "Convergence and divergence",
+            "course": "Calculus II",
+            "coreIdea": "Sequences and Series"
+        },
+        {
+            "id": "BE",
+            "number_id": 65,
+            "label": "Comparison tests",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "SeqSer4",
+            "topicName": "Comparison tests",
+            "course": "Calculus II",
+            "coreIdea": "Sequences and Series"
+        },
+        {
+            "id": "BF",
+            "number_id": 66,
+            "label": "The ratio and root tests",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "SeqSer5",
+            "topicName": "The ratio and root tests",
+            "course": "Calculus II",
+            "coreIdea": "Sequences and Series"
+        },
+        {
+            "id": "BG",
+            "number_id": 67,
+            "label": "Alternating series",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "SeqSer6",
+            "topicName": "Alternating series",
+            "course": "Calculus II",
+            "coreIdea": "Sequences and Series"
+        },
+        {
+            "id": "BI",
+            "number_id": 69,
+            "label": "Power series and functions",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "SeqSer8",
+            "topicName": "Power series and functions",
+            "course": "Calculus II",
+            "coreIdea": "Sequences and Series"
+        },
+        {
+            "id": "BL",
+            "number_id": 72,
+            "label": "Area and arc length in polar coordinates",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [],
+                "Fluid Mechanics": [
+                    {
+                        "cs_topic": "Viscous effects",
+                        "rationale": "A viscous fluid has zero velocity where it touches a physical boundary. In a cylindrical pipe or radius R, the fluid velocity at radius r is modeled as a constant times (R^2-r^2).The viscous forces acting on a (control volume within a) pipe are estimated as the crosss ectional area times the pressure difference at the ends."
+                    },
+                    {
+                        "cs_topic": "Navier-Stokes equations",
+                        "rationale": "These are the central equations of Computational Fluid Dyanmics, derived from conservation of momentum in a shrinking control volume. Choosing the control volume to be a shrinking cube allows the derivation to utilize the fundamental theorem of calculus and integration by parts rather than the more advanced divergence theorem. Based on geometry, they may need to be written in cartesian or cylindrical coordinates,"
+                    },
+                    {
+                        "cs_topic": "Control volume analysis",
+                        "rationale": "A control volume is a region, with physical or imagined boundaries, through which fluid flows (e.g. the bottom half of a cylindrical tank with a hole at the bottom (outlet)). Applying conservation laws to shrinking control volumes yields results about the properties of the flow. The application of these laws involve derivatives and flux integrals (typically over simple inlet and outlet regions in undergraduate courses)."
+                    },
+                    {
+                        "cs_topic": "Conservation of Momentum",
+                        "rationale": "Conservation of momentum is a vector conservation law expressing the (material) time derivative of total linear momentum in the control volume as the time derivative of a volume integral plus  surfaces integrals of fluxes. For control volumes with simple inlets and outlets these surface integrals reduce to simple one dimensional integrals,frequently in polar coordinates, that are treated in calculus."
+                    },
+                    {
+                        "cs_topic": "Conservation of Momentum",
+                        "rationale": "Conservation of angular momentum is expressed in terms of integrals of moment arms over simple inlets and outlets, requiring slightly more complicted integrals than those in the linear momentum equation, also in polar coordinates."
+                    },
+                    {
+                        "cs_topic": "Internal flow -  pipe flow",
+                        "rationale": "Application of Bernoulli's conservation law shows pipes with gradually expanding diameters (diffusers) increase pressure and reduce velocity, preventing turbulence. The calculus is in the derivation. The application is modelling and algebra."
+                    },
+                    {
+                        "cs_topic": "External flow - Lift and drag",
+                        "rationale": "The aerodynamic drag on an object depends on the apparent surface area as seen from the flow (as well as other propertie of the object). This often requires an area integral in polar coordinates."
+                    }
+                ]
+            },
+            "topicCode": "ParamPol3",
+            "topicName": "Area and arc length in polar coordinates",
+            "course": "Calculus II",
+            "coreIdea": "Parametric Equations and Polar Coordinates"
+        },
+        {
+            "id": "BM",
+            "number_id": 73,
+            "label": "Conic sections",
+            "calc_level": "Calculus II",
+            "cs_categories": [],
+            "rationales": {
+                "Dynamics": [
+                    {
+                        "cs_topic": "Particle motion",
+                        "rationale": "The paths of a objects accelerated  by central forces are conic sections. Descriptions of planetary motion require the use of  polar coordinate and motivate descriptions of ellipses using eccentricity."
+                    }
+                ],
+                "Fluid Mechanics": []
+            },
+            "topicCode": "ParamPol4",
+            "topicName": "Conic sections",
+            "course": "Calculus II",
+            "coreIdea": "Parametric Equations and Polar Coordinates"
+        }
+    ],
+    "edges": [
+        {
+            "source": "A",
+            "target": "B"
+        },
+        {
+            "source": "B",
+            "target": "C"
+        },
+        {
+            "source": "B",
+            "target": "H"
+        },
+        {
+            "source": "C",
+            "target": "D"
+        },
+        {
+            "source": "C",
+            "target": "E"
+        },
+        {
+            "source": "D",
+            "target": "F"
+        },
+        {
+            "source": "D",
+            "target": "G"
+        },
+        {
+            "source": "D",
+            "target": "J"
+        },
+        {
+            "source": "D",
+            "target": "BB"
+        },
+        {
+            "source": "H",
+            "target": "I"
+        },
+        {
+            "source": "I",
+            "target": "J"
+        },
+        {
+            "source": "I",
+            "target": "N"
+        },
+        {
+            "source": "I",
+            "target": "P"
+        },
+        {
+            "source": "O",
+            "target": "R"
+        },
+        {
+            "source": "O",
+            "target": "Q"
+        },
+        {
+            "source": "O",
+            "target": "U"
+        },
+        {
+            "source": "O",
+            "target": "AJ"
+        },
+        {
+            "source": "O",
+            "target": "AL"
+        },
+        {
+            "source": "O",
+            "target": "AB"
+        },
+        {
+            "source": "O",
+            "target": "BJ"
+        },
+        {
+            "source": "K",
+            "target": "Q"
+        },
+        {
+            "source": "K",
+            "target": "AM"
+        },
+        {
+            "source": "L",
+            "target": "Q"
+        },
+        {
+            "source": "L",
+            "target": "T"
+        },
+        {
+            "source": "L",
+            "target": "BH"
+        },
+        {
+            "source": "L",
+            "target": "BK"
+        },
+        {
+            "source": "M",
+            "target": "Q"
+        },
+        {
+            "source": "M",
+            "target": "T"
+        },
+        {
+            "source": "M",
+            "target": "BH"
+        },
+        {
+            "source": "N",
+            "target": "V"
+        },
+        {
+            "source": "N",
+            "target": "AA"
+        },
+        {
+            "source": "N",
+            "target": "AW"
+        },
+        {
+            "source": "U",
+            "target": "V"
+        },
+        {
+            "source": "Q",
+            "target": "X"
+        },
+        {
+            "source": "Q",
+            "target": "Y"
+        },
+        {
+            "source": "Q",
+            "target": "Z"
+        },
+        {
+            "source": "R",
+            "target": "Z"
+        },
+        {
+            "source": "AA",
+            "target": "AC"
+        },
+        {
+            "source": "AC",
+            "target": "AD"
+        },
+        {
+            "source": "AC",
+            "target": "AE"
+        },
+        {
+            "source": "AC",
+            "target": "AF"
+        },
+        {
+            "source": "AC",
+            "target": "AG"
+        },
+        {
+            "source": "AC",
+            "target": "AH"
+        },
+        {
+            "source": "AC",
+            "target": "AR"
+        },
+        {
+            "source": "AC",
+            "target": "AS"
+        },
+        {
+            "source": "AC",
+            "target": "AU"
+        },
+        {
+            "source": "AC",
+            "target": "AV"
+        },
+        {
+            "source": "AC",
+            "target": "AZ"
+        },
+        {
+            "source": "AC",
+            "target": "BL"
+        },
+        {
+            "source": "T",
+            "target": "AD"
+        },
+        {
+            "source": "T",
+            "target": "AK"
+        },
+        {
+            "source": "T",
+            "target": "AJ"
+        },
+        {
+            "source": "T",
+            "target": "AL"
+        },
+        {
+            "source": "T",
+            "target": "AB"
+        },
+        {
+            "source": "T",
+            "target": "AM"
+        },
+        {
+            "source": "T",
+            "target": "AN"
+        },
+        {
+            "source": "T",
+            "target": "AP"
+        },
+        {
+            "source": "AD",
+            "target": "AI"
+        },
+        {
+            "source": "AJ",
+            "target": "AH"
+        },
+        {
+            "source": "AJ",
+            "target": "AG"
+        },
+        {
+            "source": "AJ",
+            "target": "AO"
+        },
+        {
+            "source": "AJ",
+            "target": "AY"
+        },
+        {
+            "source": "AJ",
+            "target": "BA"
+        },
+        {
+            "source": "AJ",
+            "target": "BL"
+        },
+        {
+            "source": "AK",
+            "target": "AH"
+        },
+        {
+            "source": "AN",
+            "target": "AO"
+        },
+        {
+            "source": "AP",
+            "target": "AQ"
+        },
+        {
+            "source": "AO",
+            "target": "AQ"
+        },
+        {
+            "source": "AM",
+            "target": "AQ"
+        },
+        {
+            "source": "AQ",
+            "target": "AR"
+        },
+        {
+            "source": "AQ",
+            "target": "AS"
+        },
+        {
+            "source": "AQ",
+            "target": "AU"
+        },
+        {
+            "source": "AQ",
+            "target": "AV"
+        },
+        {
+            "source": "AS",
+            "target": "AT"
+        },
+        {
+            "source": "AW",
+            "target": "AX"
+        },
+        {
+            "source": "AW",
+            "target": "AY"
+        },
+        {
+            "source": "AW",
+            "target": "BA"
+        },
+        {
+            "source": "AY",
+            "target": "AZ"
+        },
+        {
+            "source": "BB",
+            "target": "BC"
+        },
+        {
+            "source": "BC",
+            "target": "BD"
+        },
+        {
+            "source": "BD",
+            "target": "BE"
+        },
+        {
+            "source": "BD",
+            "target": "BF"
+        },
+        {
+            "source": "BD",
+            "target": "BG"
+        },
+        {
+            "source": "BD",
+            "target": "BH"
+        },
+        {
+            "source": "BH",
+            "target": "BI"
+        },
+        {
+            "source": "BK",
+            "target": "BL"
+        },
+        {
+            "source": "BK",
+            "target": "BM"
+        },
+        {
+            "source": "BJ",
+            "target": "BM"
+        },
+        {
+            "source": "A",
+            "target": "C"
+        },
+        {
+            "source": "A",
+            "target": "D"
+        },
+        {
+            "source": "A",
+            "target": "E"
+        },
+        {
+            "source": "B",
+            "target": "D"
+        },
+        {
+            "source": "B",
+            "target": "F"
+        },
+        {
+            "source": "B",
+            "target": "E"
+        },
+        {
+            "source": "B",
+            "target": "G"
+        },
+        {
+            "source": "B",
+            "target": "I"
+        },
+        {
+            "source": "B",
+            "target": "AA"
+        },
+        {
+            "source": "B",
+            "target": "AC"
+        },
+        {
+            "source": "B",
+            "target": "AD"
+        },
+        {
+            "source": "B",
+            "target": "AS"
+        },
+        {
+            "source": "B",
+            "target": "BB"
+        },
+        {
+            "source": "C",
+            "target": "F"
+        },
+        {
+            "source": "C",
+            "target": "G"
+        },
+        {
+            "source": "C",
+            "target": "BB"
+        },
+        {
+            "source": "D",
+            "target": "L"
+        },
+        {
+            "source": "D",
+            "target": "M"
+        },
+        {
+            "source": "D",
+            "target": "S"
+        },
+        {
+            "source": "D",
+            "target": "BC"
+        },
+        {
+            "source": "D",
+            "target": "BD"
+        },
+        {
+            "source": "D",
+            "target": "BE"
+        },
+        {
+            "source": "D",
+            "target": "BF"
+        },
+        {
+            "source": "D",
+            "target": "BG"
+        },
+        {
+            "source": "H",
+            "target": "O"
+        },
+        {
+            "source": "H",
+            "target": "W"
+        },
+        {
+            "source": "I",
+            "target": "Q"
+        },
+        {
+            "source": "I",
+            "target": "Y"
+        },
+        {
+            "source": "I",
+            "target": "R"
+        },
+        {
+            "source": "I",
+            "target": "W"
+        },
+        {
+            "source": "I",
+            "target": "AD"
+        },
+        {
+            "source": "I",
+            "target": "AW"
+        },
+        {
+            "source": "I",
+            "target": "AX"
+        },
+        {
+            "source": "I",
+            "target": "BJ"
+        },
+        {
+            "source": "J",
+            "target": "U"
+        },
+        {
+            "source": "J",
+            "target": "V"
+        },
+        {
+            "source": "J",
+            "target": "Q"
+        },
+        {
+            "source": "J",
+            "target": "R"
+        },
+        {
+            "source": "J",
+            "target": "Z"
+        },
+        {
+            "source": "J",
+            "target": "X"
+        },
+        {
+            "source": "J",
+            "target": "T"
+        },
+        {
+            "source": "J",
+            "target": "AG"
+        },
+        {
+            "source": "J",
+            "target": "AB"
+        },
+        {
+            "source": "J",
+            "target": "AL"
+        },
+        {
+            "source": "J",
+            "target": "AM"
+        },
+        {
+            "source": "J",
+            "target": "BH"
+        },
+        {
+            "source": "J",
+            "target": "BJ"
+        },
+        {
+            "source": "J",
+            "target": "BK"
+        },
+        {
+            "source": "J",
+            "target": "BM"
+        },
+        {
+            "source": "O",
+            "target": "V"
+        },
+        {
+            "source": "O",
+            "target": "Z"
+        },
+        {
+            "source": "O",
+            "target": "X"
+        },
+        {
+            "source": "O",
+            "target": "AG"
+        },
+        {
+            "source": "K",
+            "target": "Z"
+        },
+        {
+            "source": "K",
+            "target": "X"
+        },
+        {
+            "source": "L",
+            "target": "Z"
+        },
+        {
+            "source": "L",
+            "target": "X"
+        },
+        {
+            "source": "L",
+            "target": "AN"
+        },
+        {
+            "source": "L",
+            "target": "AO"
+        },
+        {
+            "source": "L",
+            "target": "BL"
+        },
+        {
+            "source": "M",
+            "target": "Z"
+        },
+        {
+            "source": "M",
+            "target": "X"
+        },
+        {
+            "source": "M",
+            "target": "AK"
+        },
+        {
+            "source": "N",
+            "target": "AI"
+        },
+        {
+            "source": "N",
+            "target": "AH"
+        },
+        {
+            "source": "N",
+            "target": "AU"
+        },
+        {
+            "source": "N",
+            "target": "AV"
+        },
+        {
+            "source": "N",
+            "target": "AZ"
+        },
+        {
+            "source": "AC",
+            "target": "AT"
+        },
+        {
+            "source": "T",
+            "target": "AO"
+        },
+        {
+            "source": "T",
+            "target": "AQ"
+        },
+        {
+            "source": "T",
+            "target": "AR"
+        },
+        {
+            "source": "T",
+            "target": "AY"
+        },
+        {
+            "source": "T",
+            "target": "BA"
+        },
+        {
+            "source": "T",
+            "target": "AI"
+        },
+        {
+            "source": "AJ",
+            "target": "AQ"
+        },
+        {
+            "source": "AJ",
+            "target": "AU"
+        },
+        {
+            "source": "AJ",
+            "target": "AV"
+        },
+        {
+            "source": "AQ",
+            "target": "AT"
+        },
+        {
+            "source": "AW",
+            "target": "AZ"
+        },
+        {
+            "source": "BC",
+            "target": "BE"
+        },
+        {
+            "source": "BC",
+            "target": "BF"
+        },
+        {
+            "source": "BC",
+            "target": "BG"
+        },
+        {
+            "source": "BC",
+            "target": "BH"
+        },
+        {
+            "source": "BC",
+            "target": "BI"
+        },
+        {
+            "source": "BD",
+            "target": "BI"
+        }
+    ]
+}

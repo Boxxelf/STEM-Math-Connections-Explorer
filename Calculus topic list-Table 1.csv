@@ -1,0 +1,134 @@
+Course,Core Idea,Topic Code,Topic Name,Stewart 9th,Active Calculus,OpenStax,Rogawski,Briggs
+Calculus I,Limits and Continuity,Lim1,Introduction to calculus and limits,n/a,n/a,2.1 A Preview of Calculus,"2.1 Limits, rates of change, and tangent lines",2.1 The Idea of Limits
+Calculus I,Limits and Continuity,Lim2,The limit concept,n/a,1.2 The notion of the limit,2.2 The Limit of a Function,n/a,2.2 Definition of Limits
+Calculus I,Limits and Continuity,Lim3,Graphical and numerical limits,2.2 The Limit of a Function,"1.7 Limits, continuity, and differentiability",n/a,2.2 Limits: a numerical and graphical approach,n/a
+Calculus I,Limits and Continuity,Lim4,Limit laws,2.3 Calculating Limits Using the Limit Laws,n/a,2.3 The Limit Laws,"2.3 Basic limit laws
+2.5 Evaluating limits algebraically
+2.6 Trigonometric limits",2.3 Techniques for Computing Limits
+Calculus I,Limits and Continuity,Lim5,Epsilon-delta definition of the limit,2.4 The Precise Definition of a Limit,n/a,2.5 The Precise Definition of a Limit,2.9 The formal definition of a limit,2.7 Precise Definition of Limits
+Calculus I,Limits and Continuity,Lim6,Limits at infinity and infinite limits,2.6 Limits at Infinity; Horizontal Asymptotes,n/a,4.6 Limits at Infinity and Asymptotes,2.7 Limits at infinity,"2.4 Infinite Limits
+2.5 Limits at Infinity"
+Calculus I,Limits and Continuity,Lim7,Continuity and the intermediate value theorem,2.5 Continuity,"1.7 Limits, continuity, and differentiability",2.4 Continuity,"2.4 Limits and continuity
+2.8 Intermediate value theorem",2.6 Continuity
+Calculus I,Derivatives,Der1,Introduction to derivatives,"2.1 The Tangent and Velocity Problems
+2.7 Derivatives and Rates of Change ","1.1 How do we measure velocity?
+1.3 The derivative of a function at a point","2.1 A Preview of Calculus
+3.1 Defining the Derivative","2.1 Limits, rates of change, and tangent lines
+3.1 Definition of the derivative","2.1 The Idea of Limits
+3.1 Introducing the derivative"
+Calculus I,Derivatives,Der2,Derivatives as functions,2.8 The Derivative as a Function,"1.4 The derivative function
+1.5 Interpreting, estimating, and using the derivative
+1.7 Limits, continuity, and differentiability",3.2 The Derivative as a Function,"3.2 The derivative as a function 
+3.5 Higher derivatives",3.2 The derivative as a function
+Calculus I,Derivatives,Der3,Basic differentiation rules,3.1 Derivatives of polynomials and exponential functions,2.1 Elementary derivative rules,3.3 Differentiation Rules,n/a,3.3 Rules of differentiation
+Calculus I,Derivatives,Der4,The product and quotient rules,3.2 The product and quotient rules,2.3 The product and quotient rules,n/a,3.3 Product and quotient rules,3.4 The product and quotient rules
+Calculus I,Derivatives,Der5,Trigonometric derivatives,3.3 Derivatives of trigonometric functions,"2.2 The sine and cosine functions
+2.4 Derivatives of other trigonometric functions",3.5 Derivatives of Trigonometric Functions,3.6 Trigonometric functions,3.5 Derivatives of trigonometric functions
+Calculus I,Derivatives,Der6,Logarithmic and exponential derivatives,3.6 Derivatives of logarithmic and inverse trigonometric functions,2.6 Derivatives of inverse functions,"3.7 Derivatives of Inverse Functions
+3.9 Derivatives of Exponential and Logarithmic Functions","7.1 Derivative of f(x) = b&x and the number e
+7.2 Inverse functions
+7.3 Logarithms and their derivatives","3.9 Derivatives of logarithmic and exponential functions
+3.10 Derivatives of inverse trigonometric functions
+7.1 Logarithmic and Exponential Functions Revisited"
+Calculus I,Derivatives,Der7,The chain rule,3.4 The chain rule,2.5 The chain rule,3.6 The Chain Rule,3.7 The chain rule,3.7 The chain rule
+Calculus I,Derivatives,Der8,Implicit differentiation,3.5 Implicit differentiation,2.7 Derivatives of functions given implicitly,3.8 Implicit Differentiation,3.8 Implicit differentiation,3.8 Implicit differentiation
+Calculus I,Derivatives,Der9,Rates of change and exponential models,"3.7 Rates of change in the natural and social sciences
+3.8 Exponential growth and decay",n/a,"3.4 Derivatives as Rates of Change
+6.8 Exponential Growth and Decay","3.4 Rates of change
+7.4 Exponential growth and decay
+7.6 Models involving y' = k(y-b)","3.6 Derivatives as rates of change
+7.2 Exponential Models"
+Calculus I,Derivatives,Der10,Related rates,3.9 Related rates,3.5 Related rates,4.1 Related Rates,3.9 Related rates,3.11 Related rates
+Calculus I,Derivatives,Der11,Linear approximations,3.10 Linear approximations and differentials,1.8 The tangent line approximation,4.2 Linear Approximations and Differentials,4.1 Linear approximation and applications,4.6 Linear approximation and differentials
+Calculus I,Derivatives,Der12,Extreme values,4.1 Maximum and minimum values,3.1 Using derivatives to identify extreme values,4.3 Maxima and Minima,4.2 Extreme values,4.1 Maxima and minima
+Calculus I,Derivatives,Der13,The mean value theorem,4.2 The mean value theorem,n/a,4.4 The Mean Value Theorem,4.3 The mean value theorem and monotonicity,4.2 Mean value theorem
+Calculus I,Derivatives,Der14,The shape of graphs and concavity,4.3 What derivatives tell us about the shape of a graph,"1.6 The second derivative
+3.2 Using derivatives to describe families of functions",4.5 Derivatives and the Shape of a Graph,4.4 The shape of a graph,4.3 What derivatives tell us
+Calculus I,Derivatives,Der15,Graphing with derivatives,"4.5 Summary of curve sketching
+4.6 Graphing with calculus and technology",n/a,n/a,4.5 Graph sketching and asymptotes,4.4 Graphing functions
+Calculus I,Derivatives,Der16,L'Hôpital's rule,4.4 Indeterminate forms and l'Hospital's rule,2.8 Using derivatives to evaluate limits,4.8 L’Hôpital’s Rule,7.7 L'Hopital's rule,4.7 L'Hopital's rule
+Calculus I,Derivatives,Der17,Optimization,4.7 Optimization problems,"3.3 Global optimization
+3.4 Applied optimization",4.7 Applied Optimization Problems,4.6 Applied optimization,4.5 Optimization functions
+Calculus I,Derivatives,Der18,Newton's method,4.8 Newton's method,n/a,4.9 Newton’s Method,4.7 Newton's method,4.8 Newton's method
+Calculus I,Integrals,Int1,Antiderivatives,4.9 Antiderivatives,5.1 Constructing accurate graphs of antiderivatives,4.10 Antiderivatives,4.8 Antiderivatives,4.9 Antiderivatives
+Calculus I,Integrals,Int2,Introduction to integrals and area approximation,5.1 The Area and Distance Problems,"4.1 Determining distance traveled from velocity
+4.2 Riemann sums","2.1 A Preview of Calculus
+5.1 Approximating Areas",5.1 Approximating and computing area,5.1 Approximating Areas Under Curves
+Calculus I,Integrals,Int3,Definite integrals,"5.2 The Definite Integral
+6.5 Average Value of a Function",4.3 The definite integral,5.2 The Definite Integral,5.2 The definite integral,"5.2 Definite Integrals
+5.4 Working with Integrals"
+Calculus I,Integrals,Int4,The fundamental theorem of calculus,5.3 The Fundamental Theorem of Calculus,"4.4 The fundamental theorem of calculus
+5.2 The second fundamental theorem of calculus",5.3 The Fundamental Theorem of Calculus,"5.3 The fundamental theorem of calculus, part 1
+5.4 The fundamental theorem of calculus, part 2",5.3 Fundamental Theorem of calculus
+Calculus I,Integrals,Int5,Indefinite integrals and the net change theorem,5.4 Indefinite Integrals and the Net Change Theorem,4.4 The fundamental theorem of calculus,5.4 Integration Formulas and the Net Change Theorem,5.5 Net change as the integral of a rate,6.1 Velocity and Net Change
+Calculus I,Integrals,Int6,Logarithmic and exponential integrals,n/a,n/a,"5.6 Integrals Involving Exponential and Logarithmic Functions
+6.7 Integrals, Exponential Functions, and Logarithms","7.1 Derivative of f(x) = b&x and the number e
+7.3 Logarithms and their derivatives",7.1 Logarithmic and Exponential Functions Revisited
+Calculus I,Integrals,Int7,Integration by substitution,5.5 The Substitution Rule,5.3 Integration by substitution,5.5 Substitution,5.6 Substitution method,5.5 Substitution Rule
+Calculus I,Integrals,Int8,Area between curves,6.1 Areas Between Curves,6.1 Using definite integrals to find area and length,6.1 Area between Curves,6.1 Area between two curves,6.2 Regions Between Curves
+Calculus I,Integrals,Int9,Volume of solids of revolution,"6.2 Volumes
+6.3 Volumes by Cylindrical Shells",6.2 Using definite integrals to find volume,"6.2 Determining Volumes by Slicing
+6.3 Volumes of Revolution: Cylindrical Shells","6.2 Setting up integrals: Volume, density, average value
+6.3 Volumes of revolution
+6.4 The method of cylindrical shells","6.3 Volume by Slicing
+6.4 Volume by Shells"
+Calculus I,Integrals,Int10,Physical applications of integrals,6.4 Work,"6.3 Density, mass, and center of mass
+6.4 Physics applications: work, force, and pressure","6.5 Physical Applications
+6.6 Moments and Centers of Mass",6.5 Work and Energy,6.7 Physical applications
+Calculus I,Integrals,Int11,Arc length and surface area,"8.1 Arc Length
+8.2 Area of a Surface of Revolution",n/a,6.4 Arc Length of a Curve and Surface Area,n/a,"6.5 Length of Curves
+6.6 Surface Area"
+Calculus I,Integrals,Int12,Hyperbolic functions,3.11 Hyperbolic functions,n/a,6.9 Calculus of the Hyperbolic Functions,"7.9 Hyperbolic functions
+8.4 Integrals involving hyperbolic and inverse hyperbolic functions",7.3 Hyperbolic Functions
+Calculus I,Integrals,Int13,Inverse trigonometric integrals,n/a,n/a,5.7 Integrals Resulting in Inverse Trigonometric Functions,7.8 Inverse trigonometric functions,n/a
+Calculus II,Advanced integration,AdvInt1,Integration by parts,7.1 Integration by Parts,5.4 Integration by parts,3.1 Integration by Parts,8.1 Integration by parts,"8.1 Basic Approaches
+8.2 Integration by Parts"
+Calculus II,Advanced integration,AdvInt2,Trigonometric integrals,7.2 Trigonometric Integrals,n/a,3.2 Trigonometric Integrals,8.2 Trigonometric integrals,8.3 Trigonometric Integrals
+Calculus II,Advanced integration,AdvInt3,Trigonometric substitutions,7.3 Trigonometric Substitution,n/a,3.3 Trigonometric Substitution,8.3 Trigonometric substitution,8.4 Trigonometric Substitutions
+Calculus II,Advanced integration,AdvInt4,Integration by partial fractions,7.4 Integration of Rational Functions by Partial Fractions,5.5 Other options for finding algebraic antiderivatives,3.4 Partial Fractions,8.5 The method of partial fractions,8.5 Partial Fractions
+Calculus II,Advanced integration,AdvInt5,Integration strategies,7.5 Strategy for Integration,n/a,3.5 Other Strategies for Integration,n/a,8.6 Integration Strategies
+Calculus II,Advanced integration,AdvInt6,Numerical and table-based integration,"7.6 Integration Using Tables and Technology
+7.7 Approximate Integration",5.6 Numerical integration,3.6 Numerical Integration,8.8 Numerical integration,"8.7 Other Methods of Integration
+8.8 Numerical Integration"
+Calculus II,Advanced integration,AdvInt7,Improper integrals,7.8 Improper Integrals,6.5 Improper integrals,3.7 Improper Integrals,8.6 Improper integrals,8.9 Improper Integrals
+Calculus II,Advanced integration,AdvInt8,Probability applications,8.5 Probability,n/a,n/a,8.7 Probability and integration,n/a
+Calculus II,Advanced integration,AdvInt9,Advanced physical applications,8.3 Applications to Physics and Engineering,n/a,n/a,n/a,n/a
+Calculus II,Advanced integration,AdvInt10,Economics applications,8.4 Applications to Economics and Biology,n/a,n/a,7.5 Compound interest and present value,n/a
+Calculus II,Differential Equations,DiffEq1,Introduction to differential equations,9.1 Modeling with Differential Equations,7.1 An introduction to differential equations,4.1 Basics of Differential Equations,10.1 Solving Differential Equations,9.1 Basic Ideas
+Calculus II,Differential Equations,DiffEq2,Direction fields and Euler's method,9.2 Direction Fields and Euler’s Method,"7.2 Qualitative behavior of solutions to DEs
+7.3 Euler's method",4.2 Direction Fields and Numerical Methods,10.2 Graphical and Numerical Methods,9.2 Direction Fields and Euler’s Method
+Calculus II,Differential Equations,DiffEq3,Separable differential equations,9.3 Separable Equations,7.4 Separable differential equations,4.3 Separable Equations,n/a,9.3 Separable Differential Equations 
+Calculus II,Differential Equations,DiffEq4,Modeling with differential equations,"9.4 Models for Population Growth
+9.6 Predator-Prey Systems","7.5 Modeling with differential equations
+7.6 Population growth and the logistic equation",4.4 The Logistic Equation,10.3 The Logistic Equation,9.5 Modeling with Differential Equations
+Calculus II,Differential Equations,DiffEq5,Special first-order linear differential equations,9.5 Linear Equations,n/a,4.5 First-order Linear Equations,10.4 First-Order Linear Equations,9.4 Special First-Order Linear Differential Equations 
+Calculus II,Sequences and Series,SeqSer1,Sequences,11.1 Sequences,8.1 Sequences,5.1 Sequences,11.1 Sequences,"10.1 An Overview
+10.2 Sequences"
+Calculus II,Sequences and Series,SeqSer2,Series,11.2 Series,"8.2 Geometric Series
+8.3 Series of real numbers",5.2 Infinite Series,11.2 Summing an Infinite Series,10.3 Infinite Series
+Calculus II,Sequences and Series,SeqSer3,Convergence and divergence,11.3 The Integral Test and Estimates of Sums,n/a,5.3 The Divergence and Integral Tests,"11.3 Convergence of Series with Positive Terms
+11.4 Absolute and Conditional Convergence",10.4 The Divergence and Integral Tests
+Calculus II,Sequences and Series,SeqSer4,Comparison tests,"11.4 The Comparison Tests
+11.7 Strategy for Testing Series",n/a,5.4 Comparison Tests,n/a,"10.5 Comparison Tests
+10.8 Choosing a Convergence Test"
+Calculus II,Sequences and Series,SeqSer5,The ratio and root tests,11.6 The Ratio and Root Tests,n/a,5.6 Ratio and Root Tests,11.5 The Ratio and Root Tests,10.7 The Ratio and Root Tests
+Calculus II,Sequences and Series,SeqSer6,Alternating series,11.5 Alternating Series and Absolute Convergence,8.4 Alternating series,5.5 Alternating Series,n/a,"10.6 Alternating Series
+"
+Calculus II,Sequences and Series,SeqSer7,Taylor series,"11.10 Taylor and Maclaurin Series
+11.11 Applications of Taylor Polynomials",8.5 Talyor polynomials and Taylor series,"6.3 Taylor and Maclaurin Series
+6.4 Working with Taylor Series",11.7 Taylor Series,"11.3 Taylor Series
+11.4 Working with Taylor Series"
+Calculus II,Sequences and Series,SeqSer8,Power series and functions ,"11.8 Power Series
+11.9 Representations of Functions as Power Series",8.6 Power series,"6.1 Power Series and Functions
+6.2 Properties of Power Series",11.6 Power Series,"11.1 Approximating Functions with Polynomials
+11.2 Properties of Power Series"
+Calculus II,Parametric Equations and Polar Coordinates,ParamPol1,Parametric equations,"10.1 Curves Defined by Parametric Equations
+10.2 Calculus with Parametric Curves",n/a,"7.1 Parametric Equations
+7.2 Calculus of Parametric Curves","12.1 Parametric Equations
+12.2 Arc Length and Speed ",12.1 Parametric Equations
+Calculus II,Parametric Equations and Polar Coordinates,ParamPol2,Polar coordinates,"10.3 Polar Coordinates
+10.4 Calculus in Polar Coordinates",n/a,7.3 Polar Coordinates,12.3 Polar Coordinates ,"12.2 Polar Coordinates
+12.3 Calculus in Polar Coordinates"
+Calculus II,Parametric Equations and Polar Coordinates,ParamPol3,Area and arc length in polar coordinates,n/a,n/a,7.4 Area and Arc Length in Polar Coordinates,12.4 Area and Arc Length in Polar Coordinates ,n/a
+Calculus II,Parametric Equations and Polar Coordinates,ParamPol4,Conic sections,"10.5 Conic Sections
+10.6 Conic Sections in Polar Coordinates",n/a,7.5 Conic Sections,12.5 Conic Sections,12.4 Conic Sections

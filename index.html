@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus Connections Explorer</title>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('cce-theme');
+                var dark = t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.classList.add('theme-dark');
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body home-splash">
+    <header class="app-top-bar app-top-bar--splash" role="banner">
+        <div class="app-top-bar-inner">
+            <span class="app-top-bar-brand app-top-bar-brand--current" aria-current="page">Calculus Connections Explorer</span>
+            <div class="app-top-bar-actions">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="home-main">
+        <h1 class="home-title">Choose a track</h1>
+        <p class="home-lead">
+            Explore how calculus ideas connect to topics in <strong>Computer Science</strong> or <strong>Mechanical Engineering</strong>.
+            Each mode uses the same calculus concept map, with filters and rationales tailored to that discipline.
+        </p>
+
+        <div class="home-grid" role="navigation" aria-label="Choose CS, Mechanical Engineering, or source materials">
+            <a href="cs.html" class="home-card home-card--cs">
+                <span class="home-card-label">Computer Science</span>
+                <span class="home-card-title">CS ↔ Calculus</span>
+                <p class="home-card-desc">
+                    Select CS areas (e.g. Machine Learning, Algorithms, AI, Graphics) to see related calculus topics,
+                    prerequisites, connection strength, and written rationales.
+                </p>
+                <span class="home-card-cta">Open CS connections →</span>
+            </a>
+
+            <a href="meche/index.html" class="home-card home-card--me">
+                <span class="home-card-label">Mechanical Engineering</span>
+                <span class="home-card-title">MechE ↔ Calculus</span>
+                <p class="home-card-desc">
+                    Select Dynamics or Fluid Mechanics topics to see linked calculus ideas, the concept map,
+                    and discipline-specific rationales.
+                </p>
+                <span class="home-card-cta">Open ME connections →</span>
+            </a>
+
+            <a href="sources.html" class="home-card home-card--sources">
+                <span class="home-card-label">Source materials</span>
+                <span class="home-card-title">Connection maps and data</span>
+                <p class="home-card-desc">
+                    Download reference CSVs (topic lists, connection tables, rationales) and other source files.
+                    PDF connection maps and rationale documents will be added here.
+                </p>
+                <span class="home-card-cta">Browse files →</span>
+            </a>
+        </div>
+    </main>
+
+    <script src="theme-toggle.js"></script>
+</body>
+</html>
