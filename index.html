@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculus Connections Explorer</title>
+    <title>STEM–Math Connections Explorer</title>
     <script>
         (function () {
             try {
@@ -15,55 +15,90 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-body home-splash">
-    <header class="app-top-bar app-top-bar--splash" role="banner">
-        <div class="app-top-bar-inner">
-            <span class="app-top-bar-brand app-top-bar-brand--current" aria-current="page">Calculus Connections Explorer</span>
-            <div class="app-top-bar-actions">
+<body class="home-body site-landing">
+    <header class="site-header" role="banner">
+        <div class="site-header-inner">
+            <a href="index.html" class="site-brand" aria-current="page">STEM–Math Connections Explorer</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="site-nav__link site-nav__link--current">Home</a>
+                <a href="about.html" class="site-nav__link">About</a>
+                <a href="how-to-use.html" class="site-nav__link">How to Use</a>
+                <a href="methods.html" class="site-nav__link">Methods</a>
+                <a href="team.html" class="site-nav__link">Team</a>
+                <a href="dissemination.html" class="site-nav__link">Dissemination</a>
+                <a href="contact.html" class="site-nav__link">Contact</a>
+            </nav>
+            <div class="site-header-actions">
                 <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
             </div>
         </div>
     </header>
 
-    <main class="home-main">
-        <h1 class="home-title">Choose a track</h1>
-        <p class="home-lead">
-            Explore how calculus ideas connect to topics in <strong>Computer Science</strong> or <strong>Mechanical Engineering</strong>.
-            Each mode uses the same calculus concept map, with filters and rationales tailored to that discipline.
-        </p>
+    <section class="site-hero site-hero--with-image site-hero--home" aria-labelledby="home-hero-title">
+        <div class="site-hero-inner">
+            <h1 id="home-hero-title">Mapping How Calculus Connects to Degree Pathways</h1>
+            <p class="site-hero-lead">
+                Explore how calculus ideas support advanced courses in undergraduate STEM programs.
+            </p>
+        </div>
+    </section>
 
-        <div class="home-grid" role="navigation" aria-label="Choose CS, Mechanical Engineering, or source materials">
-            <a href="cs.html" class="home-card home-card--cs">
-                <span class="home-card-label">Computer Science</span>
-                <span class="home-card-title">CS ↔ Calculus</span>
-                <p class="home-card-desc">
-                    Select CS areas (e.g. Machine Learning, Algorithms, AI, Graphics) to see related calculus topics,
-                    prerequisites, connection strength, and written rationales.
+    <main class="site-main site-main--landing site-main--home" id="main">
+        <div class="home-blocks">
+            <section class="home-block home-block--explore" aria-labelledby="sec-explore">
+                <h2 id="sec-explore">Explore the Degree Mappings</h2>
+                <p class="home-block__lead">
+                    See interactive visualizations showing how calculus topics connect to advanced courses in <strong>Computer Science</strong> and <strong>Mechanical Engineering</strong>. Filter by course, topic, or discipline to understand which ideas matter most and where gaps emerge.
                 </p>
-                <span class="home-card-cta">Open CS connections →</span>
-            </a>
+                <div class="home-panels" role="navigation" aria-label="Degree mapping tools">
+                    <a href="cs.html" class="home-card home-card--cs">
+                        <img class="home-card-image" src="images/156870954_l.jpg" alt="Person writing math notation on a whiteboard" loading="lazy">
+                        <span class="home-card-label">Computer Science</span>
+                        <span class="home-card-title">CS ↔ Calculus</span>
+                        <p class="home-card-desc">
+                            Select CS areas to see related calculus topics, connection strength, and written rationales.
+                        </p>
+                        <span class="home-card-cta">Explore the Computer Science mapping →</span>
+                    </a>
 
-            <a href="meche/index.html" class="home-card home-card--me">
-                <span class="home-card-label">Mechanical Engineering</span>
-                <span class="home-card-title">MechE ↔ Calculus</span>
-                <p class="home-card-desc">
-                    Select Dynamics or Fluid Mechanics topics to see linked calculus ideas, the concept map,
-                    and discipline-specific rationales.
-                </p>
-                <span class="home-card-cta">Open ME connections →</span>
-            </a>
+                    <a href="meche/index.html" class="home-card home-card--me">
+                        <img class="home-card-image" src="images/methods.jpg" alt="Computer workstation with code visualizations" loading="lazy">
+                        <span class="home-card-label">Mechanical Engineering</span>
+                        <span class="home-card-title">MechE ↔ Calculus</span>
+                        <p class="home-card-desc">
+                            Select dynamics or fluids topics to see linked calculus ideas and discipline-specific rationales.
+                        </p>
+                        <span class="home-card-cta">Explore the Mechanical Engineering mapping →</span>
+                    </a>
+                </div>
+            </section>
 
-            <a href="sources.html" class="home-card home-card--sources">
-                <span class="home-card-label">Source materials</span>
-                <span class="home-card-title">Connection maps and data</span>
-                <p class="home-card-desc">
-                    Download reference CSVs (topic lists, connection tables, rationales) and other source files.
-                    PDF connection maps and rationale documents will be added here.
+            <section class="home-block home-block--why" aria-labelledby="sec-why">
+                <h2 id="sec-why">Why this project exists</h2>
+                <p>
+                    <strong>Calculus</strong> is a required gateway for many students, yet its connections to later coursework are often unclear. This project makes those connections visible to support better <strong>curriculum design</strong>, <strong>advising</strong>, and <strong>student pathways</strong>.
                 </p>
-                <span class="home-card-cta">Browse files →</span>
-            </a>
+                <p>
+                    <a href="about.html" class="site-text-link">Read more about the project →</a>
+                </p>
+            </section>
         </div>
     </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-footer-inner">
+            <div class="site-partner-logos" aria-label="Partner organizations">
+                <a href="https://www.ets.org/research.html" class="site-partner-logo site-partner-logo--primary" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/ETS_Research_Institute.png" alt="ETS Research Institute" width="320" height="70" loading="lazy">
+                </a>
+                <a href="https://www.wested.org/" class="site-partner-logo site-partner-logo--sub" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/logo-wested.png" alt="WestEd" width="140" height="32" loading="lazy">
+                </a>
+            </div>
+            <p class="site-footer-note">STEM–Math Connections Explorer</p>
+            <p class="site-footer-license">Hero images: <a href="https://www.123rf.com/license/standard/" class="site-footer-link" target="_blank" rel="noopener noreferrer">123RF Standard License</a></p>
+        </div>
+    </footer>
 
     <script src="theme-toggle.js"></script>
 </body>

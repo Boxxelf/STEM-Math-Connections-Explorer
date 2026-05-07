@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Source materials — Calculus Connections Explorer</title>
+    <title>Source materials — STEM–Math Connections Explorer</title>
     <script>
         (function () {
             try {
@@ -15,11 +15,20 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-body home-splash sources-body">
-    <header class="app-top-bar app-top-bar--splash" role="banner">
-        <div class="app-top-bar-inner">
-            <a href="index.html" class="app-top-bar-brand">Calculus Connections Explorer</a>
-            <div class="app-top-bar-actions">
+<body class="site-page sources-body">
+    <header class="site-header" role="banner">
+        <div class="site-header-inner">
+            <a href="index.html" class="site-brand">STEM–Math Connections Explorer</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="site-nav__link">Home</a>
+                <a href="about.html" class="site-nav__link">About</a>
+                <a href="how-to-use.html" class="site-nav__link">How to Use</a>
+                <a href="methods.html" class="site-nav__link">Methods</a>
+                <a href="team.html" class="site-nav__link">Team</a>
+                <a href="dissemination.html" class="site-nav__link">Dissemination</a>
+                <a href="contact.html" class="site-nav__link">Contact</a>
+            </nav>
+            <div class="site-header-actions">
                 <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
             </div>
         </div>
@@ -79,6 +88,21 @@
 
         <p class="sources-back"><a href="index.html">← Back to home</a></p>
     </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-footer-inner">
+            <div class="site-partner-logos" aria-label="Partner organizations">
+                <a href="https://www.ets.org/research.html" class="site-partner-logo site-partner-logo--primary" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/ETS_Research_Institute.png" alt="ETS Research Institute" width="320" height="70" loading="lazy">
+                </a>
+                <a href="https://www.wested.org/" class="site-partner-logo site-partner-logo--sub" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/logo-wested.png" alt="WestEd" width="140" height="32" loading="lazy">
+                </a>
+            </div>
+            <p class="site-footer-note">STEM–Math Connections Explorer</p>
+            <p class="site-footer-license">Hero images: <a href="https://www.123rf.com/license/standard/" class="site-footer-link" target="_blank" rel="noopener noreferrer">123RF Standard License</a></p>
+        </div>
+    </footer>
 
     <script src="theme-toggle.js"></script>
 </body>

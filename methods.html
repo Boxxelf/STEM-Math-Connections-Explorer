@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods — STEM–Math Connections Explorer</title>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('cce-theme');
+                var dark = t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.classList.add('theme-dark');
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site-page">
+    <header class="site-header" role="banner">
+        <div class="site-header-inner">
+            <a href="index.html" class="site-brand">STEM–Math Connections Explorer</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="site-nav__link">Home</a>
+                <a href="about.html" class="site-nav__link">About</a>
+                <a href="how-to-use.html" class="site-nav__link">How to Use</a>
+                <a href="methods.html" class="site-nav__link site-nav__link--current" aria-current="page">Methods</a>
+                <a href="team.html" class="site-nav__link">Team</a>
+                <a href="dissemination.html" class="site-nav__link">Dissemination</a>
+                <a href="contact.html" class="site-nav__link">Contact</a>
+            </nav>
+            <div class="site-header-actions">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="site-hero site-hero--with-image site-hero--methods site-hero--inner" aria-labelledby="page-title">
+        <div class="site-hero-inner">
+            <h1 id="page-title">Methods</h1>
+        </div>
+    </section>
+
+    <main class="site-main site-prose" id="main">
+        <h2>Mapping Approach</h2>
+        <p>The Degree Mapping Project uses a <strong>systematic, evidence‑informed approach</strong> to examine how concepts from gateway calculus courses connect to advanced, degree‑required coursework. The aim is not to evaluate individual programs or instructors, but to identify common patterns in how mathematical ideas are taken up across disciplinary contexts.</p>
+        <p>The mapping process unfolds in several coordinated stages:</p>
+        <p><strong>1. Identifying calculus concepts.</strong><br>
+        Concepts from Calculus I and Calculus II were articulated as fine‑grained topics representing the foundational ideas typically taught across the standard calculus sequence. These topics were refined and organized to support consistent interpretation across analyses.</p>
+        <p><strong>2. Identifying disciplinary course topics.</strong><br>
+        For each degree pathway, representative advanced courses were selected based on common curricular structures. Topic lists for these courses (currently within Computer Science and Mechanical Engineering programs) were developed through analyses of publicly available course syllabi and widely used textbooks, with attention to capturing core ideas rather than institution‑specific details.</p>
+        <p><strong>3. Mapping connections between calculus and disciplinary topics.</strong><br>
+        Calculus topics were systematically compared with disciplinary course topics to identify where calculus supports understanding, reasoning, or problem solving in advanced coursework. Connections were documented using structured mapping tables that describe the strength and nature of each relationship.</p>
+        <p><strong>4. Developing rationales and validation.</strong><br>
+        Each identified connection is accompanied by a brief rationale explaining how the calculus concept is used in the disciplinary context. Draft mappings and rationales were iteratively reviewed and refined through internal review and consultation with subject‑matter experts to ensure disciplinary accuracy and clarity.</p>
+        <p><strong>5. Visualization and sensemaking.</strong><br>
+        The finalized mappings serve as the foundation for the interactive visualizations presented on this website. The visual tools are designed to help users explore connections, compare patterns across courses, and reason about alignment without prescribing specific curricular decisions.</p>
+        <p>Together, these stages produce a <strong>transparent and reusable framework</strong> for examining alignment between gateway mathematics and degree pathways.</p>
+
+        <h2>Supporting Materials</h2>
+        <p>The visualizations on this site are grounded in a set of <strong>supporting materials</strong> that document how topics and connections were identified. These materials are provided to promote transparency and to support deeper exploration by interested users.</p>
+        <p class="methods-note">External links below are placeholders until final URLs are provided. Related CSVs and files are also available on the <a href="sources.html" class="site-text-link">source materials</a> page.</p>
+
+        <h3 class="methods-sub">Calculus Materials</h3>
+        <ul>
+            <li><a href="#" class="methods-link-placeholder">Calculus topic list (Calculus I and II)</a>: A structured list of calculus topics used as the foundation for all mappings, reflecting common content across the standard calculus sequence.</li>
+            <li><a href="#" class="methods-link-placeholder">Textbook alignment</a>: An alignment of calculus topics with sections from commonly used calculus textbooks, used to support consistent interpretation of topic scope and sequencing.</li>
+        </ul>
+
+        <h3 class="methods-sub">Computer Science Materials</h3>
+        <ul>
+            <li><a href="#" class="methods-link-placeholder">Computer Science topic lists</a>: Topic lists for selected Computer Science courses (algorithms, machine learning, artificial intelligence, and computer graphics) derived from syllabus and textbook analyses.</li>
+            <li><strong>Course‑level mapping tables and rationales:</strong> Tables documenting connections between calculus topics and course topics for each mapped course, with associated explanations describing why and how a given calculus concept supports learning.</li>
+        </ul>
+        <ul class="methods-course-links">
+            <li><strong>Algorithms</strong> — <a href="#" class="methods-link-placeholder">Mapping table</a> | <a href="#" class="methods-link-placeholder">Rationales</a></li>
+            <li><strong>Machine learning</strong> — <a href="#" class="methods-link-placeholder">Mapping table</a> | <a href="#" class="methods-link-placeholder">Rationales</a></li>
+            <li><strong>Artificial intelligence</strong> — <a href="#" class="methods-link-placeholder">Mapping table</a> | <a href="#" class="methods-link-placeholder">Rationales</a></li>
+            <li><strong>Computer graphics</strong> — <a href="#" class="methods-link-placeholder">Mapping table</a> | <a href="#" class="methods-link-placeholder">Rationales</a></li>
+        </ul>
+
+        <h3 class="methods-sub">Mechanical Engineering</h3>
+        <ul>
+            <li><a href="#" class="methods-link-placeholder">Mechanical Engineering topic lists</a>: Topic lists for selected Mechanical Engineering courses (dynamics, fluid mechanics, heat transfer, and control systems) derived from syllabus and textbook analyses.</li>
+            <li><strong>Course‑level mapping tables and rationales:</strong> Tables documenting connections between calculus topics and course topics for each mapped course, with associated explanations describing why and how a given calculus concept supports learning.</li>
+        </ul>
+        <ul class="methods-course-links">
+            <li><strong>Dynamics</strong> — <a href="#" class="methods-link-placeholder">Mapping table</a> | <a href="#" class="methods-link-placeholder">Rationales</a></li>
+            <li><strong>Fluid mechanics</strong> — <a href="#" class="methods-link-placeholder">Mapping table</a> | <a href="#" class="methods-link-placeholder">Rationales</a></li>
+            <li><strong>Heat transfer</strong> — <a href="#" class="methods-link-placeholder">Mapping table</a> | <a href="#" class="methods-link-placeholder">Rationales</a></li>
+            <li><strong>Control systems</strong> — <a href="#" class="methods-link-placeholder">Mapping table</a> | <a href="#" class="methods-link-placeholder">Rationales</a></li>
+        </ul>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-footer-inner">
+            <div class="site-partner-logos" aria-label="Partner organizations">
+                <a href="https://www.ets.org/research.html" class="site-partner-logo site-partner-logo--primary" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/ETS_Research_Institute.png" alt="ETS Research Institute" width="320" height="70" loading="lazy">
+                </a>
+                <a href="https://www.wested.org/" class="site-partner-logo site-partner-logo--sub" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/logo-wested.png" alt="WestEd" width="140" height="32" loading="lazy">
+                </a>
+            </div>
+            <p class="site-footer-note">STEM–Math Connections Explorer</p>
+            <p class="site-footer-license">Hero images: <a href="https://www.123rf.com/license/standard/" class="site-footer-link" target="_blank" rel="noopener noreferrer">123RF Standard License</a></p>
+        </div>
+    </footer>
+
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

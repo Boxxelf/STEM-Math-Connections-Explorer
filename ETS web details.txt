@@ -1,0 +1,131 @@
+﻿Site name: STEM–Math Connections Explorer 
+Domain: rt.ets.org/stem-math-mapping 
+Logos to include: ETS Research Institute, WestEd, Gates Foundation 
+Pages / site map: 
+* Home page 
+* About 
+* How to Use 
+* Methods 
+* Team 
+* Dissemination 
+* Contact 
+Page-Specific Content: 
+Home page 
+* Building on the current home page: 
+* Replace the current header (“Choose a track”) with “Mapping How Calculus Connects to Degree Pathways”. Update the current text under the header to say: “Explore how calculus ideas support advanced courses in undergraduate STEM programs." 
+* Include a section below with header “Explore the Degree Mappings” with text: “See interactive visualizations showing how calculus topics connect to advanced courses in Computer Science and Mechanical Engineering. Filter by course, topic, or discipline to understand which ideas matter most and where gaps emerge.” 
+* Within this section, include separate links to the CS and MechE mappings, like: “Explore the Computer Science mapping -->” and “Explore the Mechanical Engineering mapping -->” 
+* Include a second section, with header “Why this project exists” with text “Calculus is a required gateway for many students, yet its connections to later coursework are often unclear. This project makes those connections visible to support better curriculum design, advising, and student pathways.” 
+* In this section, add a link to the About page with text “Read more about the project -->” 
+“About” page 
+* “Project Overview” header, with the following paragraphs: 
+The Degree Mapping Project explores how calculus actually shows up in students’ degree pathways. 
+ 
+Calculus is a foundational requirement for many STEM and near‑STEM majors, yet students and instructors often experience a disconnect between what is taught in calculus courses and how mathematics is later used in advanced, discipline‑specific coursework. The Degree Mapping Project addresses this disconnect by making visible how key concepts from Calculus I and Calculus II connect to advanced courses in undergraduate degree programs. 
+ 
+This website presents interactive mappings and supporting resources that trace relationships between calculus concepts and advanced courses in Computer Science and Mechanical Engineering. Drawing on analyses of course syllabi, textbooks, and expert review, the mappings highlight which calculus ideas are most relevant for particular courses, where calculus plays a limited role, and how prerequisite structures shape students’ progress through degree programs. The site is intended as a resource for researchers, instructors, curriculum designers, advisors, and others interested in strengthening alignment between gateway mathematics and postsecondary pathways. 
+* “Motivation & Goals” header, with the following paragraphs: 
+Gateway mathematics courses are designed to prepare students for success across STEM and near‑STEM degrees, yet evidence consistently points to misalignment between calculus instruction and downstream course demands. Calculus I, in particular, is widely recognized as a bottleneck that contributes to delayed progress, course repetition, and attrition, disproportionately affecting students from historically underserved backgrounds. At the same time, research on learning transfer suggests that students may leave calculus with procedural skills but without a clear understanding of when and how those ideas apply in later coursework. 
+ 
+The goal of the Degree Mapping Project is to respond to this challenge by clearly articulating where gateway calculus concepts support learning in advanced disciplinary courses. By systematically mapping relationships between calculus topics and degree‑required coursework, the project aims to: 
+* Illuminate which calculus concepts are most central to learning in specific degree pathways. 
+* Support curriculum alignment and revision in mathematics and partner disciplines. 
+* Inform instructional decisions, course design, and advising related to mathematics prerequisites. 
+* Contribute to broader efforts to modernize gateway mathematics in ways that promote equity, persistence, and degree completion. 
+ 
+The work begins with Computer Science, a high‑enrollment and rapidly evolving field, and extends to Mechanical Engineering to examine how calculus supports learning across different disciplinary contexts. 
+* “Funding & Partners” header, with the following paragraphs: 
+The Degree Mapping Project is supported by the Gates Foundation as part of a broader effort to strengthen gateway mathematics and improve alignment between mathematics instruction and undergraduate degree pathways. 
+ 
+The project is jointly led by Educational Testing Service (ETS) and WestEd. ETS leads the analytic, mapping, and visualization development work, while WestEd contributes expertise in study design, disciplinary consultation, and the recruitment and coordination of subject matter experts. Together, the partners bring complementary strengths in assessment, learning sciences, curriculum research, and stakeholder engagement. 
+ 
+A multidisciplinary project team, including researchers, developers, and external advisors, supports the design, validation, and dissemination of the mappings presented on this site. More information about the people involved in the work is available on the Project Team page. 
+ 
+“How to Use” page 
+* “Interpreting the Maps” header with text: 
+The degree mappings on this site are designed to show how concepts from Calculus I and Calculus II relate to content in advanced, degree‑required coursework. Each map presents calculus topics alongside disciplinary course topics and highlights where meaningful connections exist. 
+ 
+In the visualizations, calculus topics represent foundational mathematical ideas typically taught in the standard calculus sequence. Disciplinary topics represent core concepts commonly covered in upper‑level courses within a given field (for example, algorithms or machine learning in Computer Science, or fluid mechanics and dynamics in Mechanical Engineering). Links between topics indicate that a calculus concept supports understanding, problem solving, or reasoning in that disciplinary context. 
+ 
+Not all calculus topics connect equally, or at all, to advanced courses. Stronger concentrations of connections suggest areas where calculus plays a central role, while sparse or absent connections point to topics that may be less frequently used, at least in the courses examined. The maps are exploratory tools: they are intended to surface patterns, prompt reflection, and support conversations across disciplines, rather than to prescribe a single curricular pathway. 
+* “Use Cases” header with text: 
+The mappings are intended to support a range of audiences and purposes: 
+* Faculty and curriculum designers can use the maps to examine how calculus topics align with disciplinary needs, identify potential gaps or redundancies, and support conversations about course sequencing, emphasis, or redesign. 
+* Calculus instructors can explore where and how their course content is used in downstream coursework, helping to inform instructional choices, examples, and emphasis on particular concepts. 
+* Disciplinary instructors can use the maps to better understand students’ mathematical preparation, anticipate where targeted review or support might be needed, and clarify expectations around prerequisite knowledge. 
+* Advisors and academic leaders can use the mappings to support discussions about degree pathways, prerequisites, and student progression, particularly when considering equity‑oriented reforms to gateway mathematics. 
+* Researchers can draw on the mappings as an evidence base for studying alignment between mathematics instruction and degree outcomes, or for generating new research questions about transfer, curriculum coherence, and student persistence. 
+* “Limitations” header with text: 
+The degree mappings are designed to support sensemaking and discussion, but they come with important limitations. 
+ 
+First, the mappings reflect patterns derived from analyses of representative course syllabi, commonly used textbooks, and expert review. They are not exhaustive of all courses, institutions, or instructional approaches, and they should not be interpreted as universal requirements for every program. 
+ 
+Second, a connection shown in the maps does not imply that students will automatically transfer calculus knowledge into disciplinary contexts. Instructional practices, course design, and students’ prior experiences all influence whether and how transfer occurs. 
+ 
+Third, the absence of a connection does not mean that a calculus topic is unimportant in an absolute sense. Some ideas may support broader mathematical reasoning, prepare students for later courses not included here, or serve purposes beyond the specific courses examined. 
+ 
+Finally, the mappings are descriptive rather than prescriptive. They are intended to inform inquiry, dialogue, and decision‑making, not to dictate curricula or replace local expertise. Users are encouraged to interpret the maps in conjunction with institutional context, disciplinary judgment, and ongoing engagement with students and faculty. 
+ 
+“Methods” page 
+* “Mapping Approach” header with the following text: 
+The Degree Mapping Project uses a systematic, evidence‑informed approach to examine how concepts from gateway calculus courses connect to advanced, degree‑required coursework. The aim is not to evaluate individual programs or instructors, but to identify common patterns in how mathematical ideas are taken up across disciplinary contexts. 
+ 
+The mapping process unfolds in several coordinated stages: 
+1. Identifying calculus concepts. 
+Concepts from Calculus I and Calculus II were articulated as fine‑grained topics representing the foundational ideas typically taught across the standard calculus sequence. These topics were refined and organized to support consistent interpretation across analyses. 
+2. Identifying disciplinary course topics. 
+For each degree pathway, representative advanced courses were selected based on common curricular structures. Topic lists for these courses (currently within Computer Science and Mechanical Engineering programs) were developed through analyses of publicly available course syllabi and widely used textbooks, with attention to capturing core ideas rather than institution‑specific details. 
+3. Mapping connections between calculus and disciplinary topics. 
+Calculus topics were systematically compared with disciplinary course topics to identify where calculus supports understanding, reasoning, or problem solving in advanced coursework. Connections were documented using structured mapping tables that describe the strength and nature of each relationship. 
+4. Developing rationales and validation. 
+Each identified connection is accompanied by a brief rationale explaining how the calculus concept is used in the disciplinary context. Draft mappings and rationales were iteratively reviewed and refined through internal review and consultation with subject‑matter experts to ensure disciplinary accuracy and clarity. 
+5. Visualization and sensemaking. 
+The finalized mappings serve as the foundation for the interactive visualizations presented on this website. The visual tools are designed to help users explore connections, compare patterns across courses, and reason about alignment without prescribing specific curricular decisions. 
+ 
+Together, these stages produce a transparent and reusable framework for examining alignment between gateway mathematics and degree pathways. 
+ 
+* “Supporting Materials” header, with the following text: 
+The visualizations on this site are grounded in a set of supporting materials that document how topics and connections were identified. These materials are provided to promote transparency and to support deeper exploration by interested users. 
+* “Calculus Materials” sub-header, with links to the following: 
+* Calculus topic list (Calculus I and II): A structured list of calculus topics used as the foundation for all mappings, reflecting common content across the standard calculus sequence. 
+* Textbook alignment: An alignment of calculus topics with sections from commonly used calculus textbooks, used to support consistent interpretation of topic scope and sequencing. 
+* “Computer Science Materials” sub-header, with links to the following: 
+* Computer Science topic lists: Topic lists for selected Computer Science courses (algorithms, machine learning, artificial intelligence, and computer graphics) derived from syllabus and textbook analyses. 
+* Course‑level mapping tables and rationales: Tables documenting connections between calculus topics and course topics for each mapped course, with associated explanations describing why and how a given calculus concept supports learning. 
+* Algorithms – Mapping table | Rationales 
+* Machine learning – Mapping table | Rationales 
+* Artificial intelligence – Mapping table | Rationales 
+* Computer graphics – Mapping table | Rationales 
+* “Mechanical Engineering” sub-header, with links to the following: 
+* Mechanical Engineering topic lists: Topic lists for selected Mechanical Engineering courses (dynamics, fluid mechanics, heat transfer, and control systems) derived from syllabus and textbook analyses. 
+* Course‑level mapping tables and rationales: Tables documenting connections between calculus topics and course topics for each mapped course, with associated explanations describing why and how a given calculus concept supports learning. 
+* Dynamics – Mapping table | Rationales 
+* Fluid mechanics – Mapping table | Rationales 
+* Heat transfer – Mapping table | Rationales 
+* Control systems – Mapping table | Rationales 
+ 
+“Team” page 
+* Opening paragraph at the top of the page: 
+The Degree Mapping Project is led by a multidisciplinary team of researchers, designers, and subject‑matter experts with experience spanning mathematics education, computer science, assessment design, and curriculum research. Together, the team brings expertise in analyzing course content, documenting conceptual dependencies, and translating research findings into usable tools and resources. 
+* “Research Team” header with sections for each person: 
+Lei Liu, Ph.D., is a Research Director at ETS and an adjunct professor at the University of Pennsylvania. She holds a Ph.D. in educational psychology with a focus on learning sciences and educational technology from Rutgers University, and earned her bachelor's degree in science and English with a minor in Computer Science from Central South University of Technology in China. Dr. Liu’s research centers on STEM education and the transition from K-12 to postsecondary pathways. She has led multiple federally funded projects and an AI center focusing on AI-supported assessments and STEM innovations. She contributes to national and state assessment programs, including NAEP Science and Mathematics, and CA State assessments. For the Degree Mapping Project, she oversees the research design, integration of disciplinary perspectives, and development of the analytic framework. 
+Ou Lydia Liu, Ph.D. is Associate Vice President of Research at ETS and a globally recognized expert in the assessment of critical skills and competencies in higher education and the workforce. She has led large-scale research projects funded by government and private agencies across the U.S., India, China, and Korea. A recipient of multiple national awards, she was named an AERA Fellow in 2023. Dr. Liu holds a Ph.D. in Quantitative Methods and Evaluation from the University of California, Berkeley. For the Degree Mapping Project, she provides strategic oversight and guidance to ensure methodological rigor. 
+Field Watts, Ph.D., is a Research Associate at ETS, where he contributes to projects related to eliciting, identifying, and measuring student learning. His research focuses on student reasoning in STEM and the applications of machine learning and artificial intelligence within educational contexts. He holds a Ph.D. in Chemistry Education and an M.S. in Chemistry from the University of Michigan. Dr. Watts provides valuable contributions to the mapping by integrating insights on conceptual learning and applications of calculus in scientific and computational reasoning. 
+Erin Barno. Ph.D., is an Associate Measurement Scientist at ETS specializing in math teacher learning and mathematical knowledge for teaching. Before joining ETS, Erin taught secondary mathematics and was a mathematics instructional coach in the greater Boston area before completing her Ph.D. in STEM curriculum and instruction at Boston University. Her research focuses on designing technology-enhanced practice spaces for pre- and in-service teachers that promote equitable and ambitious mathematics instruction. Dr. Barno contributes valuable expertise on how conceptual calculus understanding supports both teaching and learning in STEM contexts. 
+Ann Edwards, Ph.D., is Senior Director of Mathematics at WestEd and a national leader in equitable mathematics education, with over 30 years of experience spanning K-12, postsecondary and adult contexts. She covers the Carnegie Math Pathways, supporting over 85,000 students across 140 institutions, and co-led the recent NAEP Mathematics Framework revision. Her bachelor’s degree in Applied Mathematics (Harvard) and Ph.D. from UC Berkeley inform her expertise in curriculum design and teacher learning. For this project, Ann collaborates with subject matter experts from both STEM and mathematics domains to guide the development and refinement of the mappings. 
+[bio for Lewis Hosie] 
+[bio for Tina Jiang] 
+ 
+“Dissimenation” page 
+* Include the following text at the top: 
+Findings from the Degree Mapping Project are being shared with research, policy, and practitioner communities through conference presentations and convenings focused on mathematics education, disciplinary education, and postsecondary teaching and learning. These dissemination activities are intended to surface insights from the mapping work, gather feedback, and support broader conversations about alignment between gateway mathematics and undergraduate degree pathways. 
+* Header “Presentations and Publications”, then the following list: 
+* Watts, F. M., Barno, E., Liu, L., Liu, O. L., Higgin, T., Hosie, L., & Edwards, A. (2026). Connecting calculus to disciplinary applications: a conceptual mapping to support success in STEM degree courses. Gates Foundation Digitally Enabled Teaching and Learning Research and Development Convening, San Diego, CA. 
+* Liu, L., Watts, F. M., Barno, E., Teodorescu, T., & Liu, O. L. (2026) Rethinking calculus for computer science: A mapping analysis of topic relevance. Annual Meeting of the American Educational Research Association (AERA), Los Angeles, CA. 
+* Liu, L., Liu, O. L., & Watts, F. M. (in press). Connecting calculus to computing education: a conceptual mapping tool to support disciplinary applications. In Proceedings of the 31st Annual ACM Conference on Innovation and Technology in Computer Science Education (ITiCSE). ACM. 
+“Contact” page 
+* Include the following text: 
+For questions about the Degree Mapping Project or the materials on this site, please contact the research team at: 
+ 
+[project‑email@ets.org] 
+We welcome inquiries from researchers, educators, and others interested in gateway mathematics and degree‑level alignment.

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculus Connections Explorer — Mechanical Engineering</title>
+    <title>Mechanical Engineering mapping — STEM–Math Connections Explorer</title>
     <script>
         (function () {
             try {
@@ -14,19 +14,30 @@
         })();
     </script>
     <link rel="stylesheet" href="../style.css">
-    <!-- KaTeX for LaTeX rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <!-- KaTeX for LaTeX rendering (bundled for offline / iOS WKWebView) -->
+    <link rel="stylesheet" href="../vendor/katex/katex.min.css">
+    <script defer src="../vendor/katex/katex.min.js"></script>
+    <script defer src="../vendor/katex/contrib/auto-render.min.js"></script>
 </head>
 <body class="app-with-topbar">
     <header class="app-top-bar" role="banner">
-        <div class="app-top-bar-inner">
-            <a href="../index.html" class="app-top-bar-brand">Calculus Connections Explorer</a>
-            <div class="app-top-bar-actions">
-                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
-                <button type="button" id="instructions-open" class="instructions-button">Instructions</button>
+        <div class="app-top-bar-inner app-top-bar-inner--stacked">
+            <div class="app-top-bar-row-site">
+                <a href="../index.html" class="app-top-bar-brand">STEM–Math Connections Explorer</a>
+                <div class="app-top-bar-actions">
+                    <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
+                    <button type="button" id="instructions-open" class="instructions-button">Instructions</button>
+                </div>
             </div>
+            <nav class="site-nav site-nav--compact" aria-label="Site">
+                <a href="../index.html" class="site-nav__link">Home</a>
+                <a href="../about.html" class="site-nav__link">About</a>
+                <a href="../how-to-use.html" class="site-nav__link">How to Use</a>
+                <a href="../methods.html" class="site-nav__link">Methods</a>
+                <a href="../team.html" class="site-nav__link">Team</a>
+                <a href="../dissemination.html" class="site-nav__link">Dissemination</a>
+                <a href="../contact.html" class="site-nav__link">Contact</a>
+            </nav>
         </div>
     </header>
 
@@ -160,8 +171,8 @@
 
     <div class="tooltip" style="opacity:0;"></div>
 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../vendor/d3.v7.min.js"></script>
     <script src="../theme-toggle.js"></script>
-    <script src="app-meche.js?v=22"></script>
+    <script src="app-meche.js?v=24"></script>
 </body>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — STEM–Math Connections Explorer</title>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('cce-theme');
+                var dark = t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.classList.add('theme-dark');
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site-page">
+    <header class="site-header" role="banner">
+        <div class="site-header-inner">
+            <a href="index.html" class="site-brand">STEM–Math Connections Explorer</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="site-nav__link">Home</a>
+                <a href="about.html" class="site-nav__link site-nav__link--current" aria-current="page">About</a>
+                <a href="how-to-use.html" class="site-nav__link">How to Use</a>
+                <a href="methods.html" class="site-nav__link">Methods</a>
+                <a href="team.html" class="site-nav__link">Team</a>
+                <a href="dissemination.html" class="site-nav__link">Dissemination</a>
+                <a href="contact.html" class="site-nav__link">Contact</a>
+            </nav>
+            <div class="site-header-actions">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="site-hero site-hero--with-image site-hero--about site-hero--inner" aria-labelledby="page-title">
+        <div class="site-hero-inner">
+            <h1 id="page-title">About</h1>
+        </div>
+    </section>
+
+    <main class="site-main site-prose" id="main">
+        <h2>Project Overview</h2>
+        <p>The <strong>Degree Mapping Project</strong> explores how calculus actually shows up in students’ degree pathways.</p>
+        <p><strong>Calculus</strong> is a foundational requirement for many STEM and near‑STEM majors, yet students and instructors often experience a disconnect between what is taught in calculus courses and how mathematics is later used in advanced, discipline‑specific coursework. The Degree Mapping Project addresses this disconnect by making visible how key concepts from <strong>Calculus I</strong> and <strong>Calculus II</strong> connect to advanced courses in undergraduate degree programs.</p>
+        <p>This website presents <strong>interactive mappings</strong> and supporting resources that trace relationships between calculus concepts and advanced courses in <strong>Computer Science</strong> and <strong>Mechanical Engineering</strong>. Drawing on analyses of course syllabi, textbooks, and expert review, the mappings highlight which calculus ideas are most relevant for particular courses, where calculus plays a limited role, and how prerequisite structures shape students’ progress through degree programs. The site is intended as a resource for researchers, instructors, curriculum designers, advisors, and others interested in strengthening alignment between <strong>gateway mathematics</strong> and postsecondary pathways.</p>
+
+        <h2>Motivation &amp; Goals</h2>
+        <p><strong>Gateway mathematics</strong> courses are designed to prepare students for success across STEM and near‑STEM degrees, yet evidence consistently points to misalignment between calculus instruction and downstream course demands. <strong>Calculus I</strong>, in particular, is widely recognized as a bottleneck that contributes to delayed progress, course repetition, and attrition, disproportionately affecting students from historically underserved backgrounds. At the same time, research on learning transfer suggests that students may leave calculus with procedural skills but without a clear understanding of when and how those ideas apply in later coursework.</p>
+        <p>The goal of the Degree Mapping Project is to respond to this challenge by clearly articulating where gateway calculus concepts support learning in advanced disciplinary courses. By systematically mapping relationships between calculus topics and degree‑required coursework, the project aims to:</p>
+        <ul>
+            <li><strong>Illuminate</strong> which calculus concepts are most central to learning in specific degree pathways.</li>
+            <li><strong>Support</strong> curriculum alignment and revision in mathematics and partner disciplines.</li>
+            <li><strong>Inform</strong> instructional decisions, course design, and advising related to mathematics prerequisites.</li>
+            <li><strong>Contribute</strong> to broader efforts to modernize gateway mathematics in ways that promote equity, persistence, and degree completion.</li>
+        </ul>
+        <p>The work begins with <strong>Computer Science</strong>, a high‑enrollment and rapidly evolving field, and extends to <strong>Mechanical Engineering</strong> to examine how calculus supports learning across different disciplinary contexts.</p>
+
+        <h2>Funding &amp; Partners</h2>
+        <p>The Degree Mapping Project is supported by the <strong>Gates Foundation</strong> as part of a broader effort to strengthen gateway mathematics and improve alignment between mathematics instruction and undergraduate degree pathways.</p>
+        <p>The project is jointly led by <strong>ETS</strong> and <strong>WestEd</strong>. ETS leads the analytic, mapping, and visualization development work, while WestEd contributes expertise in study design, disciplinary consultation, and the recruitment and coordination of subject matter experts. Together, the partners bring complementary strengths in assessment, learning sciences, curriculum research, and stakeholder engagement.</p>
+        <p>A multidisciplinary project team, including researchers, developers, and external advisors, supports the design, validation, and dissemination of the mappings presented on this site. More information about the people involved in the work is available on the <a href="team.html" class="site-text-link">Project Team</a> page.</p>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-footer-inner">
+            <div class="site-partner-logos" aria-label="Partner organizations">
+                <a href="https://www.ets.org/research.html" class="site-partner-logo site-partner-logo--primary" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/ETS_Research_Institute.png" alt="ETS Research Institute" width="320" height="70" loading="lazy">
+                </a>
+                <a href="https://www.wested.org/" class="site-partner-logo site-partner-logo--sub" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/logo-wested.png" alt="WestEd" width="140" height="32" loading="lazy">
+                </a>
+            </div>
+            <p class="site-footer-note">STEM–Math Connections Explorer</p>
+            <p class="site-footer-license">Hero images: <a href="https://www.123rf.com/license/standard/" class="site-footer-link" target="_blank" rel="noopener noreferrer">123RF Standard License</a></p>
+        </div>
+    </footer>
+
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use — STEM–Math Connections Explorer</title>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('cce-theme');
+                var dark = t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.classList.add('theme-dark');
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site-page">
+    <header class="site-header" role="banner">
+        <div class="site-header-inner">
+            <a href="index.html" class="site-brand">STEM–Math Connections Explorer</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="site-nav__link">Home</a>
+                <a href="about.html" class="site-nav__link">About</a>
+                <a href="how-to-use.html" class="site-nav__link site-nav__link--current" aria-current="page">How to Use</a>
+                <a href="methods.html" class="site-nav__link">Methods</a>
+                <a href="team.html" class="site-nav__link">Team</a>
+                <a href="dissemination.html" class="site-nav__link">Dissemination</a>
+                <a href="contact.html" class="site-nav__link">Contact</a>
+            </nav>
+            <div class="site-header-actions">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="site-hero site-hero--with-image site-hero--how-to-use site-hero--inner" aria-labelledby="page-title">
+        <div class="site-hero-inner">
+            <h1 id="page-title">How to Use</h1>
+        </div>
+    </section>
+
+    <main class="site-main site-prose" id="main">
+        <h2>Interpreting the Maps</h2>
+        <p>The degree mappings on this site are designed to show how concepts from <strong>Calculus I</strong> and <strong>Calculus II</strong> relate to content in advanced, degree‑required coursework. Each map presents calculus topics alongside disciplinary course topics and highlights where meaningful connections exist.</p>
+        <p>In the visualizations, <strong>calculus topics</strong> represent foundational mathematical ideas typically taught in the standard calculus sequence. <strong>Disciplinary topics</strong> represent core concepts commonly covered in upper‑level courses within a given field (for example, algorithms or machine learning in Computer Science, or fluid mechanics and dynamics in Mechanical Engineering). Links between topics indicate that a calculus concept supports understanding, problem solving, or reasoning in that disciplinary context.</p>
+        <p>Not all calculus topics connect equally, or at all, to advanced courses. Stronger concentrations of connections suggest areas where calculus plays a central role, while sparse or absent connections point to topics that may be less frequently used, at least in the courses examined. The maps are <strong>exploratory tools</strong>: they are intended to surface patterns, prompt reflection, and support conversations across disciplines, rather than to prescribe a single curricular pathway.</p>
+
+        <h2>Use Cases</h2>
+        <p>The mappings are intended to support a range of audiences and purposes:</p>
+        <ul>
+            <li><strong>Faculty and curriculum designers</strong> can use the maps to examine how calculus topics align with disciplinary needs, identify potential gaps or redundancies, and support conversations about course sequencing, emphasis, or redesign.</li>
+            <li><strong>Calculus instructors</strong> can explore where and how their course content is used in downstream coursework, helping to inform instructional choices, examples, and emphasis on particular concepts.</li>
+            <li><strong>Disciplinary instructors</strong> can use the maps to better understand students’ mathematical preparation, anticipate where targeted review or support might be needed, and clarify expectations around prerequisite knowledge.</li>
+            <li><strong>Advisors and academic leaders</strong> can use the mappings to support discussions about degree pathways, prerequisites, and student progression, particularly when considering equity‑oriented reforms to gateway mathematics.</li>
+            <li><strong>Researchers</strong> can draw on the mappings as an evidence base for studying alignment between mathematics instruction and degree outcomes, or for generating new research questions about transfer, curriculum coherence, and student persistence.</li>
+        </ul>
+
+        <h2>Limitations</h2>
+        <p>The degree mappings are designed to support sensemaking and discussion, but they come with <strong>important limitations</strong>.</p>
+        <p><strong>First,</strong> the mappings reflect patterns derived from analyses of representative course syllabi, commonly used textbooks, and expert review. They are not exhaustive of all courses, institutions, or instructional approaches, and they should not be interpreted as universal requirements for every program.</p>
+        <p><strong>Second,</strong> a connection shown in the maps does not imply that students will automatically transfer calculus knowledge into disciplinary contexts. Instructional practices, course design, and students’ prior experiences all influence whether and how transfer occurs.</p>
+        <p><strong>Third,</strong> the absence of a connection does not mean that a calculus topic is unimportant in an absolute sense. Some ideas may support broader mathematical reasoning, prepare students for later courses not included here, or serve purposes beyond the specific courses examined.</p>
+        <p><strong>Finally,</strong> the mappings are descriptive rather than prescriptive. They are intended to inform inquiry, dialogue, and decision‑making, not to dictate curricula or replace local expertise. Users are encouraged to interpret the maps in conjunction with institutional context, disciplinary judgment, and ongoing engagement with students and faculty.</p>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-footer-inner">
+            <div class="site-partner-logos" aria-label="Partner organizations">
+                <a href="https://www.ets.org/research.html" class="site-partner-logo site-partner-logo--primary" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/ETS_Research_Institute.png" alt="ETS Research Institute" width="320" height="70" loading="lazy">
+                </a>
+                <a href="https://www.wested.org/" class="site-partner-logo site-partner-logo--sub" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/logo-wested.png" alt="WestEd" width="140" height="32" loading="lazy">
+                </a>
+            </div>
+            <p class="site-footer-note">STEM–Math Connections Explorer</p>
+            <p class="site-footer-license">Hero images: <a href="https://www.123rf.com/license/standard/" class="site-footer-link" target="_blank" rel="noopener noreferrer">123RF Standard License</a></p>
+        </div>
+    </footer>
+
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

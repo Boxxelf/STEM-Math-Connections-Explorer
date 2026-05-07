@@ -1,0 +1,6 @@
+Third-party assets vendored for offline use (iOS app and local runs without CDN).
+
+- D3 v7 — https://d3js.org/ — ISC License
+- KaTeX 0.16.9 — https://katex.org/ — MIT License
+
+Source files were obtained from https://www.jsdelivr.com/package/npm/katex and https://d3js.org/d3.v7.min.js .

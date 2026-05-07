@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dissemination — STEM–Math Connections Explorer</title>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('cce-theme');
+                var dark = t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.classList.add('theme-dark');
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site-page">
+    <header class="site-header" role="banner">
+        <div class="site-header-inner">
+            <a href="index.html" class="site-brand">STEM–Math Connections Explorer</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="site-nav__link">Home</a>
+                <a href="about.html" class="site-nav__link">About</a>
+                <a href="how-to-use.html" class="site-nav__link">How to Use</a>
+                <a href="methods.html" class="site-nav__link">Methods</a>
+                <a href="team.html" class="site-nav__link">Team</a>
+                <a href="dissemination.html" class="site-nav__link site-nav__link--current" aria-current="page">Dissemination</a>
+                <a href="contact.html" class="site-nav__link">Contact</a>
+            </nav>
+            <div class="site-header-actions">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="site-hero site-hero--with-image site-hero--dissemination site-hero--inner" aria-labelledby="page-title">
+        <div class="site-hero-inner">
+            <h1 id="page-title">Dissemination</h1>
+        </div>
+    </section>
+
+    <main class="site-main site-prose" id="main">
+        <p>Findings from the Degree Mapping Project are being shared with research, policy, and practitioner communities through <strong>conference presentations</strong> and convenings focused on mathematics education, disciplinary education, and postsecondary teaching and learning. These dissemination activities are intended to surface insights from the mapping work, gather feedback, and support broader conversations about alignment between gateway mathematics and undergraduate degree pathways.</p>
+
+        <h2>Presentations and Publications</h2>
+        <ul>
+            <li>Watts, F. M., Barno, E., Liu, L., Liu, O. L., Higgin, T., Hosie, L., &amp; Edwards, A. (2026). <strong>Connecting calculus to disciplinary applications: a conceptual mapping to support success in STEM degree courses.</strong> Gates Foundation Digitally Enabled Teaching and Learning Research and Development Convening, San Diego, CA.</li>
+            <li>Liu, L., Watts, F. M., Barno, E., Teodorescu, T., &amp; Liu, O. L. (2026) <strong>Rethinking calculus for computer science: A mapping analysis of topic relevance.</strong> Annual Meeting of the American Educational Research Association (AERA), Los Angeles, CA.</li>
+            <li>Liu, L., Liu, O. L., &amp; Watts, F. M. (in press). <strong>Connecting calculus to computing education: a conceptual mapping tool to support disciplinary applications.</strong> In Proceedings of the 31st Annual ACM Conference on Innovation and Technology in Computer Science Education (ITiCSE). ACM.</li>
+        </ul>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-footer-inner">
+            <div class="site-partner-logos" aria-label="Partner organizations">
+                <a href="https://www.ets.org/research.html" class="site-partner-logo site-partner-logo--primary" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/ETS_Research_Institute.png" alt="ETS Research Institute" width="320" height="70" loading="lazy">
+                </a>
+                <a href="https://www.wested.org/" class="site-partner-logo site-partner-logo--sub" target="_blank" rel="noopener noreferrer">
+                    <img src="logos/logo-wested.png" alt="WestEd" width="140" height="32" loading="lazy">
+                </a>
+            </div>
+            <p class="site-footer-note">STEM–Math Connections Explorer</p>
+            <p class="site-footer-license">Hero images: <a href="https://www.123rf.com/license/standard/" class="site-footer-link" target="_blank" rel="noopener noreferrer">123RF Standard License</a></p>
+        </div>
+    </footer>
+
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

@@ -34,6 +34,150 @@ document.addEventListener('DOMContentLoaded', () => {
     const connectionThresholdValue = d3.select('#connection-threshold-value');
     const calcSortModeSelect = d3.select('#calc-sort-mode');
 
+    const calcBookTooltip = (() => {
+        const el = document.createElement('div');
+        el.className = 'calc-book-tooltip';
+        el.setAttribute('role', 'tooltip');
+        el.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(el);
+        return d3.select(el);
+    })();
+
+    const TEXTBOOK_DISPLAY_ORDER = [
+        'Stewart 9th',
+        'Active Calculus',
+        'OpenStax',
+        'Rogawski',
+        'Briggs'
+    ];
+
+    const TEXTBOOK_PURCHASE_LINKS = {
+        'Stewart 9th': 'https://www.amazon.com/dp/1337613924',
+        'Active Calculus': 'https://www.amazon.com/dp/1724458329',
+        OpenStax: 'https://www.amazon.com/dp/1506698050',
+        Rogawski: 'https://www.amazon.com/dp/1319050740',
+        Briggs: 'https://www.amazon.com/dp/0134763645'
+    };
+
+    const CALC_BOOK_NO_MAPPING_HTML =
+        '<div class="calc-book-tooltip-empty">No textbook mapping</div>';
+
+    const CALC_BOOK_ICON_SVG =
+        '<svg class="calc-topic-textbook-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>';
+
+    function isTextbookCellEmpty(value) {
+        if (value == null) {
+            return true;
+        }
+        const s = String(value).trim();
+        if (!s) {
+            return true;
+        }
+        return /^n\/a$/i.test(s);
+    }
+
+    function escapeHtmlForTooltip(str) {
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
+
+    function buildTextbookReferenceTooltipHtml(textbooks) {
+        if (!textbooks) {
+            return '';
+        }
+        const parts = [];
+        TEXTBOOK_DISPLAY_ORDER.forEach((key) => {
+            const text = textbooks[key];
+            if (!isTextbookCellEmpty(text)) {
+                const body = escapeHtmlForTooltip(text)
+                    .replace(/\r\n/g, '\n')
+                    .split('\n')
+                    .join('<br>');
+                const buyUrl = TEXTBOOK_PURCHASE_LINKS[key];
+                const buyHtml = buyUrl
+                    ? `<a class="calc-book-tooltip-buy" href="${escapeHtmlForTooltip(
+                          buyUrl
+                      )}" target="_blank" rel="noopener noreferrer">View on Amazon</a>`
+                    : '';
+                parts.push(
+                    `<div class="calc-book-tooltip-section"><div class="calc-book-tooltip-heading">${escapeHtmlForTooltip(
+                        key
+                    )}</div>${buyHtml}<div class="calc-book-tooltip-text">${body}</div></div>`
+                );
+            }
+        });
+        return parts.join('');
+    }
+
+    function hideCalcBookTooltip() {
+        if (calcBookHideTimer) {
+            clearTimeout(calcBookHideTimer);
+            calcBookHideTimer = null;
+        }
+        calcBookTooltip.classed('is-visible', false).attr('aria-hidden', 'true');
+    }
+
+    let calcBookHideTimer = null;
+    function scheduleHideCalcBookTooltip() {
+        if (calcBookHideTimer) {
+            clearTimeout(calcBookHideTimer);
+        }
+        calcBookHideTimer = window.setTimeout(() => {
+            calcBookHideTimer = null;
+            hideCalcBookTooltip();
+        }, 180);
+    }
+    function cancelHideCalcBookTooltip() {
+        if (calcBookHideTimer) {
+            clearTimeout(calcBookHideTimer);
+            calcBookHideTimer = null;
+        }
+    }
+
+    calcBookTooltip
+        .on('mouseenter', cancelHideCalcBookTooltip)
+        .on('mouseleave', scheduleHideCalcBookTooltip)
+        .on('mousedown', cancelHideCalcBookTooltip);
+
+    function positionCalcBookTooltip(anchorEl) {
+        const rect = anchorEl.getBoundingClientRect();
+        const tooltipNode = calcBookTooltip.node();
+        const margin = 10;
+        const pad = 8;
+        let left = rect.right + margin;
+        let top = rect.top + rect.height / 2;
+        const tw = tooltipNode.offsetWidth;
+        const th = tooltipNode.offsetHeight;
+        top -= th / 2;
+        if (left + tw > window.innerWidth - pad) {
+            left = rect.left - tw - margin;
+        }
+        if (left < pad) {
+            left = pad;
+        }
+        if (top < pad) {
+            top = pad;
+        }
+        if (top + th > window.innerHeight - pad) {
+            top = window.innerHeight - th - pad;
+        }
+        calcBookTooltip
+            .style('position', 'fixed')
+            .style('left', `${left}px`)
+            .style('top', `${top}px`)
+            .style('z-index', '10000');
+    }
+
+    function showCalcBookTooltip(html, anchorEl) {
+        calcBookTooltip.html(html).classed('is-visible', true).attr('aria-hidden', 'false');
+        requestAnimationFrame(() => {
+            positionCalcBookTooltip(anchorEl);
+        });
+    }
+
     const containerRect = container.node().getBoundingClientRect();
     const state = {
         width: containerRect.width,
@@ -83,6 +227,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = getChartLayoutRect();
         state.width = rect.width;
         state.height = rect.height;
+        if (state.width < 8 || state.height < 8) {
+            const vw = window.innerWidth || document.documentElement.clientWidth || 320;
+            const vh = window.innerHeight || document.documentElement.clientHeight || 568;
+            state.width = Math.max(120, vw - 28);
+            state.height = Math.max(220, Math.floor(vh * 0.4));
+        }
         svg.attr('width', state.width).attr('height', state.height);
         if (state.simulation) {
             state.simulation.force('center', d3.forceCenter(state.width / 2, state.height / 2));
@@ -198,10 +348,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function dataUrl(relativePath) {
+        try {
+            return new URL(relativePath, window.location.href).href;
+        } catch (e) {
+            return relativePath;
+        }
+    }
+
+    /** iOS WKWebView: native app injects Base64 at document start (fetch to file:// often fails). */
+    function utf8FromBase64(b64) {
+        var bin = atob(b64);
+        var bytes = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        return new TextDecoder('utf-8').decode(bytes);
+    }
+    function bundleGraphFromIOS() {
+        var s = window.__CCE_GRAPH_B64;
+        if (!s) return null;
+        try {
+            return JSON.parse(utf8FromBase64(s));
+        } catch (e) {
+            console.warn('__CCE_GRAPH_B64 decode failed', e);
+            return null;
+        }
+    }
+    function bundleTextFromIOS(key) {
+        var s = window[key];
+        if (!s) return null;
+        try {
+            return utf8FromBase64(s);
+        } catch (e) {
+            console.warn(key + ' decode failed', e);
+            return null;
+        }
+    }
+
+    var _cceG = bundleGraphFromIOS();
+    var _cceCalc = bundleTextFromIOS('__CCE_CALC_CSV_B64');
+    var _cceME = bundleTextFromIOS('__CCE_ME_TOPICS_CSV_B64');
+
     Promise.all([
-        d3.json('graph_data_meche.json'),
-        d3.text('../Calculus topic list-Table 1.csv'),
-        d3.text('../ME topic lists.csv')
+        _cceG != null ? Promise.resolve(_cceG) : d3.json(dataUrl('graph_data_meche.json')),
+        _cceCalc != null ? Promise.resolve(_cceCalc) : d3.text(dataUrl('../Calculus topic list-Table 1.csv')),
+        _cceME != null ? Promise.resolve(_cceME) : d3.text(dataUrl('../ME topic lists.csv'))
     ]).then(([graph, calculusCsvText, csTopicsCsvText]) => {
         if (!graph) {
             throw new Error('Graph data missing');
@@ -226,10 +416,25 @@ document.addEventListener('DOMContentLoaded', () => {
         recomputeCalcConnections();
         updateNodeStyling();
 
-        window.setTimeout(() => {
-            fitGraphToView({ animate: true });
+        // WKWebView / mobile: layout size is often 0 at DOMContentLoaded; remeasure after paint.
+        function kickChartLayout(animate) {
+            applyChartDimensions();
+            if (state.simulation) {
+                state.simulation.force('center', d3.forceCenter(state.width / 2, state.height / 2));
+                state.simulation.alpha(0.25).restart();
+            }
+            fitGraphToView({ animate: animate });
             state.initialFitDone = true;
-        }, 900);
+        }
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                kickChartLayout(false);
+                if (state.width < 8 || state.height < 8) {
+                    [50, 200, 600].forEach((ms) => window.setTimeout(() => kickChartLayout(ms === 600), ms));
+                }
+            });
+        });
+        window.setTimeout(() => kickChartLayout(true), 900);
     }).catch((error) => {
         console.error('Error loading visualization data:', error);
         alert('An error occurred while loading the visualization. Please check the console for details.');
@@ -243,6 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', hideCalcBookTooltip, true);
 
     function initializeGraph(graph) {
         state.nodes = graph.nodes.map((node) => ({ ...node }));
@@ -399,25 +605,35 @@ document.addEventListener('DOMContentLoaded', () => {
             return [];
         }
 
-        const strippedLines = rawText.split(/\r?\n/).filter((line, index) => {
-            if (index === 0 && /^table/i.test(line.trim())) {
-                return false;
-            }
-            return line.trim().length > 0;
-        });
+        let text = rawText.replace(/^\uFEFF/, '');
+        const firstBreak = text.indexOf('\n');
+        const firstLine = firstBreak >= 0 ? text.slice(0, firstBreak).trim() : text.trim();
+        if (/^table/i.test(firstLine)) {
+            text = firstBreak >= 0 ? text.slice(firstBreak + 1) : '';
+        }
 
-        const parsedRows = d3.csvParseRows(strippedLines.join('\n'));
-        const headerIndex = parsedRows.findIndex((row) => row[0] === 'Course');
-        const dataRows = headerIndex >= 0 ? parsedRows.slice(headerIndex + 1) : parsedRows;
+        const rows = d3.csvParse(text.trim());
+        if (!rows || !rows.length) {
+            return [];
+        }
 
-        return dataRows
+        return rows
             .map((row) => {
-                const [course, coreIdea, topicCode, topicName] = row;
+                const course = (row.Course || '').trim();
+                const coreIdea = (row['Core Idea'] || '').trim();
+                const topicCode = (row['Topic Code'] || '').trim();
+                const topicName = (row['Topic Name'] || '').trim();
+                const textbooks = {};
+                TEXTBOOK_DISPLAY_ORDER.forEach((key) => {
+                    const cell = row[key];
+                    textbooks[key] = cell != null ? String(cell).trim() : '';
+                });
                 return {
-                    course: (course || '').trim(),
-                    coreIdea: (coreIdea || '').trim(),
-                    topicCode: (topicCode || '').trim(),
-                    topicName: (topicName || '').trim()
+                    course,
+                    coreIdea,
+                    topicCode,
+                    topicName,
+                    textbooks
                 };
             })
             .filter((item) => item.course && item.coreIdea && item.topicCode && item.topicName);
@@ -1501,6 +1717,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 .append('span')
                 .attr('class', 'calc-pill-meta')
                 .text(`×${entry.totalConnections}`);
+
+            const meta = state.topicMetaByCode.get(node.topicCode);
+            const textbooks = meta && meta.textbooks;
+            const hasAnyRef =
+                textbooks &&
+                TEXTBOOK_DISPLAY_ORDER.some((k) => !isTextbookCellEmpty(textbooks[k]));
+            const tooltipHtml = hasAnyRef
+                ? buildTextbookReferenceTooltipHtml(textbooks) || CALC_BOOK_NO_MAPPING_HTML
+                : CALC_BOOK_NO_MAPPING_HTML;
+
+            const bookBtn = row
+                .append('button')
+                .attr('type', 'button')
+                .classed('calc-topic-textbook-btn', true)
+                .classed('calc-topic-textbook-btn--calculus-ii', courseKey === 'calculus-ii')
+                .classed('calc-topic-textbook-btn--empty', !hasAnyRef)
+                .attr('aria-label', hasAnyRef ? 'Textbook references' : 'No textbook mapping')
+                .on('click', (event) => {
+                    event.stopPropagation();
+                })
+                .html(CALC_BOOK_ICON_SVG);
+
+            bookBtn
+                .on('mouseenter', function () {
+                    cancelHideCalcBookTooltip();
+                    showCalcBookTooltip(tooltipHtml, this);
+                })
+                .on('mouseleave', scheduleHideCalcBookTooltip)
+                .on('focus', function () {
+                    cancelHideCalcBookTooltip();
+                    showCalcBookTooltip(tooltipHtml, this);
+                })
+                .on('blur', scheduleHideCalcBookTooltip);
         });
 
         rowSelection.exit().remove();
@@ -1968,11 +2217,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleResize() {
         applyChartDimensions();
-        if (state.simulation) {
-            state.simulation.alpha(0.2).restart();
+        if (!state.simulation) {
+            return;
         }
-        if (state.initialFitDone) {
-            fitGraphToView({ animate: true });
+        state.simulation.force('center', d3.forceCenter(state.width / 2, state.height / 2));
+        state.simulation.alpha(0.2).restart();
+        if (state.width >= 8 && state.height >= 8) {
+            fitGraphToView({ animate: state.initialFitDone });
+            state.initialFitDone = true;
+        }
+    }
+
+    if (typeof ResizeObserver !== 'undefined') {
+        let roTimer = null;
+        const ro = new ResizeObserver(() => {
+            if (!state.simulation) {
+                return;
+            }
+            window.clearTimeout(roTimer);
+            roTimer = window.setTimeout(handleResize, 48);
+        });
+        const cNode = container.node();
+        const pNode = chartPanel.node();
+        if (cNode) {
+            ro.observe(cNode);
+        }
+        if (pNode) {
+            ro.observe(pNode);
         }
     }
 });
